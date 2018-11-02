@@ -26,7 +26,7 @@
 
 
 # chapter 13
-+ 阿米特·辛格
++ 阿米特‧辛格尔（Amit Singhal）[1]
 
 + 简单的哲学  
   一直坚持寻找简单有效的解决方案，主要原因在于容易解释每一个步骤和方法背后的道理，便于出现问题时查错，也容易找到改进的目标。    
@@ -50,6 +50,9 @@ Google Now
 > Notes:  
 > 简单方法，之所以可行，某种程度上也在于大量数据的支撑。
 
+> reference:  
+> [1] https://en.wikipedia.org/wiki/Amit_Singhal  
+
 
 
 
@@ -58,8 +61,8 @@ Google Now
 
 
 ## chapter 22
-+ 米奇·马库斯（Mitch Marcus）  
-弟子 - 迈克尔·柯林斯（Michael Collins）、艾里克·布莱尔（Eric Brill）、大卫·雅让斯基（David Yarowsky）、拉纳帕提（Adwait Ratnaparkhi）
++ 米奇·马库斯（Mitch Marcus）[1]  
+弟子 - 迈克尔·柯林斯（Michael Collins）[2]、艾里克·布莱尔（Eric Brill）、大卫·雅让斯基（David Yarowsky）[3]、拉纳帕提（Adwait Ratnaparkhi）、Jason Eisner[4]
 
 + 迈克尔·柯林斯  
 追求完美 -  
@@ -77,3 +80,9 @@ b - 根据上下文，列举所有同音字的替换规则 - “去伪存真”
 c - 将所有规则应用到事先标识好的语料，挑出有用的，删掉无用的 - “去粗取精”  
 d - 重复b、c两步，直至找不出有用的为止  
 
+
+> reference:  
+> [1] https://www.cis.upenn.edu/~mitch/  
+> [2] http://www.cs.columbia.edu/~mcollins/  
+> [3] http://www.cs.jhu.edu/~yarowsky/
+> [4] http://www.cs.jhu.edu/~jason/
