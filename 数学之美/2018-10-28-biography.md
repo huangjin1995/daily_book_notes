@@ -82,7 +82,7 @@ d - 重复b、c两步，直至找不出有用的为止
 
 
 > reference:  
-> [1] https://www.cis.upenn.edu/~mitch/  
-> [2] http://www.cs.columbia.edu/~mcollins/  
-> [3] http://www.cs.jhu.edu/~yarowsky/
-> [4] http://www.cs.jhu.edu/~jason/
+[1] https://www.cis.upenn.edu/~mitch/  
+[2] http://www.cs.columbia.edu/~mcollins/  
+[3] http://www.cs.jhu.edu/~yarowsky/  
+[4] http://www.cs.jhu.edu/~jason/
