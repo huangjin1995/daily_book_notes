@@ -4,7 +4,11 @@
 
 ## chapter 7
 + 弗里德里克·贾里尼克(Frederek Jelinek, 1932.11.18-2010.9.14)  
-学派 - 诺威格(Peter Norvig)/费尔南多·皮耶尔(Fernando Pereira)
+学派 - 诺威格(Peter Norvig)[1]/费尔南多·皮耶尔(Fernando Pereira)[2]
+
+    费尔南多·皮耶尔(Fernando Pereira)  
+弟子 - Ryan Mcdonald[3]
+
 
 + 成就  
 1). 在贾里尼克之前，科学家们把语音识别问题当作人工智能和模式匹配问题。而贾里尼克把它当成通信问题，并用两个隐含马尔可夫模型（声学模型和语言模型）把语音识别概括得清清楚楚。  
@@ -17,6 +21,11 @@
 
 > Notes:
 > "什么方法不好"，是从一生的经验教训中得到的，可以节省很多无用功的时间。
+
+> reference:  
+[1] http://www.norvig.com/  
+[2] https://sites.google.com/site/fernandopereira/  
+[3] https://ryanmcd.github.io/
 
 
 
@@ -51,7 +60,7 @@ Google Now
 > 简单方法，之所以可行，某种程度上也在于大量数据的支撑。
 
 > reference:  
-> [1] https://en.wikipedia.org/wiki/Amit_Singhal  
+[1] https://en.wikipedia.org/wiki/Amit_Singhal  
 
 
 
@@ -61,8 +70,15 @@ Google Now
 
 
 ## chapter 22
-+ 米奇·马库斯（Mitch Marcus）[1]  
++ 米奇·马库斯（Mitch Marcus）  
+米奇·马库斯（Mitch Marcus）[1]  
 弟子 - 迈克尔·柯林斯（Michael Collins）[2]、艾里克·布莱尔（Eric Brill）、大卫·雅让斯基（David Yarowsky）[3]、拉纳帕提（Adwait Ratnaparkhi）、Jason Eisner[4]
+
+    迈克尔·柯林斯（Michael Collins）  
+弟子 - Percy Liang[5]、Terry Koo[6]、Luke Zettlemoyer[7]  
+
+    Jason Eisner  
+弟子 - Noah Smith[8]  
 
 + 迈克尔·柯林斯  
 追求完美 -  
@@ -81,8 +97,17 @@ c - 将所有规则应用到事先标识好的语料，挑出有用的，删掉�
 d - 重复b、c两步，直至找不出有用的为止  
 
 
++ Summary  
+Michael Collins/Jason Eisner对NLP结构学习领域贡献极大  
+David Yarowsky早年研究词义消歧，是著名的yarowsky algorithm的作者，后来做了很多跨语言学习的开创性工作  
+
+
 > reference:  
 [1] https://www.cis.upenn.edu/~mitch/  
 [2] http://www.cs.columbia.edu/~mcollins/  
 [3] http://www.cs.jhu.edu/~yarowsky/  
-[4] http://www.cs.jhu.edu/~jason/
+[4] http://www.cs.jhu.edu/~jason/  
+[5] https://cs.stanford.edu/~pliang/  
+[6] http://people.csail.mit.edu/maestro/  
+[7] https://www.cs.washington.edu/people/faculty/lsz/  
+[8] https://homes.cs.washington.edu/~nasmith/  
