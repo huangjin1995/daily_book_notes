@@ -1,2 +1,22 @@
 翻墙下载Pycharm版本对应的markdown-support:
 https://plugins.jetbrains.com/plugin/7793-markdown-support
+
+MarkdownPad2.5/2 注册码
+User：
+Soar360@live.com
+授权：
+GBPduHjWfJU1mZqcPM3BikjYKF6xKhlKIys3i1MU2eJHqWGImDHzWdD6xhMNLGVpbP2M5SN6bnxn2kSE8qHqNY5QaaRxmO3YSMHxlv2EYpjdwLcPwfeTG7kUdnhKE0vVy4RidP6Y2wZ0q74f47fzsZo45JE2hfQBFi2O9Jldjp1mW8HUpTtLA2a5/sQytXJUQl/QKO0jUQY4pa5CCx20sV1ClOTZtAGngSOJtIOFXK599sBr5aIEFyH0K7H4BoNMiiDMnxt1rD8Vb/ikJdhGMMQr0R4B+L3nWU97eaVPTRKfWGDE8/eAgKzpGwrQQoDh+nzX1xoVQ8NAuH+s4UcSeQ==
+
+下载文件：jaxedit[1]，解压到硬盘，找到如下路径，如：D:\software\jaxedit-0.40\library\mathjax\unpacked。
+转到MarkdownPad2中，点击Tools > Options > Advanced > HTML Head Editor，输入：
+<script type="text/javascript"  src="D:\software\jaxedit-0.40\library\mathjax\unpacked\MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+F6 preview - 浏览器预览
+
+
+Typora - 文字及公式实时预览
+
+
+reference:
+[1] https://github.com/zohooo/jaxedit/releases
+
