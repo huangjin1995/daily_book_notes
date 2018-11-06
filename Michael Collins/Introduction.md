@@ -21,8 +21,11 @@ at discourse(论述) level-(multi-clause) (anaphora-指代)
 
 
 + Recommend books
-Jurafsky and Martin:
-Speech and Language Processing (2nd Edition)
+Jurafsky and Martin: Speech and Language Processing (3nd Edition)
+https://web.stanford.edu/~jurafsky/slp3/
+Coursera:
+Natural Language Processing
+https://pan.baidu.com/s/1cEjJn5-gChsXLlr9-5WK2A
 
 
 > question:  
