@@ -1,3 +1,8 @@
+> more refer:
+https://github.com/guodongxiaren/README
+https://github.com/younghz/Markdown
+
+
 ## 主要内容
 > #### Markdown*是什么*？
 > #### *谁*创造了它？

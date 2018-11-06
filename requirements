@@ -1,6 +1,9 @@
+Pycharm-markdown
 翻墙下载Pycharm版本对应的markdown-support:
 https://plugins.jetbrains.com/plugin/7793-markdown-support
 
+
+MarkdownPad
 MarkdownPad2.5/2 注册码
 User：
 Soar360@live.com
@@ -14,9 +17,15 @@ GBPduHjWfJU1mZqcPM3BikjYKF6xKhlKIys3i1MU2eJHqWGImDHzWdD6xhMNLGVpbP2M5SN6bnxn2kSE
 F6 preview - 浏览器预览
 
 
+Typora
 Typora - 文字及公式实时预览
+
+
+Github-markdown
+CodeCogs 提供了一个在线 LaTeX 编辑器[2]，可以将输入的数学公式转换为图片，并自动生成 HTML 代码（也支持其他格式）。
+由于 Markdown 允许嵌入 HTML，所以直接把生成的代码粘贴过去就可以了。
 
 
 reference:
 [1] https://github.com/zohooo/jaxedit/releases
-
+[2] https://www.codecogs.com/latex/eqneditor.php

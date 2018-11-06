@@ -24,7 +24,17 @@ $\lim_{x \to \infty} \exp(-x)=0$
 
 ### 插入表情:happy:
 
-使用`:happy:`输入表情:happy:,使用`:sad:`输入表情:sad:,使用`:cry:`输入表情:cry:等。以此类推！
+使用`:happy:`输入表情:happy:,使用`:cry:`输入表情:cry:等。以此类推！
+
+:laughing:,:sunglasses:,:blush:,:scream:,:v:, :family:,:rocket:,:bug:,:exclamation:,:question:,
+
+> emoji cheat sheet: 
+>
+> https://www.webpagefx.com/tools/emoji-cheat-sheet/
+>
+> https://github.com/guodongxiaren/README/blob/master/emoji.md
+
+
 
 ### 下划线
 
@@ -171,10 +181,8 @@ GFM添加了删除文本的语法，这是标准的Markdown语法木有的。使
 
 - [x] 吃饭
 
-      
 - [x] 逛街
 
-      
 - [x] 看电影
 
       ​
