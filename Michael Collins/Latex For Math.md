@@ -22,13 +22,41 @@ $\prod_{i=0}^n$, $\prod^{n}_{i=0}$
 
 ### 希腊字母
 
-$alpha$, $\beta$, $\gamma$
+#### 小写
+
+$alpha$, $\beta$, $\gamma$, $\kappa$,
 
 $\lambda$,
+
+#### 大写
+
+$\Sigma$, 
 
 ### 二元运算符
 
 $+$, $-$, $\times$, $\setminus$, $\cdot$, 
 
+$\cup$, $\cap$, 
 
+### 二元关系符
+
+$\in$, $\notin$,
+
+
+
+`\le` is stand for "less than or equal to".  And `slant` means 倾斜. 
+
+`\ge` is stand for "greater than or equal to".
+
+$\ge$, $\geq$, $\geqslant$, $\geqq$,
+
+$\le$, $\leq$, $\leqslant$, $\leqq$,
+
+
+
+### 箭头
+
+$\leftarrow$, $\gets$, $\rightarrow$, $\to$,
+
+$\Leftarrow$, $\Rightarrow$,
 
