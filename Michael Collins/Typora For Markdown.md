@@ -26,7 +26,19 @@ $\lim_{x \to \infty} \exp(-x)=0$
 
 使用`:happy:`输入表情:happy:,使用`:cry:`输入表情:cry:等。以此类推！
 
-:laughing:,:sunglasses:,:blush:,:thumbsup:,:v:, :family:,:rocket:,:bug:,:exclamation:,:question:, :star:, :star2:, :point_left:, :point_right:, ​
+:laughing:,:sunglasses:,:blush:,
+
+:thumbsup:,:v:, :wave:,:star2:, :point_left:, :point_right:, 
+
+:rocket:, 
+
+:bug:,
+
+:exclamation:,:question:, 
+
+:star:, :star2:
+
+:dancing_men:, :dancing_women:, :family:,
 
 > emoji cheat sheet: 
 >
