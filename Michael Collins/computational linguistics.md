@@ -25,6 +25,7 @@ Computational linguistics is always aims to **find** or **create** the best repr
 | named entity recognition |                                                   |
 | relation extraction      |                                                   |
 | dependency parser        |                                                   |
+| constituency parser      |                                                   |
 | semantic role labeling   |                                                   |
 | slots filling            | question analysis (task oriented dialogue system) |
 | event triples            |                                                   |
