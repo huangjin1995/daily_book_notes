@@ -6,7 +6,7 @@
 
 ### Syntactic Parsing
 
-
+The problem of mapping from a string of words to its parse tree is called syntactic parsing.
 
 #### Convert CFG to CNF
 
@@ -17,10 +17,6 @@
 problem:question:
 
 4. Make all rules binary and add them to new grammar.
-
-why we need the CNF(Chomsky Norma Form):question:
-
-The CNF is bi-gram model​ :question: 
 
 ### Partial parsing
 

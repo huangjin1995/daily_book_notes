@@ -3,11 +3,11 @@
 
 
 ## chapter 7
-+ 弗里德里克·贾里尼克(Frederek Jelinek, 1932.11.18-2010.9.14)  
-学派 - 诺威格(Peter Norvig)[1]/费尔南多·皮耶尔(Fernando Pereira)[2]
++ 弗里德里克·贾里尼克(Frederek Jelinek, 1932.11.18-2010.9.14)[1]  
+学派 - 诺威格(Peter Norvig)[2]/费尔南多·皮耶尔(Fernando Pereira)[3]
 
     费尔南多·皮耶尔(Fernando Pereira)  
-弟子 - Ryan Mcdonald[3]
+弟子 - Ryan Mcdonald[4]
 
 
 + 成就  
@@ -23,9 +23,11 @@
 > "什么方法不好"，是从一生的经验教训中得到的，可以节省很多无用功的时间。
 
 > reference:  
-[1] http://www.norvig.com/  
-[2] https://sites.google.com/site/fernandopereira/  
-[3] https://ryanmcd.github.io/
+[1] http://www.clsp.jhu.edu/people/jelinek/promoce.html  
+    http://googleresearch.blogspot.com/2010/09/remembering-fred-jelinek.html  
+[2] http://www.norvig.com/  
+[3] https://sites.google.com/site/fernandopereira/  
+[4] https://ryanmcd.github.io/
 
 
 
