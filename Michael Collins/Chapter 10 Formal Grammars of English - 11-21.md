@@ -36,3 +36,5 @@ use of the lexicon. Among the more computationally relevant approaches are Lexic
 
 
 
+[中文CCG树库的构建](http://jcip.cipsc.org.cn/CN/abstract/abstract1600.shtml)<br>[Chinese CCGbank: extracting CCG derivations from the Penn Chinese Treebank](http://aclweb.org/anthology/C/C10/C10-1122.pdf)
+
