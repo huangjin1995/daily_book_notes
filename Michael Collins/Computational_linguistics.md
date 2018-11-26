@@ -1,4 +1,6 @@
-[Computational linguistics](https://en.wikipedia.org/wiki/Computational_linguistics)
+more refer:
+
+https://en.wikipedia.org/wiki/Computational_linguistics
 
 ### Computational linguistics
 
@@ -7,6 +9,14 @@
 
 
 #### approaches - unfinished
+
+##### Developmental approaches
+
+Language is a cognitive skill which develops throughout the life of an individual. This developmental process has been examined using a number of techniques, and a computational approach is one of them.
+
+Attempts have been made to model the developmental process of language acquisition in children from a computational angle, leading to both [statistical grammars](https://en.wikipedia.org/wiki/Stochastic_grammar) and [connectionist models](https://en.wikipedia.org/wiki/Connectionism).
+
+???
 
 ##### Structural approaches
 
