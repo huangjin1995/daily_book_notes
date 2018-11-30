@@ -1,5 +1,3 @@
-[《立委科普：语言学的基本概念》](http://blog.sciencenet.cn/blog-362400-498588.html)
-
 more refer:
 
 Speech and Language Processing
