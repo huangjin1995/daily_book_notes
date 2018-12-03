@@ -203,11 +203,19 @@ Referents of pronouns usually require some degree of salience in the discourse (
 
   推理对象(inferrable)、不连续集(discontinuous set)和类属(generic)
 
-
 ### Algorithms
+
+#### Hobbs Algorithm
+
+Hobbs ‘78: syntax tree-based referential search
+
+1978 年 Hobbs 提出一种不依赖任何语义知识或语篇信息，只利用语法规则和完全解析树信息的指代消解算法，又叫**树查询算法(Tree Search Algorithm)**。算法会遍历当前句子和先行句(preceding sentences)的解析树，根据 binding theory, recency, 和 grammatical role preferences 选择合适的 NP 作为 referent，这种方法需要 parser，需要 gender 和 number 信息，也需要用于确定 NP gender 的 head rule 和 wordnet。现在实际系统中很少直接使用，一般只会拿来做 baseline。
+
+#### Resolution of Anaphora Procedure(RAP)
 
 Lappin & Leas ‘94: weighting via recency and syntactic preferences. [paper](http://www.aclweb.org/anthology/J/J94/J94-4002.pdf)
 
+1994 年 Lappin 和 Lease 提出，使用 McCord 提出的 Slot Grammar 获得文档的句法结构，根据过滤规则过滤掉不合适的 referent，然后通过手工加权的各种语言特征计算剩下的 referent 重要性，确定 referent。
 
 Weights candidate antecedents by recency and syntactic preference (86% accuracy)
 
@@ -219,7 +227,7 @@ Partial example for 3P, non-reflexives
 
 + Saliency Factor Weights
 
-  Sentence recency (in current sentence?) 100<br>Subject emphasis (is it the subject?) 80<br>Existential emphasis (existential prednom?) 70<br>Accusative emphasis (is it the dir obj?) 50<br>Indirect object/oblique comp emphasis 40<br>Non-adverbial emphasis (not in PP,) 50<br>Head noun emphasis (is head noun) 80
+  Sentence recency (in current sentence?) 100<br>Subject emphasis (is it the subject?) 80<br>Existential emphasis (existential prednom? - "there is ...") 70<br>Accusative emphasis (is it the direct object?) 50<br>Indirect object/oblique comp emphasis 40<br>Non-adverbial emphasis (not in PP,) 50<br>Head noun emphasis (is head noun) 80
 
 Implicit ordering of arguments:
 subj/exist pred/obj/indobjoblique/dem.advPP
@@ -240,9 +248,9 @@ Update:
   value for each potential antecedent
   Select referent with highest salience; if tie, select closest referent in string
 
+1996 年 Kennedy 等人对 RAP 做了修改和扩展，避免了构建完整的解析树，只用 NLP 工具预处理得到词性标注和句法功能标注等浅层信息，2005 年 Luo 等人继续做了改进，尝试用最大熵模型来自动确定各种语言特征的权值。
 
-
-#### Example
+##### Example
 
 On the sofa, the cat was eating bonbons.
 sofa: 100+80=180
@@ -259,9 +267,22 @@ sofa: 90/2=45
 cat: 155/2=77.5
 bonbons: 450/2=225 (+35) = 260….
 
----
+#### Centering theory
 
-Hobbs ‘78: syntax tree-based referential search
+Centering algorithm 和 Lappin & Leas 算法一样都采用了 discourse model 的表示，但同时引入了 center 的概念，center 表示语段中心成分，在语篇中联系不同语段的实体(entity)，在话语中的任何定点都有一个单独的实体被作为 center。center 细分为**语段潜在中心** (forward-looking center $C_f$) 和**语段现实中心**(backward-looking center $C_b$)。
+
+...
+
+#### Log-linear model
+
+监督学习，需要手工标注共指关系，基于上述规则作为特征...
+
+#### General Coreference Resolution
+
+监督学习，需要手工标注共指关系，基于上述规则作为特征... - 分类问题，先识别文本中的 NP，然后对每一个 NP pair 进行一个二分类，看他们是否是共指关系，然后合并结果形成**共指链(coreferential chain)**，Coreference chains 其实是 cohesion 的一个部分，
+
+Combine best: ENCORE (Bo Lin et al 2010)
+ML for Cross-Doc Coref (Rushin Shah et al 2011)
 
 
 
