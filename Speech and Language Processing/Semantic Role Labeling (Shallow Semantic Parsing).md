@@ -59,6 +59,14 @@ Example: SRL语义标注结果一致<br>“豪华汽车制造商将要销售大�
 - [Preposition SRL](https://github.com/CogComp/cogcomp-nlp/tree/master/prepsrl): Identifies semantic relations expressed by prepositions
 - [Shalmaneser](http://www.coli.uni-saarland.de/projects/salsa/shal/) is another state of the art system for assigning semantic predicates and roles.
 
+http://code.google.com/p/mate-tools/
+
+http://sourceforge.net/projects/swirl-parser/
+
+https://blog.csdn.net/ilovewindseed/article/details/8841365
+
+https://github.com/talnsoftware/deepsyntacticparsing/wiki
+
 ### Paper
 
 
