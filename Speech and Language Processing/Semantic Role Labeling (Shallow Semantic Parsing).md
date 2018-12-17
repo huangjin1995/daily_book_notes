@@ -1,0 +1,78 @@
+more refer:
+
+https://web.stanford.edu/~jurafsky/slp3/slides/22_SRL.pdf
+
+
+
+### Semantic Role Labeling
+
+Who      did what      to whom    when and where
+
+Agent    Predicate    Theme      Time          Location
+
+
+
+
+
+
+
+#### Methods
+
+##### classification problem
+
+语义角色标注大致分为四个步骤：
+
+1. 将问题给出的句子进行句法分析得到句法树。并对句法树进行剪枝，去掉不可能成为语义角色的标注单元。
+
+2. 使用分类器给选出的候选论元。
+
+3. 对论元进行分类，类别为所有的语义角色标签。有些系统中也将2、3步骤合为一步，也就是将非语义角色也作为一个分类标签，在本文中就是使用的这种方法。
+
+4. 后处理。在此步骤中，常常做一些强制的一致性限制。
+
+可以看出，语义角色标注的核心就是对论元进行语义标签的分类。语义角色标注的不同方法，其实就是针对这个问题设计不同的更加高效的分类器。
+
+##### sequence labeling problem
+
+
+
+#### Application
+
+谓词相同，语义不变的情况
+
+Example: SRL语义标注结果一致<br>昨天 ， 张三 用球拍打了李四 。<br>李四 昨天被 张三 用球拍 打了 。<br>昨天 ，用一个球拍，张三 把 李四 打了。
+
+谓词改变但语义不变的情况
+
+Example: SRL语义标注结果不一致<br>“豪华汽车制造商去年销售了1214辆汽车。”<br>“豪华汽车制造商去年汽车的出售量是1214辆。”
+
+谓词时态改变但语义改变的情况
+
+Example: SRL语义标注结果一致<br>“豪华汽车制造商将要销售大量汽车。”<br>“豪华汽车制造商已销售了大量汽车。”
+
+
+
+### Tutorials
+
+- [CoNLL-2005 Shared Task: Semantic Role Labeling](http://www.lsi.upc.es/~srlconll/)
+- [Illinois Semantic Role Labeler](http://cogcomp.cs.illinois.edu/page/software_view/SRL) state of the art semantic role labeling system [Demo](http://cogcomp.cs.illinois.edu/page/demo_view/SRL)
+- [Preposition SRL](https://github.com/CogComp/cogcomp-nlp/tree/master/prepsrl): Identifies semantic relations expressed by prepositions
+- [Shalmaneser](http://www.coli.uni-saarland.de/projects/salsa/shal/) is another state of the art system for assigning semantic predicates and roles.
+
+### Paper
+
+
+
+ 中文语义角色标注的特征工程, 2007 [paper](http://ir.hit.edu.cn/~car/papers/chinese_srl_jocip.pdf)
+
+
+
+
+
+- Automatic Labeling of Semantic Roles, Daniel Gildea and Daniel Jurafsky. 2000 [paper](https://www.cs.rochester.edu/~gildea/gildea-cl02.pdf)
+- Chinese LTP - A Unified Architecture for Semantic Role Labeling and Relation Classification, Coling 2016 [paper](http://ir.hit.edu.cn/~car/papers/coling16guo-2.pdf)
+- Encoding Sentences with Graph Convolutional Networks for Semantic Role Labeling EMNLP 2017 [paper](https://arxiv.org/abs/1703.04826) | [code](https://github.com/diegma/neural-dep-srl)
+- A Simple and Accurate Syntax-Agnostic Neural Model for Dependency-based Semantic Role Labeling CoNLL 2017 [paper](https://arxiv.org/abs/1701.02593)  | [code](https://github.com/diegma/neural-dep-srl)
+- Deep Semantic Role Labeling: What works and what's next, ACL 2017 [paper](https://homes.cs.washington.edu/~luheng/files/acl2017_hllz.pdf) | [code](https://github.com/luheng/deep_srl)
+- Deep Semantic Role Labeling with Self-Attention AAAI 2018 [arxiv](https://arxiv.org/abs/1712.01586) | [code](https://github.com/XMUNLP/Tagger)
+- 

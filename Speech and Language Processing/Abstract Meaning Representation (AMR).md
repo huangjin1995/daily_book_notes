@@ -1,4 +1,4 @@
-https://amr.isi.edu/<br>https://github.com/amrisi/amr-guidelines/blob/master/amr.md<br>[中文抽象语义表示](http://www.cs.brandeis.edu/~clp/camr/camr.html)<br>[融合概念对齐信息的中文 AMR 语料库的构建](http://www.cips-cl.org/static/anthology/CCL-2017/CCL-17-034.pdf)<br>[中文AMR语料库的构建工作简介](http://blog.sciencenet.cn/blog-39714-1069586.html)<br>
+https://amr.isi.edu/<br>https://github.com/amrisi/amr-guidelines/blob/master/amr.md<br>http://www.isi.edu/~ulf/amr/help/amr-guidelines.pdf<br>[中文抽象语义表示](http://www.cs.brandeis.edu/~clp/camr/camr.html)<br>[融合概念对齐信息的中文 AMR 语料库的构建](http://www.cips-cl.org/static/anthology/CCL-2017/CCL-17-034.pdf)<br>[中文AMR语料库的构建工作简介](http://blog.sciencenet.cn/blog-39714-1069586.html)<br>
 
 
 
