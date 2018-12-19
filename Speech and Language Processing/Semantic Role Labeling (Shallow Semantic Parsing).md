@@ -55,15 +55,22 @@ Example: SRL语义标注结果一致<br>“豪华汽车制造商将要销售大�
 ### Tutorials
 
 - [CoNLL-2005 Shared Task: Semantic Role Labeling](http://www.lsi.upc.es/~srlconll/)
-- [Illinois Semantic Role Labeler](http://cogcomp.cs.illinois.edu/page/software_view/SRL) state of the art semantic role labeling system [Demo](http://cogcomp.cs.illinois.edu/page/demo_view/SRL)
+- [Illinois Semantic Role Labeler](http://cogcomp.cs.illinois.edu/page/software_view/SRL) state of the art semantic role labeling system [Demo](http://cogcomp.cs.illinois.edu/page/demo_view/SRL), uses PropBank.
 - [Preposition SRL](https://github.com/CogComp/cogcomp-nlp/tree/master/prepsrl): Identifies semantic relations expressed by prepositions
 - [Shalmaneser](http://www.coli.uni-saarland.de/projects/salsa/shal/) is another state of the art system for assigning semantic predicates and roles.
 
-http://code.google.com/p/mate-tools/
+1. [Mate tools](http://code.google.com/p/mate-tools/) (which I'm currently using), uses Propbank style
+2. [BioKIT](http://nlp.comp.nus.edu.sg/software) - SRL for biomedical text
+3. [SEMAFOR](http://www.ark.cs.cmu.edu/SEMAFOR/) - the parser (MST) requires 8GB of RAM
+4. [Propbank-Nombank frames](http://nlp.cs.lth.se/software/semantic_parsing:_propbank_nombank_frames/) and [The LTH System for Frame-Semantic Structure Extraction ](http://nlp.cs.lth.se/software/semantic_parsing:_framenet_frames/)may be related to Mate tools
+5. [ClearNLP](http://clearnlp.wikispaces.com/)
+6. [CogCompNLP pipeline](https://github.com/CogComp/cogcomp-nlp/tree/master/pipeline): multiple versions of SRL (verb, preposition, comma, noun)
 
 http://sourceforge.net/projects/swirl-parser/
 
 https://blog.csdn.net/ilovewindseed/article/details/8841365
+
+http://www.kenvanharen.com/2012/11/comparison-of-semantic-role-labelers.html
 
 https://github.com/talnsoftware/deepsyntacticparsing/wiki
 
@@ -83,4 +90,7 @@ https://github.com/talnsoftware/deepsyntacticparsing/wiki
 - A Simple and Accurate Syntax-Agnostic Neural Model for Dependency-based Semantic Role Labeling CoNLL 2017 [paper](https://arxiv.org/abs/1701.02593)  | [code](https://github.com/diegma/neural-dep-srl)
 - Deep Semantic Role Labeling: What works and what's next, ACL 2017 [paper](https://homes.cs.washington.edu/~luheng/files/acl2017_hllz.pdf) | [code](https://github.com/luheng/deep_srl)
 - Deep Semantic Role Labeling with Self-Attention AAAI 2018 [arxiv](https://arxiv.org/abs/1712.01586) | [code](https://github.com/XMUNLP/Tagger)
-- 
+
+### Question
+
++ what's the difference of ... and **CCG** SRL?
