@@ -1,5 +1,5 @@
 天气：阴  
-阅读时间：早班车
+阅读时间：早班车<br>记录时间:  25-晨
 
 Semantic Role Labeling - slp2 - chapter 20.9/ slp3 - chapter 18
 
@@ -11,23 +11,37 @@ more refer:<br>https://web.stanford.edu/~jurafsky/slp3/slides/22_SRL.pdf
 
 ### Semantic Role Labeling
 
+
+
+#### What's SRL?
+
 Who      did what      to whom    when and where
 
 Agent    Predicate    Theme      Time          Location
 
-
+​	Semantic roles are representations that express the abstract role that arguments of a predicate can take in the event; these can be very specific, like the BUYER, abstract like the AGENT, or super-abstract (the PROTO-AGENT). These roles can both represent general semantic properties of the arguments and also express their likely relationship to the syntactic role of the argument in the sentence.
 
 #### Why we need the SRL?
 
-**Shallow Semantic Parsing**
-
-字面意义
+​	Semantic roles is to act as a shallow meaning representation that can let us make simple inferences that aren’t possible from the pure surface string of words (字面意义), or even from the parse tree (句法分析). It's useful in dealing with complications like **diathesis alternations**. <br>(Many verbs allow their thematic roles to be realized in various syntactic positions, these multiple argument structure realizations are called verb alternations or diathesis alternations)
 
 
 
 #### What's the difficulty of SRL?
 
+It's very difficult to come up with a standard set of roles, and equally difficult to produce a formal definition of roles like AGENT, THEME, or INSTRUMENT.
 
+1. Role like AGENT or THEME often need to fragment into many specific roles.
+2. Can not reason about and generalize across semantic roles with finite discrete lists of roles.
+3. It's difficult to formally define the thematic roles.
+
+These problems have led to alternative semantic role models that use either many fewer or many more roles.
+
+The first of these options is to define generalized semantic roles that abstract over the specific thematic roles. For example, PROTO-AGENT and PROTO-PATIENT are generalized roles that express roughly agent-like and roughly patient-like meanings. These roles are defined, not by necessary and sufficient conditions, but rather by a set of heuristic features that accompany more agent-like or more patient-like meanings.
+
+The second direction is instead to define semantic roles that are specific to a particular verb or a particular group of semantically related verbs or nouns.
+
+**PropBank** uses both proto-roles and verb-specific semantic roles. **FrameNet** uses semantic roles that are specific to a general semantic idea called a frame.
 
 #### Methods (How)
 
@@ -51,11 +65,11 @@ Agent    Predicate    Theme      Time          Location
 
 #### Application
 
-中间语义表示
+question answering ???
 
-question answering
+Shallow semantics might act as a useful **intermediate language** in machine translation.
 
-machine translation
+#### Example
 
 谓词相同，语义不变的情况
 
@@ -68,8 +82,6 @@ Example: SRL语义标注结果不一致<br>“豪华汽车制造商去年销售�
 谓词时态改变但语义改变的情况
 
 Example: SRL语义标注结果一致<br>“豪华汽车制造商将要销售大量汽车。”<br>“豪华汽车制造商已销售了大量汽车。”
-
-
 
 ### Tutorials
 
