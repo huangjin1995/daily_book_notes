@@ -1,6 +1,11 @@
-more refer:
+天气：阴  
+阅读时间：早班车
 
-https://web.stanford.edu/~jurafsky/slp3/slides/22_SRL.pdf
+Semantic Role Labeling - slp2 - chapter 20.9/ slp3 - chapter 18
+
+
+
+more refer:<br>https://web.stanford.edu/~jurafsky/slp3/slides/22_SRL.pdf
 
 
 
@@ -12,11 +17,19 @@ Agent    Predicate    Theme      Time          Location
 
 
 
+#### Why we need the SRL?
+
+**Shallow Semantic Parsing**
+
+字面意义
 
 
 
+#### What's the difficulty of SRL?
 
-#### Methods
+
+
+#### Methods (How)
 
 ##### classification problem
 
@@ -37,6 +50,12 @@ Agent    Predicate    Theme      Time          Location
 
 
 #### Application
+
+中间语义表示
+
+question answering
+
+machine translation
 
 谓词相同，语义不变的情况
 
