@@ -65,9 +65,24 @@ The second direction is instead to define semantic roles that are specific to a 
 
 #### Application
 
-question answering ???
+##### Question Answering
+
++ Using Semantic Roles to Improve Question Answering, EMNLP 2007, [paper](http://www.aclweb.org/anthology/D07-1002)
+
+  method: view semantic role assignment as an optimization problem in a bipartite
+  graph and answer extraction as an instance of graph matching.
+
+  data: the TREC datasets
+
++ QASR: Spoken Question Answering Using Semantic Role Labeling, [paper](http://www.cs.columbia.edu/~sstoyanchev/papers/Stenchikova_Tur_QASR_ASRU05-demo.pdf)
+
+
+
+##### Machine Translation
 
 Shallow semantics might act as a useful **intermediate language** in machine translation.
+
+
 
 #### Example
 
