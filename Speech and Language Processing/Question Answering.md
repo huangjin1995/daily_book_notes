@@ -1,11 +1,9 @@
-天气：阴  
-阅读时间：早班车<br>记录时间:  25-晨
+天气：晴  
+阅读时间：2019-1-2-晨<br>
 
 Question Answering - slp2 - chapter 23.2/ slp3 - chapter 23
 
-Most question answering systems focus on **factoid questions**, questions that can
-be answered with simple facts expressed in short texts. The answers to the questions
-below can expressed by a personal name, temporal expression, or location.
+Most question answering systems focus on **factoid questions**, questions that can be answered with simple facts expressed in short texts. The answers to the questions below can expressed by a personal name, temporal expression, or location.
 
 By the early 1960s, systems used the two major paradigms of question answering: information retrieval-based and knowledge-based.
 
