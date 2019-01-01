@@ -92,6 +92,8 @@ $+$, $-$, $\times$, $\setminus$, $\cdot$,
 
 $\cup$, $\cap$, 
 
+$\vee$, $\lor$, $\wedge$, $\land$, $\bigvee$, $\bigwedge$, 
+
 ### 二元关系符
 
 $\in$, $\notin$,
