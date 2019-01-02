@@ -12,7 +12,34 @@
   Although returning the response to the most similar turn seems like a more intuitive
   algorithm, returning the most similar turn seems to work better in practice.
 
-  Example:
+  Example 1:
+
+  User: Do you like Doctor Who?
+  Cleverbot: Yes, so funny
+  User: What's your favorite show?
+  Cleverbot: I don't have one
+
+  --
+
+  User query:
+
+  q = 'Do you like Doctor Who?'
+
+  Most similar turn:
+
+  t = 'Do you like Doctor Strangelove?'
+
+  method 1-grap whatever the response was to t:
+
+  'Yes, so funny'
+
+  method 2-return the most similar turn:
+
+  'Do you like Doctor Strangelove?'
+
+  --
+
+  Example 2:
 
   1.
   q: 我喜欢你!
