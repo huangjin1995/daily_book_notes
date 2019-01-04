@@ -43,7 +43,11 @@ paper: Chen, D., Fisch, A., Weston, J., and Bordes, A. (2017). Reading wikipedia
 
 knowledge-based question answering, a system instead builds a semantic representation of the query, mapping What states border Texas? to the logical representation: $\lambda$x.state(x) $\wedge$ borders(x, texas), or When was Ada Lovelace born? to the gapped relation: birth-year (Ada Lovelace, ?x). These meaning representations are then used to query databases of facts.
 
-???
+#### Question
+
+如何选择合适的question进入图谱查询？
+
+如何解析question？
 
 
 
