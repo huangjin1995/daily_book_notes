@@ -1,23 +1,33 @@
 天气：晴  
-阅读时间：早班车
+阅读时间：早班车<br>记录时间：2018-11-05
 
+#### Keyphrases
 
-# chapter 1
-+ language model  
++ sentence probability decide by the frequency of sentence in the **corpus**.
++ sentence probability -> word probability will generalize to new sentence.
 
-  what's original of language model?  
+### chapter 1
 
-  language models were originally developed for the problem of speech recognition.
+#### Motivation
 
-  why we need language models?  
-  Language models is very useful as a good 'prior' distribution over which sentences are or aren't probable in language.  
+Language models were originally developed for the problem of speech recognition, which is very useful as a good 'prior' distribution over which sentences are or aren't probable in language.  
 
-  what's trigram language model?
+The estimation techniques developed for this problem will be VERY useful for other problems in NLP.
 
-  $p(x_1,...,x_n)=\prod_{i=1}^n q(x_i|x_{i-2},x_{i-1})$
+#### Trigram language model
 
-+ strengths and weaknesses of trigram language models (maximum-likelihood estimates)  
-  solution to data sparsity (smoothed estimation methods):  
+$$
+p(x_1,...,x_n) = q(x_1) \prod_{i=2}^n q(x_i|x_1,...,x_{i-1})\\
+= \prod_{i=1}^n q(x_i|x_{i-2},x_{i-1})
+$$
+
+For convenience we assume $x_0 = x_{-1} = *$, where $*$ is a special '"start" symbol, $x_n = STOP$ where $STOP$ is a special symbol.
+
+##### maximum-likelihood estimates
+
+Sparse Data Problems: Say our vocabulary size is $N = |V|$, then there are $V^3$ parameters in the model.
+
++  solution to data sparsity (smoothed estimation methods):  
   The key idea will be to rely on lower-order statistical estimates (using estimates based on bigram or unigram counts to smooth the estimates based on trigrams).  
 
     1. linear interpolation  
@@ -39,23 +49,22 @@
     The only parameter is the $\gamma$.  
 
     2. discounting methods  
+
       It reflects the intuition that if we take counts from the training corpus, we will systematically over-estimate the probability of bigrams seen in the corpus (and under-estimate bigrams not seen in the corpus).  
       For the bigrams count larger than zero part, we discount the bigrams count, and it leads to the missing probability mass.  
       For the bigrams count identical to zero part, we using the missing probability mass as weight average of the probability of unigrams.  
       The only parameter is the discounting value.  
 
 > question:  
-why the parameters of linear interpolation should be estimated by development data, rather than training data?  
+> why the parameters of linear interpolation should be estimated by development data, rather than training data?  
+
+#### Evaluation
 
 
 + perplexity  
-under a uniform probability model, the perplexity is equal to the vocabulary size.  
+  under a uniform probability model, the perplexity is equal to the vocabulary size.  
 
 
-+ summary
-
-
-+ assignment
 
 
 
