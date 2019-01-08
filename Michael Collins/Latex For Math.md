@@ -26,15 +26,28 @@ $\prod_{i=0}^n$, $\prod^{n}_{i=0}$
 
 $\sum_{i=1}^{n}$, 
 
-#### 重音符
+#### 重音符(导数)
 
-`\bar`
+`\bar`, `\dot`,`\acute`
 
-$\bar{A}$, 
+$\bar{A}$, $\dot{A}$, $\acute{A}$ 
 
 #### 上/下划线
 
 $\overline{A}$,$\underline{A}$, 
+
+#### 上/下括号
+
+`\overbrace`, `\underbrace`
+
+$\underbrace{a+b}_{c}$
+
+#### 上/下字母
+
+`\mathop`
+$$
+\mathop{\arg \max}_{\theta}
+$$
 
 ### 字体
 
@@ -115,4 +128,64 @@ $\le$, $\leq$, $\leqslant$, $\leqq$,
 $\leftarrow$, $\gets$, $\rightarrow$, $\to$,
 
 $\Leftarrow$, $\Rightarrow$,
+
+### 空格、换行
+
+空格 - `\quad`
+
+换行 - `\\`
+
+示例：
+
+$a \quad b$
+
+$a \\ b$
+
+### 公式对齐
+
+```
+\begin{align*}
+&=
+\end{align*}
+```
+
+示例：
+$$
+\begin{align*}
+u \cdot n
+& =u n^T \\
+& = u(A A^{-1})n^T \\
+& =(uA)(A^{-1}n^T) \\
+& =(uA)((A^{-1}n^T)^T)^T \\
+& =(uA)(n(A^{-1})^T)^T \\
+& =uA \cdot n(A^{-1})^T \\
+& =uA\cdot nB \\
+& =0
+\end{align*}
+$$
+
+
+$$
+\begin{split}
+a &= b \\
+c &= d \\
+e &= f 
+\end{split}\tag{1.3}
+$$
+
+$$
+\begin{eqnarray*}
+
+x^n+y^n &=& z^n \tag{1.4} \\\
+
+x+y &=& z \tag{1.5}
+
+\end{eqnarray*}
+$$
+
+### 其他符号
+
+`\cdots`
+
+$\cdots$
 

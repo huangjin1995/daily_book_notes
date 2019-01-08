@@ -1,20 +1,22 @@
 天气：晴  
-阅读时间：5日-晚班车
+阅读时间：5日-晚班车\晨<br>记录时间：2018-11-06\2019-01-09
 
 
 # chapter 2
-## POS Tagging  
+## The Tagging Problem
+
+### POS Tagging  
 
 1. Challenges of POS  
 a). ambiguity  
 b). words rare(data sparsity)  
 
-2. Two Sources of Information for POS  
-a). individual words have statistical preferences for their pos  
-b). the context has an important effect on the pos for a word  
+2. **Two Sources of Information** for POS  
+a). "Local": individual words have statistical preferences for their pos  
+b). "Contextual": the context has an important effect on the pos for a word  
 c). Sometimes these two sources of evidence are in conflict.
 
-## Named-Entity Recognition  
+### Named-Entity Recognition  
 
 
 
@@ -22,21 +24,35 @@ c). Sometimes these two sources of evidence are in conflict.
 
 First, how to model (define a model) ?
 
-generative models:  $p(x,y)=p(y)p(x|y)$
-
-interpretations - 
-
-conditional models:  $p(y|x)$
-
-interpretations - :question:
-
 Second, how to estimate(estimate model)?
-
-
 
 Third, how to predict (decoding a model)?
 
-:question:
++ **generative models**
+
+  interpretations - 
+
+  $p(x,y)=p(y)p(x|y)$
+
+
++ **conditional models**
+
+​	interpretations - 
+
+​	$p(y|x)$
+
++ difference and common
+
+$$
+\begin{align*}
+f(x) 
+& = \mathop{\arg \max}_{y} p(y|x) \\
+& = \mathop{\arg \max}_{y} \frac{p(y)p(x|y)}{p(x)} \\
+& = \mathop{\arg \max}_{y} p(y)p(x|y)
+\end{align*}
+$$
+
+
 
 > question: how to choose between generative model and conditional model?
 
