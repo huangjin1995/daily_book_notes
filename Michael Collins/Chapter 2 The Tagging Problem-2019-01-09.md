@@ -145,11 +145,9 @@ Solution for POS:
 
 1. Mapping low-frequency words to pseudo-words (**word class** depending on prefixes, suffixes etc).
 
-A drawback of the approach is hancraft...
+A drawback of the approach is that some care is needed in defining the mapping to pseudo-words: this mapping may vary depending on the task being considered.
 
 2. Using the ideas of log-linear models.
-
-:question:
 
 ​	==notes==: Each general algorithm should consider the specific solution for the specific problem!
 
