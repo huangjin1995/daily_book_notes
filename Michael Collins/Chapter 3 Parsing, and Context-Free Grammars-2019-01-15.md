@@ -5,13 +5,34 @@
 
 ### Context-Free Grammars
 
-$N$ is a finite set of non-terminal symbols.
+A context free grammar $G=(N,\Sigma,R,S)$ where:<br>$N$ is a finite set of non-terminal symbols.<br>$\Sigma$ is a finite set of terminal symbols.<br>$R$ is a finite set of rules of the form $X \to Y_1Y_2...Y_n$, where $X \in N$, $n \geq 0$, and $Y_i \in (N  \cup \Sigma)$ for $i=1...n$.<br>$S \in N$ is a distinguished start symbol.
 
-$\Sigma$ is a finite set of terminal symbols.
+### A Simple Grammar for English
 
-$R$ is a finite set of rules of the form $X \to Y_1Y_2...Y_n$, where $X \in N$, $n \geq 0$, and $Y_i \in (N  \cup \Sigma)$ for $i=1...n$.
+The grammar completely fails to capture.<br>We've only scratched the surface:
 
-...
++ Agreement
+
+  The dogs laugh vs. The dog laughs
+
++ Wh-movement
+
+  The dog that the cat liked ...
+
++ Active vs. passiv
+
+  The dog saw the cat vs.
+  The cat was seen by the dog
+
+Sources of Ambiguity:
+
+Part-of-Speech ambiguity
+
+Prepositional phrase attachment
+
+Noun premodifier
+
+
 
 ### Probabilistic Context-Free Grammars(PCFGs)
 
