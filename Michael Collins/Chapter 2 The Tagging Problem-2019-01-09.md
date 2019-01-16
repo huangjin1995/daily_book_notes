@@ -74,7 +74,7 @@ $$
 $$
 where the $\arg \max$ is taken over all sequences $y_1,\cdots,y_{n+1}$ such that $y_i \in S$ for $i=1 \cdots n$, and $y_{n+1} = STOP$. 
 $$
-p(x_1,\cdots,x_n,y_1,\cdots,y_n) = \prod_{i=1}^{n+1}q(y_i|y_{i-2},y_{i-1}) \prod_{i=1}^{n}e(x_i|y_i)
+p(x_1,\cdots,x_n,y_1,\cdots,y_{n+1}) = \prod_{i=1}^{n+1}q(y_i|y_{i-2},y_{i-1}) \prod_{i=1}^{n}e(x_i|y_i)
 $$
 where $y_{0} = y_{-1} = *$, and $y_{n+1} = STOP$.
 
@@ -112,22 +112,23 @@ who use the viterbi algorithm for markov model with noisy channel model?
    $$
 
 
+
    Define a dynamic programming table
-   $$
+$$
    \pi(k,u,v) = max_{<y_{-1},y_0,y_1,\cdots,y_k>:y_{k-1}=u,y_k=v} r(y_{-1},y_0,y_1,\cdots,y_k)
-   $$
+$$
    For any $k \in {1\dots n}$, for any $u \in S_{k-1}$ and $v \in S_{k}$:
-   $$
+$$
    \pi(k,u,v) = max_{w \in S_{k-2}} (\pi(k-1,w,u) * q(v|w,u) * e(x_k|v))
-   $$
+$$
    In particular, note that
-   $$
+$$
    p(x_1 \dots x_n,y_1 \dots y_{n+1}) = r(y_{-1},y_0,y_1,\dots,y_n) * q(STOP|y_{n-1},y_n)
-   $$
+$$
    So
-   $$
+$$
    max_{y_1 \dots y_{n+1}} p(x_1 \dots x_n,y_1 \dots y_{n+1}) = max_{u \in K_{n-1},v \in K_n} (\pi(n,u,v) * q(STOP|u,v)
-   $$
+$$
 
 2. The Viterbi Algorithm with Backpointers
 
