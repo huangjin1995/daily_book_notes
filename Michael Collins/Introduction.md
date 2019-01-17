@@ -3,9 +3,6 @@ Introduction to natural language processing, the study of human language from a 
 
 Coursera:  
 http://www.cs.columbia.edu/~mcollins/notes-spring2013.html
-assignment:  
-https://github.com/pz325/Coursera_NLP_MC
-https://github.com/hankcs/Coursera_NLP_MC
 
 Course: Latest Materials  
 http://www.cs.columbia.edu/~mcollins/cs4705-fall2018/
