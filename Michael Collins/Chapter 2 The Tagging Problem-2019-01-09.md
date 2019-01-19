@@ -1,5 +1,5 @@
 天气：晴  
-阅读时间：5日-晚班车\晨<br>记录时间：2018-11-06\2019-01-15
+阅读时间：5日-晚班车\晨<br>记录时间：2018-11-06\2019-01-09~15
 
 
 # chapter 2
@@ -83,7 +83,7 @@ where $y_{0} = y_{-1} = *$, and $y_{n+1} = STOP$.
 Solutions:
 
 1. Probability methods - directly calculate the probability, but will encounter the data sparsity problem.
-2. Search methods - viterbi algorithm
+2. Search methods - Viterbi algorithm
 
 
 
@@ -97,7 +97,7 @@ stochastic process is very interesting!
 
 
 
-## viterbi algorithm
+## Viterbi algorithm
 
 who use the viterbi algorithm for markov model with noisy channel model?
 
@@ -111,24 +111,31 @@ who use the viterbi algorithm for markov model with noisy channel model?
    S_k = S \quad for \quad k \in \{1 \dots n\}
    $$
 
+   Define 
+   $$
+   r(y_{-1},y_0,y_1,\cdots,y_k) = \prod_{i=1}^{k}q(y_i|y_{i-2},y_{i-1}) \prod_{i=1}^{k}e(x_i|y_i)
+   $$
+   Define a dynamic programming table: maximum probability of a tag sequence ending in tags $u,v$ at position $k$.
 
+$$
+\pi(k,u,v) = max_{<y_{-1},y_0,y_1,\cdots,y_k>:y_{k-1}=u,y_k=v} r(y_{-1},y_0,y_1,\cdots,y_k)
+$$
+ ​	For any $k \in {1\dots n}$, for any $u \in S_{k-1}$ and $v \in S_{k}$:
+$$
+\pi(k,u,v) = max_{w \in S_{k-2}} (\pi(k-1,w,u) * q(v|w,u) * e(x_k|v)) \tag{1}
+$$
+​	base case, $\pi(0, *,*) = 1$.
 
-   Define a dynamic programming table
-$$
-   \pi(k,u,v) = max_{<y_{-1},y_0,y_1,\cdots,y_k>:y_{k-1}=u,y_k=v} r(y_{-1},y_0,y_1,\cdots,y_k)
-$$
-   For any $k \in {1\dots n}$, for any $u \in S_{k-1}$ and $v \in S_{k}$:
-$$
-   \pi(k,u,v) = max_{w \in S_{k-2}} (\pi(k-1,w,u) * q(v|w,u) * e(x_k|v))
-$$
-   In particular, note that
+​	In particular, note that
 $$
    p(x_1 \dots x_n,y_1 \dots y_{n+1}) = r(y_{-1},y_0,y_1,\dots,y_n) * q(STOP|y_{n-1},y_n)
 $$
-   So
+   	So
 $$
-   max_{y_1 \dots y_{n+1}} p(x_1 \dots x_n,y_1 \dots y_{n+1}) = max_{u \in K_{n-1},v \in K_n} (\pi(n,u,v) * q(STOP|u,v)
+max_{y_1 \dots y_{n+1}} p(x_1 \dots x_n,y_1 \dots y_{n+1}) = max_{u \in K_{n-1},v \in K_n} (\pi(n,u,v) * q(STOP|u,v)
 $$
+
+​	The formula of (1) is recursive. How to justify it? The highest probability for any sequence of length k ending in the bigram $(u,v)$ is identical to the highest probability for any sequence of length k ending in the trigram $(w,u,v)$. 
 
 2. The Viterbi Algorithm with Backpointers
 

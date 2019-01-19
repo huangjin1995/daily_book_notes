@@ -131,10 +131,22 @@ $$
 
 and $m$ is the number of sentences, $M$ is the total number of words in test data.
 
-#### notes
+#### Summary
 
-- sentence probability decide by the frequency of sentence in the **corpus**.
-- sentence probability generalize poorly to new sentence -> word probability will generalize to new sentence.
++ Three steps in deriving the language model probabilities:
+
+  1. Expand $p(w_1,w_2 \dots w_n)$ using Chain rule.
+
+  2. Make Markov Independence Assumptions
+
+     $p(w_i|w_1,w_2 \dots w_{i-2},w_{i-1}) = p(w_i|w_{i-2},w_{i-1})$
+
+  3. Smooth the estimates using low order counts.
+
++ Other methods used to improve language models:
+  1. "Topic" or "long-range" features.
+  2. Syntactic models.
++ It's generally hard to improve on trigram models though!!
 
 #### QA
 
