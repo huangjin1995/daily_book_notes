@@ -40,6 +40,12 @@ Noun premodifier
 
 
 
+### Chomsky Normal Form
+
+A context free grammar $G=(N,\Sigma,R,S)$ in Chomsky Normal Form is as follows:
+
+​	$N$ is a set of non-terminal symbols.<br>	$\Sigma$ is a set of terminal symbols.<br>	$R$ is a set of rules which take one of two forms:<br>		$X \to Y_1Y_2$ for $X \in N$, and $Y_1,Y_2 \in N$<br>		$X \rightarrow Y$ for $X \in N$, and $Y \in \Sigma$<br>​	$S \in N$ is a distinguished start symbol.
+
 ### Probabilistic Context-Free Grammars(PCFGs)
 
 Probabilistic Context-Free Grammars(PCFGs), also known as the Stochastic Context-Free Grammars(SCFGs), first proposed by Booth(1969).
@@ -62,6 +68,20 @@ Solutions:
 
 1. Probability methods - directly calculate the probability, but will encounter the data sparsity problem.
 2. Search methods - The CKY algorithm
+
+#### paramters estimation
+
+$$
+q_{ML}(\alpha \rightarrow \beta) = \frac{Count(\alpha \rightarrow \beta)}{Count(\alpha)}
+$$
+
+where the counts are taken from a training set of example trees.
+
+An example parameter in a PCFGs:
+$$
+q(S \to NP \ VP)
+$$
+
 
 ### The CKY algorithm
 
@@ -87,7 +107,7 @@ The formula (1) is recursive. How to justify it? If the highest scoring tree roo
 
 ![CKY](https://github.com/bifeng/daily_book_notes/raw/master/resource/cky_algorithm.png)
 
-the complexity/running time of viterbi algorithm is $O(n^3|N|^3)$ .
+the complexity/running time of the CKY algorithm is $O(n^3 \times |N|^3)​$ .
 
 #### The probabilistic CKY algorithm
 

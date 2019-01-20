@@ -91,6 +91,12 @@ Solutions:
 >
 > How to include the context information in paragraph?
 
+### why the name?
+
+$$
+p(x_1,\cdots,x_n,y_1,\cdots,y_{n+1}) = \underbrace{\prod_{i=1}^{n+1}q(y_i|y_{i-2},y_{i-1})}_{Markov\ Chain} \ \underbrace{\prod_{i=1}^{n}e(x_i|y_i)}_{x_{i}\ is\ observed}
+$$
+
 ### stochastic process
 
 stochastic process is very interesting!
