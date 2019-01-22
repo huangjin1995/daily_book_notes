@@ -240,7 +240,7 @@ $$
 
 ### 其他符号
 
-`\cdots`
+`\cdots`, `\blacktriangleright`, `\blacktriangledown`
 
-$\cdots$
+$\cdots$, $\blacktriangleright$, $\blacktriangledown​$,
 

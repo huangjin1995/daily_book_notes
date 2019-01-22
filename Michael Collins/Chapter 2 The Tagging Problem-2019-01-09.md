@@ -130,7 +130,7 @@ $$
 $$
 \pi(k,u,v) = max_{w \in S_{k-2}} (\pi(k-1,w,u) * q(v|w,u) * e(x_k|v)) \tag{1}
 $$
-​	base case, $\pi(0, *,*) = 1$.
+​	base case, $\pi(0, *,*) = 1​$.
 
 ​	In particular, note that
 $$
@@ -145,7 +145,7 @@ $$
 
 2. The Viterbi Algorithm with Backpointers
 
-![viterbi](https://github.com/bifeng/daily_book_notes/raw/master/resource/viterbi_backpointers.png)
+![viterbi](https://github.com/bifeng/daily_book_notes/raw/master/resource/viterbi_backpointers_hmm.png)
 
 the complexity/running time of viterbi algorithm is $O(n|S|^3)$ ($S$ is the number of tags) .
 
