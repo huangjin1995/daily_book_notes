@@ -131,7 +131,9 @@ Tree layers of structure:
 
    Chunks are dened as any phrase where all children are part-of-speech tags.
 
-   Next n decisions are chunk tagging decisions $\rightarrow$ $<d_{n+1},d_{n+2},\dots,d_{2n}> = <Start(NP),Join(NP),Other,\dots>$ 
+   Next $n$ decisions are chunk tagging decisions $\rightarrow$ $<d_{n+1},d_{n+2},\dots,d_{2n}> = <Start(NP),Join(NP),Other,\dots>$ 
+
+   (common chunks are NP, ADJP, QP)
 
 3. Remaining structure
 
