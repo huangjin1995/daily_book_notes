@@ -4,16 +4,17 @@ Introduction to natural language processing, the study of human language from a 
 Coursera:  
 http://www.cs.columbia.edu/~mcollins/notes-spring2013.html
 
-[Complete Coursera Vedio](https://archive.org/details/academictorrents_f99e7184fca947ee8f77901679e171fcadbf82e7/lectures)
+[Complete Coursera Video](https://archive.org/details/academictorrents_f99e7184fca947ee8f77901679e171fcadbf82e7/lectures)
 
-Course: 
-
-Current Materials
-
+Course:  
+Current Materials  
 http://www.cs.columbia.edu/~cs4705/
 
 Latest Materials  
 http://www.cs.columbia.edu/~mcollins/cs4705-fall2018/
+
+Teachine:  
+http://www.cs.columbia.edu/~mcollins/teaching.html
 
 
 + Challenges of NLP 

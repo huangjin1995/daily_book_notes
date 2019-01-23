@@ -3,6 +3,10 @@
 
 ## Question
 
+### How to construct the formal definition of the problem?
+
+### How to construct the objective for the problem or business goal?
+
 ### what's language model?
 
 For model of modeling the language, it's language model.
