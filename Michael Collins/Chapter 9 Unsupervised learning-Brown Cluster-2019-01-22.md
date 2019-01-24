@@ -75,6 +75,10 @@ Brown, P. F., Pietra, V. J. D., deSouza, P. V., Lai, J. C., and Mercer, R. L. (1
 
 Miller, S., Guinness, J., and Zamanian, A. (2004). Name tagging with word clusters and discriminative training. In HLT-NAACL, pages 337–342.
 
+The Brown et al. Word Clustering Algorithm, Michael Collins 讲义
+
+semi-supervised learning for natural language, percy liang 硕士论文
+
 ### Question
 
 + why using language model to do word cluster? it's incredible!
