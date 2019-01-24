@@ -44,17 +44,143 @@ $\blacktriangleright$ Generation: Convert the target-language parse tree to an o
 
 #### Interlingua-based approachs
 
+$\blacktriangleright$ Analysis: Analyze the source language sentence into a (language-independent) representation of its meaning
 
+$\blacktriangleright$ Generation: Convert the meaning representation into an output sentence
 
+Advantage: if we want to build a translation system that translates between $n$ languages, we need to develop $n$ analysis and generation systems. With a transfer based system, we'd need to develop $O(n^2)$ sets of translation rules.
 
+Disadvantage: What would a language-independent representation look like?
 
-
-
-
-
-
+​			How to represent different concepts in an interlingua? Different languages break down concepts in quite different ways. 
 
 ### Statistical machine translation
+
+#### The Noisy Channel Model
+
+Goal: translation system from French to English
+
+Have a model $p(e|f)$ which estimates conditional probability of any English sentence $e$ given the French sentence $f$. Use the training corpus to set the parameters.
+
+Giving:
+$$
+p(e|f)= \frac{p(e,f)}{p(f)} = \frac{p(e)p(f|e)}{\sum_{e}p(e)p(f|e)}
+$$
+and 
+$$
+\arg \max_e p(e|f) = \arg \max_e p(e) p(f|e)
+$$
+A Noisy Channel Model has two components:
+
+$p(e)$  the language model - could be a trigram model, estimated from any data.
+
+$p(f|e)$ the translation model - is trained from a parallel corpus of French/English pairs.
+
+Note:
+
+The language model can make up for deficiencies of the translation model.
+
+
+
+How to build $p(f|e)$?
+
+How to decode and find $\arg \max_e p(e)p(f|e)$?
+
+
+
+#### IBM Model  1
+
+Alignments
+
+English sentence $e$ has $l$ words $e_1, \dots, e_l$, French sentence $f$ has $m$ words $f_1,\dots,f_m$ 
+
+An alignment $a$ is {$a_1,\dots,a_m$}, where each $a_j \in \{0 \dots l\}$, it identifies which English word each French word orginated from.
+$$
+p(f|e,m) = \sum_{a \in \cal{A}} p(f,a|e,m) = \sum_{a \in \cal{A}} p(a|e,m)p(f|a,e,m)
+$$
+where $\cal{A}$ is the set of all possible alignments.
+
+We can also calculate 
+$$
+p(a|f,e,m) = \frac{p(f,a|e,m)}{\sum_{a \in \cal{A}} p(f,a|e,m)}
+$$
+for any alignment $a$.
+
+For a given $f,e$ pair, we can also compute the most likely alignment,
+$$
+a^* = \arg \max_a p(a|f,e,m)
+$$
+We'll define models for $p(a|e,m)$and $p(f|a,e,m)$:
+$$
+p(a|e,m) = \frac{1}{(l+1)^m} \tag{1.1}
+$$
+​		This is a major simplifying assumptions, but it gets thing started...
+$$
+p(f|a,e,m) = \prod_{j=1}^{m} t(f_j|e_{a_j}) \tag{1.2}
+$$
+
+
+The Generative Process
+
+To generate a French string $f$ from an English string $e$:
+
+Step 1: Pick an alignment $a$ with probability $\frac{1}{(l+1)^m}$
+
+Step 2: Pick the French words with probability $\prod\limits_{j=1}^{m} t(f_j|e_{a_j})$
+
+The final result:
+
+$p(f,a|e,m) = p(a|e,m) \times p(f|a,e,m) = \frac{1}{(l+1)^m}\prod\limits_{j=1}^{m} t(f_j|e_{a_j}) $
+
+#### IBM Model 2
+
+Only difference: we now introduce alignment or distortion paramters
+
+$q(i|j,l,m)=$ Probability that $j$'s French word is connected to $i$'s English word, given sentence lengths of $e$ and $f$ are $l$ and $m$ respectively
+
+Define the model $p(a|e,m)$: 
+$$
+p(a|e,m) = \prod_{j=1}^{m} q(a_j|j,l,m)
+$$
+where $a = \{a_1 \dots a_m\}$. 
+
+
+
+The Generative Process
+
+To generate a French string $f$ from an English string $e$:
+
+Step 1: Pick an alignment $a$ with probability $\prod\limits_{j=1}^{m} q(a_j|j,l,m)$
+
+Step 2: Pick the French words with probability $\prod\limits_{j=1}^{m} t(f_j|e_{a_j})$
+
+The final result:
+
+$p(f,a|e,m) = p(a|e,m) \times p(f|a,e,m) = \prod\limits_{j=1}^{m} q(a_j|j,l,m) t(f_j|e_{a_j}) $
+
+
+
+if we have parameters $q$ and $t$, we can easily recover the most likely alignment for any sentence pair.
+
+Given a sentence pair $e_1, e_2,\dots,e_l$, $f_1,f_2,\dots,f_m$, define 
+$$
+a_j = \arg \max_{a \in \{0 \dots l\}} q(a|j,l,m) \times t(f_j|e_a)
+$$
+for $j = 1 \dots m$.
+
+
+
+#### EM traning of Models 1 and 2
+
+Given the aligment:
+
+
+
+
+
+
+
+Without the aligment:
 
 
 

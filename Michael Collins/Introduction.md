@@ -4,8 +4,6 @@ Introduction to natural language processing, the study of human language from a 
 Coursera:  
 http://www.cs.columbia.edu/~mcollins/notes-spring2013.html
 
-[Complete Coursera Video](https://archive.org/details/academictorrents_f99e7184fca947ee8f77901679e171fcadbf82e7/lectures)
-
 Course:  
 Current Materials  
 http://www.cs.columbia.edu/~cs4705/
@@ -27,11 +25,13 @@ at discourse(论述) level-(multi-clause) (anaphora-指代)
 
 
 + Recommend books
-Jurafsky and Martin: Speech and Language Processing (3nd Edition)
-https://web.stanford.edu/~jurafsky/slp3/
-Coursera:
-Natural Language Processing
-https://pan.baidu.com/s/1cEjJn5-gChsXLlr9-5WK2A
+  Jurafsky and Martin: Speech and Language Processing (3nd Edition)
+  https://web.stanford.edu/~jurafsky/slp3/
+  Coursera:
+  Natural Language Processing
+  https://pan.baidu.com/s/1cEjJn5-gChsXLlr9-5WK2A
+
+  [Complete Coursera Video - bilibili](https://www.bilibili.com/video/av29608234) | [Complete Coursera Video - out of wall](https://archive.org/details/academictorrents_f99e7184fca947ee8f77901679e171fcadbf82e7/lectures) 
 
 
 > question:  
