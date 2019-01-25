@@ -23,8 +23,6 @@ Modern Information Retrieval: A Brief Overview, 2001 [paper](http://singhal.info
 
 
 
-
-
 ### books
 
 - Christopher D. Manning, Prabhakar Raghavan and Hinrich, 2008. Introduction to Information Retrieval, Cambridge University Press. [online-book](https://nlp.stanford.edu/IR-book/)
@@ -37,12 +35,12 @@ Modern Information Retrieval: A Brief Overview, 2001 [paper](http://singhal.info
 
   Hang Li, Jun Xu. Semantic Matching in Search. Foundations and Trends in Information Retrieval. Now Publishers, 2014. ([pdf](http://www.hangli-hl.com/uploads/3/4/4/6/34465961/ml_for_match-step2.pdf))
 
-- 
-
 
 
 ### competition
 
-+ dd
+- Yahoo! Learning to Rank Challenge
 
   Yahoo! Learning to Rank Challenge Overview, JMLR, 2011, [paper](http://proceedings.mlr.press/v14/chapelle11a/chapelle11a.pdf) 
+
+- 
