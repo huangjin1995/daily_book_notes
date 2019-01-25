@@ -41,3 +41,8 @@ Modern Information Retrieval: A Brief Overview, 2001 [paper](http://singhal.info
 
 
 
+### competition
+
++ dd
+
+  Yahoo! Learning to Rank Challenge Overview, JMLR, 2011, [paper](http://proceedings.mlr.press/v14/chapelle11a/chapelle11a.pdf) 

@@ -132,6 +132,8 @@ $\vee$, $\lor$, $\wedge$, $\land$, $\bigvee$, $\bigwedge$,
 
 $\in$, $\notin$,
 
+$\propto$,
+
 
 
 `\le` is stand for "less than or equal to".  And `slant` means 倾斜. 
