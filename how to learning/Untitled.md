@@ -8,4 +8,11 @@
 
 3. 交流圈
 
+4. 实践
+
+   Alphabetical list of free/public domain datasets with text data for use in Natural Language Processing (NLP)
+
+   <https://github.com/niderhoff/nlp-datasets> :star::star::star::star::star:
+
+
 
