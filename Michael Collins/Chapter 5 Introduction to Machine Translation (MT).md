@@ -1,4 +1,4 @@
-天气：晴<br>阅读时间：早<br>记录时间：2019-01-24~
+天气：晴<br>阅读时间：早<br>记录时间：2019-01-24~25
 
 # chapter 5
 
@@ -172,35 +172,62 @@ for $j = 1 \dots m$.
 
 #### EM traning of Models 1 and 2
 
-Given the aligment:
+The parameter estimation problem:
+
+Input: $(e^{(k)},f^{(k)})$ for $k=1 \dots n$. Each $e^{(k)}$ is an English sentence, each $f^{(k)}$ is a French sentence.
+
+Output: parameters $t(f|e)$ and $q(j|i,l,m)$ 
+
+A key challenge: we do not have alignments on our traning examples. 
 
 
 
+If the alignments are observed, traning data is $(e^{(k)},f^{(k)}, a^{(k)})$, each $a^{(k)}$ is an alignment, then just using maximum-likelihood parameter estimates:
+$$
+t_{ML}(f|e) = \frac{Count(e,f)}{Count(e)} \quad q_{ML}(j|i,l,m) = \frac{Count(j|i,l,m)}{Count(i,l,m)} 
+$$
+
+
+![mle](https://github.com/bifeng/daily_book_notes/raw/master/resource/mle_with_alignments_translation.png)
 
 
 
+If the aligments are not observed, the algorithm is related to algorithm when alignments are observed, but two key differences:
 
-Without the aligment:
+1. The algorithm is iterative. We start with some initial (e.g., random) choice for the $q$ and $t$ parameters. At each iteration we compute some "counts" based on the data together with our current parameter estimates. We then re-estimate our parameters with these counts, and iterate.
 
-
-
-
-
-
-
-
+2. We use the following definition for $\sigma(k,i,j)$ at each iteration:
+   $$
+   \sigma(k,i,j) = \frac{q(j|i,l_k,m_k)t(f_{i}^{(k)}|e_{j}^{(k)})}{\sum\limits_{j=0}^{l_k} q(j|i,l_k,m_k)t(f_{i}^{(k)}|e_{j}^{(k)})}
+   $$
 
 
 
+![em](https://github.com/bifeng/daily_book_notes/raw/master/resource/em_without_alignments_translation.png)
 
 
 
+The maximum-likelihood estimates are
+$$
+\arg \max_{t,q} L(t,q)
+$$
+$L(t,q)=\sum\limits_{k=1}^{n} \log p(f^{(k)}|e^{(k)})= \sum\limits_{k=1}^{n} \log \sum\limits_{a} p(f^{(k)},a|e^{(k)})$
 
+The EM algorithm will converge to a local maximum of the log-likelihood function.
 
+#### Summary
 
++ Key ideas in the IBM translation models:
 
+  Alignment variables
 
+  Translation parameters, e.g., $t(chien|dog)$
 
+  Distortion parameters, e.g., $q(2|1,6,7)$
+
++ The EM algorithm: an iterative algorithm for training the $q$ and $t$ parameters 
+
++ Once the parameters are trained, we can recover the most likely alignments on our training examples
 
 
 
