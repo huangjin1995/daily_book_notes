@@ -1,5 +1,7 @@
 > reference: 
 >
+> https://github.com/CTeX-org/lshort-cn
+>
 > http://www.mohu.org/info/symbols/symbols.htm 常用数学符号的 LaTeX 表示方法
 >
 > https://blog.csdn.net/thither_shore/article/details/52260742
@@ -8,11 +10,17 @@
 
 ### 数学符号
 
+#### 集合
+
+`\emptyset` -> $\emptyset$
+
 #### 上标/下标
 
-$a^1$, $a^{1}​$, 
+$a^1$, $a^{1}$, 
 
-$y'$,$y^{'}$,
+$y'$, $y^\prime$,
+
+`\dot`, `\ddot` $\rightarrow$ $\dot{y}$, $\ddot{y}​$ 
 
 $a_1$, $a_{1}$
 
@@ -70,9 +78,9 @@ $$
 
 ##### 小写
 
-$alpha$, $\beta$, $\gamma$, $\kappa$,
+$\alpha$, $\beta$, $\gamma$, $\delta$, $\theta$, $\zeta$, $\eta$, $\kappa$,
 
-$\lambda$,
+$\lambda​$, 
 
 ##### 大写
 
@@ -122,9 +130,11 @@ $\sf{A}$
 
 ### 二元运算符
 
-$+$, $-$, $\times$, $\setminus$, $\cdot$, 
+$+$, $-$, $\times$, $\div$, $\cdot$, 
 
-$\cup$, $\cap$, 
+`\setminus`  $\rightarrow$   $\setminus$, 
+
+`\cup \cap` $\rightarrow$  $\cup$, $\cap$, 
 
 $\vee$, $\lor$, $\wedge$, $\land$, $\bigvee$, $\bigwedge$, 
 
