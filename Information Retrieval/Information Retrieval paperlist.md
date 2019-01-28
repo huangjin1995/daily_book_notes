@@ -9,11 +9,20 @@
 - Hang Li, Zhengdong Lu, Deep Learning for Information Retrieval, SIGIR 2016 Tutorial, Pisa, July 2016. ([pdf](http://www.hangli-hl.com/uploads/3/4/4/6/34465961/deep_learning_for_information_retrieval.pdf))
 - Hang Li, Machine Learning for Information Retrieval, the Third Asian Summer School in Information Access, Kyoto University, August 2017. ([pdf](http://www.hangli-hl.com/uploads/3/4/4/6/34465961/machine_learning_for_information_retrieval_-_kyoto.pdf))
 - Hang Li, Opportunities and Challenges in Deep Learning for Information Retrieval, Tsinghua University,  Beijing, April 2016. ([pdf](http://www.hangli-hl.com/uploads/3/4/4/6/34465961/tsinghua_opportunities_and_challenges_in_deep_learning_for_information_retrieval.pdf))
-- Hang Li. Learning to rank for information retrieval and natural language processing. Synthesis Lectures on Human Language Technologies, 4(1):1–113, 2011.
-- Tie-Yan Liu. Learning to rank for information retrieval. Found. Trends Inf. Retr., 3(3):225–331, March 2009.
-- C. Zhai. Statistical Language Models for Information Retrieval. 2008. [paper](http://sifaka.cs.uiuc.edu/czhai/pub/slmir-now.pdf) 
-- Learning to rank for information retrieval (LR4IR 2007)  [paper](http://www.sigir.org/files/forum/2007D/2007d_sigirforum_joachims.pdf) 
+- C. Zhai. <u>Statistical Language Models</u> for Information Retrieval. 2008. [paper](http://sifaka.cs.uiuc.edu/czhai/pub/slmir-now.pdf) 
 - 
+
+Learning to Rank
+
++ Learning to rank for information retrieval and natural language processing. Hang Li. Synthesis Lectures on Human Language Technologies, 4(1):1–113, 2011.
++ A short introduction to learning to rank, Hang Li. 2011, [paper](https://www.jstage.jst.go.jp/article/transinf/E94.D/10/E94.D_10_1854/_pdf) 
++ Future directions in learning to rank, O Chapelle, Y Chang, TY Liu, 2011 JMLR [paper](http://proceedings.mlr.press/v14/chapelle11b/chapelle11b.pdf) 
++ From RankNet to LambdaRank to LambdaMART: An Overview, CJC Burges - Learning, 2010 [paper](https://www.microsoft.com/en-us/research/publication/from-ranknet-to-lambdarank-to-lambdamart-an-overview/) 
++ Tie-Yan Liu. Learning to rank for information retrieval. Found. Trends Inf. Retr., 3(3):225–331, March 2009.
++ Learning to rank for information retrieval (LR4IR 2007)  [paper](http://www.sigir.org/files/forum/2007D/2007d_sigirforum_joachims.pdf) 
++ 
+
+
 
 
 ### papers

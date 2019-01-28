@@ -37,10 +37,29 @@ Modern Information Retrieval: A Brief Overview, 2001 [paper](http://singhal.info
 
 
 
+### datasets
+
++ LETOR (3.0, 4.0) - microsoft [site](https://www.microsoft.com/en-us/research/project/letor-learning-rank-information-retrieval/) 
++ Yandex [site](https://academy.yandex.ru/events/data_analysis/grant2009/) 
++ Yahoo! [site](https://webscope.sandbox.yahoo.com/catalog.php?datatype=c) 
++ Microsoft [site](https://www.microsoft.com/en-us/research/project/mslr/) 
+
 ### competition
 
 - Yahoo! Learning to Rank Challenge
 
   Yahoo! Learning to Rank Challenge Overview, JMLR, 2011, [paper](http://proceedings.mlr.press/v14/chapelle11a/chapelle11a.pdf) 
 
+  <details>
+      <summary>notes </summary> 
+   	1) regresson or decision tree?<br>
+      The solutions to ranking problem are quite mature(?). All of them used decision trees and ensemble methods, and comparing the best solution of ensemble learning with the baseline of regression model (GBDT), the relevance gap is rather small.<br>
+      The simple regression based and decision tree based:
+      In general, the choice of the loss function is all the more critical as the class of function is small, resulting in underfitting; But when the class of functions is sufficiently large and underfitting is not an issue anymore, the choice of the loss function is of secondary importance.<br>
+      For simple regression based model, gains can be obtained by designing a loss function specifically tuned for ranking.<br>
+      For decision based model, the modeling complexity is large enough and squared loss optimization is sufficient.<br>
+      2) transfer learning<br>
+      The benefits from transfer learning seem limited(?).<br>
+
 - 
+
