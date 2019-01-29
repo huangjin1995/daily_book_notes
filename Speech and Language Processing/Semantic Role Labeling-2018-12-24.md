@@ -128,14 +128,21 @@ https://github.com/talnsoftware/deepsyntacticparsing/wiki
 
 
 
++ Deep Semantic Role Labeling with Self-Attention AAAI 2018 [arxiv](https://arxiv.org/abs/1712.01586) | [code](https://github.com/XMUNLP/Tagger) 
 
-
-- Automatic Labeling of Semantic Roles, Daniel Gildea and Daniel Jurafsky. 2000 [paper](https://www.cs.rochester.edu/~gildea/gildea-cl02.pdf)
-- Chinese LTP - A Unified Architecture for Semantic Role Labeling and Relation Classification, Coling 2016 [paper](http://ir.hit.edu.cn/~car/papers/coling16guo-2.pdf)
 - Encoding Sentences with Graph Convolutional Networks for Semantic Role Labeling EMNLP 2017 [paper](https://arxiv.org/abs/1703.04826) | [code](https://github.com/diegma/neural-dep-srl)
+
 - A Simple and Accurate Syntax-Agnostic Neural Model for Dependency-based Semantic Role Labeling CoNLL 2017 [paper](https://arxiv.org/abs/1701.02593)  | [code](https://github.com/diegma/neural-dep-srl)
-- Deep Semantic Role Labeling: What works and what's next, ACL 2017 [paper](https://homes.cs.washington.edu/~luheng/files/acl2017_hllz.pdf) | [code](https://github.com/luheng/deep_srl)
-- Deep Semantic Role Labeling with Self-Attention AAAI 2018 [arxiv](https://arxiv.org/abs/1712.01586) | [code](https://github.com/XMUNLP/Tagger)
+
+- Deep Semantic Role Labeling: What works and what's next, ACL 2017 [paper](https://homes.cs.washington.edu/~luheng/files/acl2017_hllz.pdf) | [code](https://github.com/luheng/deep_srl) 
+
+- Chinese LTP - A Unified Architecture for Semantic Role Labeling and Relation Classification, Coling 2016 [paper](http://ir.hit.edu.cn/~car/papers/coling16guo-2.pdf) 
+
+- Anders Björkelund, Love Hafdell, and Pierre Nugues. *Multilingual semantic role labeling.* In Proceedings of The Thirteenth Conference on Computational Natural Language Learning (CoNLL-2009), pages 43--48, Boulder, June 4--5 2009.
+
+- Automatic Labeling of Semantic Roles, Daniel Gildea and Daniel Jurafsky. 2000 [paper](https://www.cs.rochester.edu/~gildea/gildea-cl02.pdf) 
+
+- 
 
 ### Question
 

@@ -1,4 +1,4 @@
-more refer:<br>[Dependency Parsing - Introduction Christopher Manning](http://spark-public.s3.amazonaws.com/nlp/slides/Parsing-Dependency.pdf)
+more refer:<br>[Dependency Parsing - Introduction Christopher Manning](http://spark-public.s3.amazonaws.com/nlp/slides/Parsing-Dependency.pdf) 
 
 refer:<br>[NLP 笔记 - Dependency Parsing and Treebank](http://www.shuang0420.com/2017/03/09/NLP%20%E7%AC%94%E8%AE%B0%20-%20Dependency%20Parsing%20and%20Treebank/)
 
@@ -60,4 +60,24 @@ Dependency Parsing 主要解决 linking 和 shifting 的问题，通常可以用
 [Tregex](http://nlp.stanford.edu/software/tregex-faq.shtml)
 [T-Regex operators](http://nlp.stanford.edu/manning/courses/ling289/Tregex.html)
 [T-surgeon](http://nlp.stanford.edu/nlp/javadoc/javanlp/edu/stanford/nlp/trees/tregex/tsurgeon/Tsurgeon.html)
+
+
+
+#### Papers
+
++ A Fundamental Algorithm for Dependency Parsing [paper](http://www.covingtoninnovations.com/mc/dgpacmcorr.pdf) 
+
+**graph-based dependency parser**
+
+- Bernd Bohnet. 2010. *Very High Accuracy and Fast Dependency Parsing is not a Contradiction*. The 23rd International Conference on Computational Linguistics (COLING 2010), Beijing, China. 
+
+**transition-based dependency parser**:
+
+- Bernd Bohnet and Joakim Nivre. 2012 *A Transition-Based System for Joint Part-of-Speech Tagging and Labeled Non-Projective Dependency Parsing.* EMNLP-CoNLL, pages 1455-1465 [pdf| bib]
+
+- Bernd Bohnet and Jonas Kuhn. 2012. *The Best of BothWorlds -- A Graph-based Completion Model for Transition-based Parsers.* Proceedings of the 13th Conference of the European Chapter of the Association for Computational Linguistics (EACL), pages 77--87 [pdf|bib]
+
+
+
+
 
