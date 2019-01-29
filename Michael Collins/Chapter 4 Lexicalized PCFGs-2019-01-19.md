@@ -93,8 +93,7 @@ Need to encode preferences for close attachment
 John was believed to have been shot by Bill
 
 Further reading:
-Michael Collins. 2003. Head-Driven Statistical Models for Natural Language Parsing. In Computational
-Linguistics.
+Michael Collins. 2003. Head-Driven Statistical Models for Natural Language Parsing. In Computational Linguistics.
 
 #### parsing with Lexicalized CFGs
 
@@ -108,7 +107,9 @@ the complexity/running time of the CKY algorithm is $O(n^3 \times n^2|N|^3)$.
 
 ##### representing trees as constituents
 
-![constituents](https://github.com/bifeng/daily_book_notes/raw/master/resource/constituents.png)
+<div align="center">
+<img src="https://github.com/bifeng/daily_book_notes/raw/master/resource/constituents.png" width="300" height="300" alt="我是缩小后并居中的图"></img>
+</div>
 
 results:
 
@@ -119,7 +120,9 @@ More recent results: <br>90.7% Recall/91.4% Precision (Carreras et al., 2008); 9
 
 ##### representing trees as dependency
 
-![dependency](https://github.com/bifeng/daily_book_notes/raw/master/resource/dependency.png)
+<div align="center">
+<img src="https://github.com/bifeng/daily_book_notes/raw/master/resource/dependency.png" width="600" height="400" alt="我是缩小后并居中的图"></img>
+</div>
 
 <h, w, rule>
 
@@ -144,7 +147,10 @@ Lexicalized PCFGs:
 ### QA
 
 + The lexicalized PCFGs how to consider​ the​ structural​ preferences:question:
-+ 
++ Give pseudo-code for an efficient dynamic programming algorithm that returns the highest probability parse tree for a given input sentence $w_1,w_2,\dots,w_n$.
++ ...
+
+
 
 
 

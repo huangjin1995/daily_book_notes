@@ -14,13 +14,19 @@
 
 `\emptyset` -> $\emptyset$
 
+#### 无穷大
+
+`\infty` $\rightarrow$ $\infty$
+
 #### 上标/下标
 
 $a^1$, $a^{1}$, 
 
 $y'$, $y^\prime$,
 
-`\dot`, `\ddot` $\rightarrow$ $\dot{y}$, $\ddot{y}​$ 
+`\dag \\dag` $\rightarrow​$ $y^{\dag}​$, $y^{\\dag}​$, 
+
+`\dot`, `\ddot` $\rightarrow$ $\dot{y}$, $\ddot{y}$ 
 
 $a_1$, $a_{1}$
 
@@ -254,5 +260,6 @@ $$
 
 `\cdots`, `\blacktriangleright`, `\blacktriangledown`
 
-$\cdots$, $\blacktriangleright$, $\blacktriangledown​$,
+$\cdots$, $\blacktriangleright$, $\blacktriangledown$,
 
+`\S` $\rightarrow$ $\S$,
