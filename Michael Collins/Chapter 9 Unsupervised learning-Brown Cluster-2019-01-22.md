@@ -79,6 +79,8 @@ The Brown et al. Word Clustering Algorithm, Michael Collins 讲义
 
 semi-supervised learning for natural language, percy liang 硕士论文
 
+Brown et al. 1992 Clustering [slides](http://simonsuster.github.io/talks/Brown_RUG.pdf) 
+
 ### Question
 
 + why using language model to do word cluster? it's incredible!

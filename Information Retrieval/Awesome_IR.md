@@ -4,8 +4,6 @@ https://en.wikipedia.org/wiki/Learning_to_rank
 
 Hang Li, Learning to Rank, Encyclopedia of Machine Learning and Data Mining, 729-734, 2017. ([pdf](http://www.hangli-hl.com/uploads/3/4/4/6/34465961/learning_to_rank.pdf))
 
-Modern Information Retrieval: A Brief Overview, 2001 [paper](http://singhal.info/ieee2001.pdf)
-
 ### conference
 
 + SIGIR  Special Interest Group on Information Retrieval, 国际信息检
@@ -17,9 +15,29 @@ Modern Information Retrieval: A Brief Overview, 2001 [paper](http://singhal.info
 
 ### scholars
 
-+ 翟成祥 [illinois](http://czhai.cs.illinois.edu/) 语言模型
-+ 杨益銘 [CMU](http://www.cs.cmu.edu/~yiming/) 文本分类
-+ 刘铁岩 [自述](http://www.cnblogs.com/blessw/archive/2010/03/27/1698636.html) | [microsoft](https://www.microsoft.com/en-us/research/people/tyliu/) 排序学习-listwise approach to learning to rank
++ [Salton](http://link.zhihu.com/?target=http%3A//www.cs.cornell.edu/Info/Department/Annual96/Beginning/salton.html)（1927 - 1995）美国康奈尔大学：IR领域的奠基者，也因对**向量空间模型**（VSM）的贡献（ *In this model, both documents and queries are represented as vectors of term counts*）而被世人熟知，人称“*the Father of Information Retrieval*”
+
++ [Spark Jones](http://link.zhihu.com/?target=https%3A//www.cl.cam.ac.uk/misc/obituaries/sparck-jones/)（1935 - 2007）英国剑桥大学：NLP和IR的杰出先驱，同时也是**概率检索模型**（*Probabilistic model of retrieval*）的提出者之一。我们现在用的IDF term weighting就是她的贡献之一
+
++ [Stephen Robertson](http://www.staff.city.ac.uk/~sb317/) 微软英国剑桥研究院：概率检索模型的倡导者之一，并且开发了OKAPI检索系统
+
++ [W.B. Crofit](http://link.zhihu.com/?target=http%3A//ciir.cs.umass.edu/croft) 美国UMass CIIR：基于**统计语言建模IR模型**的提出者，并和CMU共同开发了Lemur工具（开源搜索引擎）
+
++ [Susan Dumais](http://link.zhihu.com/?target=http%3A//susandumais.com) 微软研究院：**隐形语义索引**LSI的提出者
+
++ [Thorsten Joachims](http://www.cs.cornell.edu/people/tj/) Cornell: Feedback
+
++ [聂建云](http://rali.iro.umontreal.ca/nie/jian-yun-nie-en/) Montreal：**跨語言檢索**、IR模型
+
+  Université de Montréal
+
++ [翟成祥](http://czhai.cs.illinois.edu/) UIUC: 语言模型、IR模型、主題模型（Topic Model）
+
+  University of Illinois at Urbana-Champaign
+
++ [杨益銘](http://www.cs.cmu.edu/~yiming/) CMU: 文本分类
+
++ [刘铁岩](https://www.microsoft.com/en-us/research/people/tyliu/)  [自述](http://www.cnblogs.com/blessw/archive/2010/03/27/1698636.html) Microsoft: 排序学习-listwise approach to learning to rank
 
 
 
@@ -99,4 +117,12 @@ the mean average precision and ERR@20 by approximately 10% [Tao and Zhai
 ### tools
 
 + RankSVM [site](http://www.cs.cornell.edu/people/tj/svm_light/svm_rank.html) 
++ 
+
+
+
+### resources
+
++ Information on Information Retrieval (IR) books, courses, conferences and other resources, stanford, update to 2009, [site](https://nlp.stanford.edu/IR-book/information-retrieval.html) 
++ 信息检索学术资源整理 [site](https://zhuanlan.zhihu.com/p/32072517) 
 + 

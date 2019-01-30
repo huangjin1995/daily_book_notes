@@ -1,3 +1,5 @@
+
+
 ## relevance ranking
 
 ## importance ranking
@@ -30,10 +32,6 @@ Learning to Rank
 - Hang Li, Toward Building Self-Training Search Systems, Keynote Speech at CCIR 2018, Guilin, September 2018.  ([ppt](http://www.hangli-hl.com/uploads/3/4/4/6/34465961/unbiased_learning_to_rank.pptx)) 
 
 
-
-Feedback
-
-[Thorsten Joachims](http://www.cs.cornell.edu/people/tj/)
 
 - **T. Joachims**, A. Swaminathan, T. Schnabel, *Unbiased Learning-to-Rank with Biased Feedback*, International Conference on Web Search and Data Mining (WSDM), 2017. Best Paper. [arxiv](https://arxiv.org/abs/1608.04468) 
   [PDF](http://www.cs.cornell.edu/people/tj/publications/joachims_etal_17a.pdf)][Software](http://www.cs.cornell.edu/People/tj/svm_light/svm_proprank.html)][[BibTeX](http://www.cs.cornell.edu/people/tj/publications/joachims.bib)] 
