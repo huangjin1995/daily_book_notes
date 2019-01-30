@@ -133,6 +133,26 @@ PCFGs can be applied both to disambiguation in syntactic parsing and to word pre
 
 
 
+### Question
+
++ Consider a sentence that is grammatical under the context-free grammar, and has exactly $k$ prepositions following the verb, and $0$ prepositions before the verb. How many parse trees will this sentence have?
+  $$
+  C_n = \frac{(2n)!}{(n+1)!n!}
+  $$
+  where $C_n$ is the $n$'th <u>Catalan number</u>, it can be shown that $C_n$ is the number of binary-branching trees with n+1 leaves. 
+
++ Complete the recursive definition, so that the algorithm returns the maximum probability for any **left-branching** tree underlying a sentence $x_1,x_2,\dots,x_n$.
+
++ ...
+
+
+
+
+
+
+
+
+
 
 
 

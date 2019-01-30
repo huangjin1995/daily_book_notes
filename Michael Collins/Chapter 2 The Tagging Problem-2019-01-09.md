@@ -70,7 +70,7 @@ who find its connection between markov model with noisy channel model?
 
 Problem: for an input $x_1,\cdots,x_n$, find
 $$
-\arg \max_{y_1\cdots y_n} p(x_1,\cdots,x_n,y_1,\cdots,y_{n+1})
+\arg \max_{y_1\cdots y_{n+1}} p(x_1,\cdots,x_n,y_1,\cdots,y_{n+1})
 $$
 where the $\arg \max$ is taken over all sequences $y_1,\cdots,y_{n+1}$ such that $y_i \in S$ for $i=1 \cdots n$, and $y_{n+1} = STOP$. 
 $$
@@ -164,6 +164,26 @@ A drawback of the approach is that some care is needed in defining the mapping t
 2. Using the ideas of log-linear models.
 
 ​	==notes==: Each general algorithm should consider the specific solution for the specific problem!
+
+
+
+## Question
+
++ Consider a trigram HMM, as introduced in class. give a version of the Viterbi algorithm that takes as input an integer $n$, and finds
+  $$
+  \max_{y_1\cdots y_{n+1},x_1 \cdots x_n} p(x_1 \cdots x_n,y_1 \cdots y_{n+1})
+  $$
+  for a trigram tagger.
+
++ Consider a skipgram HMM. give a version of the Viterbi algorithm that takes as input a sentence $x_1 \dots x_n$, and finds
+  $$
+  \max_{y_1\cdots y_{n+1}} p(x_1 \cdots x_n,y_1 \cdots y_{n+1})
+  $$
+  for a skipgram tagger.
+
++ 
+
+
 
 
 

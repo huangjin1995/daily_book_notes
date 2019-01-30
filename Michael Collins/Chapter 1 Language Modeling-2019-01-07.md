@@ -7,9 +7,9 @@
 
 We need to learn a probability distribution $p$ that satisfies
 $$
-\sum_{x \in V'} p(x) = 1, \quad  p(x) \ge 0 \ for\ all \ x \in V'
+\sum_{x \in \cal{V}'} p(x) = 1, \quad  p(x) \ge 0 \ for\ all \ x \in \cal{V}'
 $$
-$x$ is the sentence.
+$x$ is the sentence, $\cal{V}^\prime$ is all possible set of sentences.
 
 #### Motivation
 
@@ -32,7 +32,15 @@ For convenience we assume $x_0 = x_{-1} = *$, where $*$ is a special '"start" sy
 
 ##### maximum-likelihood estimates
 
-Sparse Data Problems: Say our vocabulary size is $N = |V|$, then there are $V^3$ parameters in the model.
+Our estimate correctly defines a distribution:
+$$
+\sum_{w \in \cal{V}^\prime} q(w|u,v) = 1
+$$
+$\cal{V}^\prime = \cal{V} \ \cup \{STOP\}$.
+
+
+
+Sparse Data Problems: Say our vocabulary size is $N = |\cal{V}|$, then there are $N^3$ parameters in the model.
 
 ###### Solution to data sparsity (smoothed estimation methods)
 
@@ -76,14 +84,6 @@ $$
 
 
 
-   The missing probability mass:
-$$
-\alpha(w_{i-1})=1- \sum_{w} \frac{Count^*(w_{i-1},w)}{Count(w_{i-1})}
-$$
-   $Count^*(x) = Count(x) - \lambda$, $Count^*(x)$ is the discounted counts, $\lambda$ is the discounting value. 
-
-
-
    Katz Back-Off Models (Bigrams)
 
 For a bigram model, define two sets
@@ -104,14 +104,13 @@ $$
 \alpha(w_{i-1})=1- \sum_{w \in A(w_{i-1})} \frac{Count^*(w_{i-1},w)}{Count(w_{i-1})}
 $$
 
+$Count^*(w_{i-1},w) = Count(w_{i-1},w) - \lambda$, $Count^*(w_{i-1},w)$ is the discounted counts, $\lambda$ is the discounting value. 
 
    Katz Back-Off Models (Trigrams)
 
 
 
-##### other methods
-
-other methods to improve language models:
+##### other methods to improve language models
 
 + "Topic" or "long-range" features
 + Syntactic models
@@ -148,9 +147,19 @@ and $m$ is the number of sentences, $M$ is the total number of words in test dat
   2. Syntactic models.
 + It's generally hard to improve on trigram models though!!
 
-#### QA
+#### Question
 
 + what makes a language model valid?
+  $$
+  \sum_{n=1}^{\infty} \sum_{w_1 \dots w_n \in \cal{V}'} p(w_1 \dots w_n) = 1
+  $$
+  $\cal{V}^\prime$ is all possible set of sentences.
+
++ Give some examples in English where English grammar suggests that a second-order Markov is very clearly violated.
+
+  1a) The <u>dog</u> in the park <u>was</u> big
+  1b) The <u>dogs</u> in the park <u>were</u> big
+  2) The dog which the cat saw is big
 
 + Let’s return to a smaller version of our corpus.
   • the book STOP

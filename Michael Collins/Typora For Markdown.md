@@ -123,6 +123,12 @@ Typroa 推荐使用两个*号。
 
 ![drag and drop image](http://typora.io/img/drag-img.gif)
 
+调整图片大小并居中：
+
+<div align="center">
+<img src="http://typora.io/img/drag-img.gif" width="300" height="300" alt="我是缩小后并居中的图"></img>
+</div>
+
 ### 插入超链接
 
 - 行内式
