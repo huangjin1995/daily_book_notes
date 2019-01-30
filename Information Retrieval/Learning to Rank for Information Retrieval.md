@@ -65,6 +65,23 @@ If we do not use all the data but only a proportion of it, how should we select 
 
 ...
 
+##### 13.3.2.1 Document Selection Strategies
+
+six document selection strategies:
+
++ Depth-k pooling: According to the depth pooling, the union of the top-k documents retrieved by each retrieval system submitted to TREC in response to a query is formed and only the documents in this depth-k pool are selected to form the training set.
++ ...
+
+
+
+##### 13.3.2.2 Data Selection by Optimizing PPC
+
+
+
+
+
+
+
 #### 13.3.3 Feature Selection for Training
 
 Similar to document selection, the selection of features may also influence the effectiveness
@@ -86,11 +103,27 @@ and efficiency of the learning-to-rank algorithms.
 
 + 
 
+# Part VII Summary and Outlook
+
+## Chapter 20 Future Work
+
+### 20.1 Sample Selection Bias
+
+There is thus a striking difference in the <u>document distribution</u> between training and test: the documents in the training set have not been drawn at random from the test distribution; they are biased toward relevant documents.
+
+A standard way of addressing the sample selection bias is to reweight the training
+samples such that reweighted training distribution matches the test distribution.
+These weights can be found through logistic regression [2]. Once the weights have been estimated, they can readily be incorporated into a pointwise learning-to-rank algorithm. How to use the weights in a pairwise or listwise algorithm is an interesting research question. 
+
+Another way of correcting this sample selection bias is to improve the scheme used for collecting training data. The pooling strategy could for instance be modified to include documents deeper in the ranking, thus reflecting more closely the test distribution. But judging more documents has a cost and this brings the question of how to select the training documents under a fixed labeling budget. This has been discussed in Sect. 13.3.
+
+2. Bickel, S., Scheffer, T.: Dirichlet-enhanced spam filtering based on biased samples. In: Advances in Neural Information Processing Systems 19 (NIPS 2006) (2007)
+
+### 20.2 Direct Learning from Logs
 
 
 
-
-
+### 20.3 Feature Engineering
 
 
 

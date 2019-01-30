@@ -40,9 +40,40 @@ Modern Information Retrieval: A Brief Overview, 2001 [paper](http://singhal.info
 ### datasets
 
 + LETOR (3.0, 4.0) - microsoft [site](https://www.microsoft.com/en-us/research/project/letor-learning-rank-information-retrieval/) 
+
 + Yandex [site](https://academy.yandex.ru/events/data_analysis/grant2009/) 
+
 + Yahoo! [site](https://webscope.sandbox.yahoo.com/catalog.php?datatype=c) 
+
+  <details><summary>features</summary>
+      1) Text match: The match score can be as simple as a count or can be more complex such as BM25. Counts can be
+  the number of occurrences in the document, the number of missing query terms or the number of extra terms (i.e. not in the query). Some basic features are defined over the query terms, while some others are arithmetic functions (min, max, or average) of them. Finally, there are also proximity features which try to quantify how far in the document are the query terms (the closer the better).<br>
+      2) Topical matching (topic level): This can for instance been done by classifying both the query and the document in a large topical taxonomy.<br>
+      3) Click: For a given query and document, different click probabilities can be computed: probability of click, first click, last click, long dwell time click or only click. Also of interest is the probability of skip (not clicked, but a document below is).<br>
+      4) Query<br>
+      5) Document classifier<br>
+      6) Document statistics<br>
+      7) Web graph<br>
+      8) External references<br>
+      9) Time<br>
+  </details>
+
 + Microsoft [site](https://www.microsoft.com/en-us/research/project/mslr/) 
+
+  <details><summary>features</summary>
+      1) Language Model: 	Language model approach for information retrieval (IR) with absolute discounting smoothing, Bayesian smoothing using Dirichlet priors or Jelinek-Mercer smoothing.<br>
+      2) Click: click count, dwell time.<br>
+      3) Quality: The score is outputted by a web page quality classifier.<br>
+      4) Query<br>
+      5) Document<br>
+      6) Others
+  </details>
+
+
+
+Notes:<br>Proximity features, which are known to be powerful relevance signals improving
+the mean average precision and ERR@20 by approximately 10% [Tao and Zhai
+2007; Cummins and O’Riordan 2009; Boytsov and Belova 2010].-- [paper](https://trec.nist.gov/pubs/trec20/papers/srchvrs.web.update.pdf) 
 
 ### competition
 
@@ -63,3 +94,9 @@ Modern Information Retrieval: A Brief Overview, 2001 [paper](http://singhal.info
 
 - 
 
+
+
+### tools
+
++ RankSVM [site](http://www.cs.cornell.edu/people/tj/svm_light/svm_rank.html) 
++ 

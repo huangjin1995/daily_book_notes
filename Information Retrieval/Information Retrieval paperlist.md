@@ -27,13 +27,20 @@ Learning to Rank
 
 ### papers
 
-- Hang Li, Toward Building Self-Training Search Systems, Keynote Speech at CCIR 2018, Guilin, September 2018.  ([ppt](http://www.hangli-hl.com/uploads/3/4/4/6/34465961/unbiased_learning_to_rank.pptx))
+- Hang Li, Toward Building Self-Training Search Systems, Keynote Speech at CCIR 2018, Guilin, September 2018.  ([ppt](http://www.hangli-hl.com/uploads/3/4/4/6/34465961/unbiased_learning_to_rank.pptx)) 
 
-- Unbiased Learning-to-Rank with Biased Feedback, WSDM 2017 Best Paper. [arxiv](https://arxiv.org/abs/1608.04468) 
+
+
+Feedback
+
+[Thorsten Joachims](http://www.cs.cornell.edu/people/tj/)
+
+- **T. Joachims**, A. Swaminathan, T. Schnabel, *Unbiased Learning-to-Rank with Biased Feedback*, International Conference on Web Search and Data Mining (WSDM), 2017. Best Paper. [arxiv](https://arxiv.org/abs/1608.04468) 
+  [PDF](http://www.cs.cornell.edu/people/tj/publications/joachims_etal_17a.pdf)][Software](http://www.cs.cornell.edu/People/tj/svm_light/svm_proprank.html)][[BibTeX](http://www.cs.cornell.edu/people/tj/publications/joachims.bib)] 
 
   **implicit feedback** - While implicit feedback has many advantages (e.g., it is inexpensive to collect, user centric, and timely), its inherent biases are a key obstacle to its effective use. For example, position bias in search rankings strongly influences how many clicks a result receives, so that directly using click data as a training signal in Learning-to-Rank (LTR) methods yields sub-optimal results. To overcome this bias problem, we present a counter-factual inference framework that provides the theoretical basis for unbiased LTR via Empirical Risk Minimization despite biased data.
 
-- 
+- **T. Joachims**, L. Granka, B. Pan, H. Hembrooke, and G. Gay, *Accurately Interpreting Clickthrough Data as Implicit Feedback*, Proceedings of the Conference on Research and Development in Information Retrieval (SIGIR), 2005. [[Postscript\]](http://www.cs.cornell.edu/people/tj/publications/joachims_etal_05a.ps.gz) [[PDF\]](http://www.cs.cornell.edu/people/tj/publications/joachims_etal_05a.pdf) [[BibTeX](http://www.cs.cornell.edu/people/tj/publications/joachims.bib)] 
 
 - 
 
