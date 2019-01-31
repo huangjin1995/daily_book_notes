@@ -123,6 +123,7 @@ the mean average precision and ERR@20 by approximately 10% [Tao and Zhai
 
 ### resources
 
++ Awesome Information Retrieval [github](https://github.com/harpribot/awesome-information-retrieval) 
 + Information on Information Retrieval (IR) books, courses, conferences and other resources, stanford, update to 2009, [site](https://nlp.stanford.edu/IR-book/information-retrieval.html) 
 + 信息检索学术资源整理 [site](https://zhuanlan.zhihu.com/p/32072517) 
 + 

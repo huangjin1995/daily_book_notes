@@ -14,6 +14,12 @@
 
 `\emptyset` -> $\emptyset$
 
+`\subset \subseteq \sqsubset` -> $\subset \subseteq \sqsubset$ 
+
+`\supset \supseteq \sqsupset` -> $\supset \supseteq \sqsupset$ 
+
+`\cup \cap` -> $\cup \ \cap$ 
+
 #### 无穷大
 
 `\infty` $\rightarrow$ $\infty$
@@ -146,7 +152,7 @@ $\vee$, $\lor$, $\wedge$, $\land$, $\bigvee$, $\bigwedge$,
 
 ### 二元关系符
 
-$\in$, $\notin$,
+`\in \notin` -> $\in \ \notin$ 
 
 $\propto$,
 
