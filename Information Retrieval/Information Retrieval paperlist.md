@@ -11,6 +11,9 @@
 - Hang Li, Zhengdong Lu, Deep Learning for Information Retrieval, SIGIR 2016 Tutorial, Pisa, July 2016. ([pdf](http://www.hangli-hl.com/uploads/3/4/4/6/34465961/deep_learning_for_information_retrieval.pdf))
 - Hang Li, Machine Learning for Information Retrieval, the Third Asian Summer School in Information Access, Kyoto University, August 2017. ([pdf](http://www.hangli-hl.com/uploads/3/4/4/6/34465961/machine_learning_for_information_retrieval_-_kyoto.pdf))
 - Hang Li, Opportunities and Challenges in Deep Learning for Information Retrieval, Tsinghua University,  Beijing, April 2016. ([pdf](http://www.hangli-hl.com/uploads/3/4/4/6/34465961/tsinghua_opportunities_and_challenges_in_deep_learning_for_information_retrieval.pdf))
+
+Statistical Language Models
+
 - C. Zhai. <u>Statistical Language Models</u> for Information Retrieval. 2008. [paper](http://sifaka.cs.uiuc.edu/czhai/pub/slmir-now.pdf) 
 - 
 
@@ -31,7 +34,7 @@ Learning to Rank
 
 - Hang Li, Toward Building Self-Training Search Systems, Keynote Speech at CCIR 2018, Guilin, September 2018.  ([ppt](http://www.hangli-hl.com/uploads/3/4/4/6/34465961/unbiased_learning_to_rank.pptx)) 
 
-
+#### Feedback
 
 - **T. Joachims**, A. Swaminathan, T. Schnabel, *Unbiased Learning-to-Rank with Biased Feedback*, International Conference on Web Search and Data Mining (WSDM), 2017. Best Paper. [arxiv](https://arxiv.org/abs/1608.04468) 
   [PDF](http://www.cs.cornell.edu/people/tj/publications/joachims_etal_17a.pdf)][Software](http://www.cs.cornell.edu/People/tj/svm_light/svm_proprank.html)][[BibTeX](http://www.cs.cornell.edu/people/tj/publications/joachims.bib)] 
@@ -41,4 +44,8 @@ Learning to Rank
 - **T. Joachims**, L. Granka, B. Pan, H. Hembrooke, and G. Gay, *Accurately Interpreting Clickthrough Data as Implicit Feedback*, Proceedings of the Conference on Research and Development in Information Retrieval (SIGIR), 2005. [[Postscript\]](http://www.cs.cornell.edu/people/tj/publications/joachims_etal_05a.ps.gz) [[PDF\]](http://www.cs.cornell.edu/people/tj/publications/joachims_etal_05a.pdf) [[BibTeX](http://www.cs.cornell.edu/people/tj/publications/joachims.bib)] 
 
 - 
+
+#### Relevance matching
+
++ A Deep Relevance Matching Model for Ad-hoc Retrieval, Jiafeng Guo, Yixing Fan, Qingyao Ai, W. Bruce Croft, CIKM 2016, [arxiv](https://arxiv.org/abs/1711.08611) 
 

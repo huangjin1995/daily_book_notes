@@ -47,7 +47,7 @@ Hang Li, Learning to Rank, Encyclopedia of Machine Learning and Data Mining, 729
 
 - Tie-Yan Liu. *Learning to Rank for Information Retrieval*, **Springer**, 2011.
 
-- Semantic Matching in Search, by Hang Li and Jun Xu, Now Publisher, 2014 
+- Semantic Matching in Search, by Hang Li and [Jun Xu](http://www.bigdatalab.ac.cn/~junxu/), Now Publisher, 2014 [pdf](http://www.bigdatalab.ac.cn/~junxu/publications/SemanticMatchingInSearch_2014.pdf) 
 
   Hang Li, Semantic Matching in Search, SIGIR 2014 Workshop on Semantic Matching in Information Retrieval, Gold Coast, July 2014. ([slides](http://www.hangli-hl.com/uploads/3/4/4/6/34465961/semantic_matching_in_search.pdf))
 
