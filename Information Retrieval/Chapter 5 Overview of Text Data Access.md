@@ -4,9 +4,9 @@
 
 ### 5.5 Document Selection vs. Document Ranking
 
-In general, we may ==assume== that there exists a subset of documents in the collection, i.e., $R(q) ⊂ C$, which are relevant to the user’s query $q$; that is, they
+In general, we may ==assume== that there exists a subset of documents in the collection, i.e., $R(q) \subset C​$, which are relevant to the user’s query $q​$; that is, they
 are relevant documents or documents useful to the user who typed in the query.
-Naturally, this relevant set depends on the query $q$. However, which documents are relevant is generally unknown; the user’s query is only a “hint” at which documents should be in the set $R(q)$.Thus, the best a computer can do is to return an approximation of $R(q)$, which we will denote by $R^\prime(q)$.
+Naturally, this relevant set depends on the query $q​$. However, which documents are relevant is generally unknown; the user’s query is only a “hint” at which documents should be in the set $R(q)​$.Thus, the best a computer can do is to return an approximation of $R(q)​$, which we will denote by $R^\prime(q)​$.
 
 Now, how can a computer compute $R^\prime(q)$? At a high level, there are two alternative strategies: document selection vs. document ranking.
 
