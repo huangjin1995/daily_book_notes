@@ -21,7 +21,7 @@ Hang Li, Learning to Rank, Encyclopedia of Machine Learning and Data Mining, 729
 
 + [Stephen Robertson](http://www.staff.city.ac.uk/~sb317/) 微软英国剑桥研究院：概率检索模型的倡导者之一，并且开发了OKAPI检索系统
 
-+ [W.B. Crofit](http://link.zhihu.com/?target=http%3A//ciir.cs.umass.edu/croft) 美国UMass CIIR：基于**统计语言建模IR模型**的提出者，并和CMU共同开发了Lemur工具（开源搜索引擎）
++ [W.B. Crofit](http://ciir.cs.umass.edu/croft) [google scholar](https://scholar.google.com/citations?user=ArV74ZMAAAAJ) 美国UMass CIIR：基于**统计语言建模IR模型**的提出者，并和CMU共同开发了Lemur工具（开源搜索引擎）
 
 + [Susan Dumais](http://link.zhihu.com/?target=http%3A//susandumais.com) 微软研究院：**隐形语义索引**LSI的提出者
 
@@ -31,13 +31,15 @@ Hang Li, Learning to Rank, Encyclopedia of Machine Learning and Data Mining, 729
 
   Université de Montréal
 
-+ [翟成祥](http://czhai.cs.illinois.edu/) UIUC: 语言模型、IR模型、主題模型（Topic Model）
++ [翟成祥](http://czhai.cs.illinois.edu/) [google scholar](https://scholar.google.com/citations?user=YU-baPIAAAAJ&hl=zh-CN) UIUC: 统计语言建模IR模型、主題模型（Topic Model）
 
   University of Illinois at Urbana-Champaign
 
 + [杨益銘](http://www.cs.cmu.edu/~yiming/) CMU: 文本分类
 
-+ [刘铁岩](https://www.microsoft.com/en-us/research/people/tyliu/)  [自述](http://www.cnblogs.com/blessw/archive/2010/03/27/1698636.html) Microsoft: 排序学习-listwise approach to learning to rank
++ [刘铁岩](https://www.microsoft.com/en-us/research/people/tyliu/) [google scholar](https://scholar.google.com/citations?user=Nh832fgAAAAJ&hl=zh-CN) [自述](http://www.cnblogs.com/blessw/archive/2010/03/27/1698636.html) Microsoft: 排序学习-listwise approach to learning to rank
+
++ [李航](http://www.hangli-hl.com/index.html) [google scholar](https://scholar.google.com/citations?user=nTl5mSwAAAAJ&hl=zh-CN)
 
 
 

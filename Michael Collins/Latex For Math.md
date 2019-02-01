@@ -2,9 +2,13 @@
 >
 > https://github.com/CTeX-org/lshort-cn
 >
+> https://blog.csdn.net/dingchenxixi/article/details/50752292
+>
 > http://www.mohu.org/info/symbols/symbols.htm 常用数学符号的 LaTeX 表示方法
 >
 > https://blog.csdn.net/thither_shore/article/details/52260742
+>
+> https://math.meta.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference
 
 
 
@@ -165,6 +169,8 @@ $\propto$,
 $\ge$, $\geq$, $\geqslant$, $\geqq$,
 
 $\le$, $\leq$, $\leqslant$, $\leqq$,
+
+`\simeq \approxeq` -> $\simeq \approxeq$
 
 
 
