@@ -71,6 +71,8 @@ $$
 
 $\bar{A}$, $\dot{A}$, $\acute{A}$ 
 
+`\hat` $\rightarrow$ $\hat{A}​$ 
+
 #### 上/下划线
 
 $\overline{A}$,$\underline{A}$, 
@@ -147,6 +149,8 @@ $\sf{A}$
 ### 二元运算符
 
 $+$, $-$, $\times$, $\div$, $\cdot$, 
+
+`\circ \odot` $\rightarrow$ $\circ$, $\odot​$, 
 
 `\setminus`  $\rightarrow$   $\setminus$, 
 
