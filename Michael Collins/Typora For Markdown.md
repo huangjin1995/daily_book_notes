@@ -208,6 +208,144 @@ Typroa 推荐使用两个*号。
 | 坑货   |  女   |  北京大学  | 2000 |
 其中代码的第二行指定对齐的方式，第一个是左对齐，第二个和第三个是居中，最后一个是右对齐。
 
+### 流程图
+
+more:
+
+https://github.com/knsv/mermaid
+
+https://mermaidjs.github.io/flowchart.html
+
+https://www.jianshu.com/p/b421cc723da5
+
+mermaid支持流程图, 时序图和甘特图三种图形的绘制：
+
+```
+​```mermaid
+graph 流程图方向
+流程图内容
+​```
+
+```
+
+```mermaid
+graph TD
+A-->B
+
+```
+
+流程图方向：
+
+- TB 从上到下
+- BT 从下到上
+- RL 从右到左
+- LR 从左到右
+- TD 同TB
+
+基本图形：
+
+- id[文字描述]矩形
+- id(文字描述)圆角矩形
+- id>文字描述]不对称的矩形
+- id{文字描述}菱形
+- id((文字描述))圆形
+
+连接方式：
+
+- A --> B     A带箭头指向B
+- A --- B      A不带箭头指向B
+- A -.- B      A用虚线指向B
+- A -.-> B    A用带箭头的虚线指向B
+- A ==> B   A用加粗的箭头指向B
+- A -- 描述 --- B       A不带箭头指向B并在中间加上文字描述
+- A -- 描述 --> B      A带箭头指向B并在中间加上文字描述
+- A -. 描述 .-> B      A用带箭头的虚线指向B并在中间加上文字描述
+- A == 描述 ==> B  A用加粗的箭头指向B并在中间加上文字描述
+
+子流程图：
+
+```
+​```
+subgraph 流程图名称
+流程图内容
+end
+​```
+```
+
+
+
+示例：
+
+```mermaid
+graph LR
+    start[开始] --> input[输入A,B,C]
+    input --> conditionA{A是否大于B}
+    conditionA -- YES --> conditionC{A是否大于C}
+    conditionA -- NO --> conditionB{B是否大于C}
+    conditionC -- YES --> printA[输出A]
+    conditionC -- NO --> printC[输出C]
+    conditionB -- YES --> printB[输出B]
+    conditionB -- NO --> printC[输出C]
+    printA --> stop[结束]
+    printC --> stop
+    printB --> stop
+```
+
+
+
+```mermaid
+gantt
+dateFormat  YYYY-MM-DD
+title Adding GANTT diagram to mermaid
+
+section A section
+Completed task            :done,    des1, 2014-01-06,2014-01-08
+Active task               :active,  des2, 2014-01-09, 3d
+Future task               :         des3, after des2, 5d
+Future task2               :         des4, after des3, 5d
+```
+
+
+
+Markdown流程图
+
+more: https://www.jianshu.com/p/02a5a1bf1096
+
+示例：
+
+```flow
+st=>start: Start
+op=>operation: Your Operation
+cond=>condition: Yes or No?
+e=>end
+st->op->cond
+cond(yes)->e
+cond(no)->op
+```
+
+
+
+```flow
+start=>start: 开始|past
+requirementAnalysis=>operation: 需求分析|past
+design=>operation: 软件设计|past
+coding=>operation: 编码|past
+selfTestingPased=>condition: 自测通过？|approved
+debug=>operation: debug|invalid
+submitTestingPased=>condition: 提测通过？|rejected
+modifyBug=>operation: 修bug|current
+deploy=>operation: 部署|future
+end=>end: 结束|future
+
+start->requirementAnalysis->design->coding->selfTestingPased
+selfTestingPased(no)->debug(right)->selfTestingPased
+selfTestingPased(yes)->submitTestingPased
+submitTestingPased(yes)->deploy->end
+submitTestingPased(no)->modifyBug(right)->submitTestingPased
+```
+
+
+
 ### 数学表达式块
 
 输入两个美元符号，然后回车，就可以输入数学表达式块了。例如：
