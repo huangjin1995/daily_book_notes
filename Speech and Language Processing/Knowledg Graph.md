@@ -8,7 +8,9 @@
 
 实体对齐（Entity Alignment）也被称作实体匹配（Entity Matching），是指对于异构数据源知识库中的各个实体，找出属于现实世界中的同一实体。
 
+实体链接
 
+https://github.com/sebastianruder/NLP-progress/blob/master/english/entity_linking.md
 
 
 

@@ -4,7 +4,7 @@ refer:<br>2016年04月27号 - http://www.52nlp.cn/达观数据搜索引擎的que
 
 ​	Query Rewrite（以下简称QR）模块包括拼写纠错，同义改写，关联query等多个功能。QR模块对于提升用户体验有着巨大的帮助，对于搜索质量不佳的query进行改写后能返回更好的搜索结果。其中，拼写纠错（Error Correction，以下简称EC）是用户比较容易感知的一个功能。
 
-![百度纠错](https://github.com/bifeng/daily_book_notes/raw/master/unclassified-notes/%E7%99%BE%E5%BA%A6%E7%BA%A0%E9%94%99.jpg)
+![百度纠错](https://github.com/bifeng/daily_book_notes/raw/master/resource/baidu_query_rewrite.jpg)
 
 ​					**百度纠错功能示例**
 
