@@ -55,6 +55,8 @@ Hang Li, Learning to Rank, Encyclopedia of Machine Learning and Data Mining, 729
 
   Hang Li, Jun Xu. Semantic Matching in Search. Foundations and Trends in Information Retrieval. Now Publishers, 2014. ([pdf](http://www.hangli-hl.com/uploads/3/4/4/6/34465961/ml_for_match-step2.pdf))
 
+- An Introduction to Neural Information Retrieval, 2018.12 [paper](https://www.microsoft.com/en-us/research/publication/introduction-neural-information-retrieval/) 
+
 
 
 ### datasets

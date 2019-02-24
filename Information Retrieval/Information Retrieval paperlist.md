@@ -6,12 +6,21 @@
 
 ### literature review
 
-- An Introduction to Neural Information Retrieval, 2018.12 [paper](https://www.microsoft.com/en-us/research/publication/introduction-neural-information-retrieval/)
-- NEURAL MODELS FOR INFORMATION RETRIEVAL, 2017.11 [ppt](https://www.microsoft.com/en-us/research/uploads/prod/2018/04/NeuralIR-Nov2017.pdf) 
-- Hang Li, Zhengdong Lu, Deep Learning for Information Retrieval, SIGIR 2016 Tutorial, Pisa, July 2016. ([pdf](http://www.hangli-hl.com/uploads/3/4/4/6/34465961/deep_learning_for_information_retrieval.pdf))
-- Hang Li, Machine Learning for Information Retrieval, the Third Asian Summer School in Information Access, Kyoto University, August 2017. ([pdf](http://www.hangli-hl.com/uploads/3/4/4/6/34465961/machine_learning_for_information_retrieval_-_kyoto.pdf))
-- Hang Li, Opportunities and Challenges in Deep Learning for Information Retrieval, Tsinghua University,  Beijing, April 2016. ([pdf](http://www.hangli-hl.com/uploads/3/4/4/6/34465961/tsinghua_opportunities_and_challenges_in_deep_learning_for_information_retrieval.pdf))
++ Hang Li, Framework and Principles of Matching Technologies, Keynote Speech at the WSDM 2019 Workshop on on Deep Matching in Practical Applications,  February 2019. ([pdf)](http://www.hangli-hl.com/uploads/3/4/4/6/34465961/wsdm_2019_workshop.pdf)
 
+  Jun Xu, Xiangnan He, Hang Li, Deep Learning for Matching in Search and Recommendation, Melbourne, Tutorial at WSDM 2019, February 2019. ([pdf](http://www.hangli-hl.com/uploads/3/4/4/6/34465961/wsdm_2019_tutorial.pdf))  
+
+  
+
++ Neural Networks for Information Retrieval, WSDM 2018 [arxiv](https://arxiv.org/abs/1801.02178) | [ppt](http://nn4ir.com/wsdm2018/) 
+
+- NEURAL MODELS FOR INFORMATION RETRIEVAL, 2017.11 [ppt](https://www.microsoft.com/en-us/research/uploads/prod/2018/04/NeuralIR-Nov2017.pdf) 
+- 
+- Hang Li, Zhengdong Lu, Deep Learning for Information Retrieval, SIGIR 2016 Tutorial, Pisa, July 2016. ([pdf](http://www.hangli-hl.com/uploads/3/4/4/6/34465961/deep_learning_for_information_retrieval.pdf))
+- Hang Li, Opportunities and Challenges in Deep Learning for Information Retrieval, Tsinghua University,  Beijing, April 2016. ([pdf](http://www.hangli-hl.com/uploads/3/4/4/6/34465961/tsinghua_opportunities_and_challenges_in_deep_learning_for_information_retrieval.pdf))
+- 
+
++ Hang Li, Machine Learning for Information Retrieval, the Third Asian Summer School in Information Access, Kyoto University, August 2017. ([pdf](http://www.hangli-hl.com/uploads/3/4/4/6/34465961/machine_learning_for_information_retrieval_-_kyoto.pdf))
 + 
 
 
