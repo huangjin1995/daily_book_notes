@@ -96,9 +96,11 @@ $$
 
 ##### 小写
 
-$\alpha$, $\beta$, $\gamma$, $\delta$, $\theta$, $\zeta$, $\eta$, $\kappa$,
+$\alpha​$, $\beta​$, $\gamma​$, $\delta​$, $\theta​$, $\zeta​$, $\eta​$, $\kappa​$,
 
-$\lambda​$, 
+$\lambda$, 
+
+`\xi` ->  $\xi$ 
 
 ##### 大写
 
@@ -174,7 +176,7 @@ $\ge$, $\geq$, $\geqslant$, $\geqq$,
 
 $\le$, $\leq$, $\leqslant$, $\leqq$,
 
-`\simeq \approxeq` -> $\simeq \approxeq$
+`\simeq \approxeq \approx` -> $\simeq \approxeq \approx $
 
 
 

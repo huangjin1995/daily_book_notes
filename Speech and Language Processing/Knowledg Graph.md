@@ -16,3 +16,15 @@ https://github.com/sebastianruder/NLP-progress/blob/master/english/entity_linkin
 
 知识库实体对齐技术综述，2016，[paper](http://crad.ict.ac.cn/CN/abstract/abstract3093.shtml) 
 
+
+
+#### Application
+
++ [KG-demo-for-movie](https://github.com/SimmerChan/KG-demo-for-movie)
++ [Z_knowledge_graph](https://github.com/Pelhans/Z_knowledge_graph)
++ 
+
+
+
+
+
