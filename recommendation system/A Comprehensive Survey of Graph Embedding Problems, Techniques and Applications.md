@@ -1,5 +1,15 @@
 
 
+### Graph embedding taxonomies
+
+![Graph embedding taxonomies](https://github.com/bifeng/daily_book_notes/raw/master/recommendation%20system/Graph%20embedding%20taxonomies.png)
+
+
+
+### Comparison of graph embedding techniques
+
+![Comparison of graph embedding techniques](https://github.com/bifeng/daily_book_notes/raw/master/recommendation system/Comparison of graph embedding techniques.png)
+
 
 
 
