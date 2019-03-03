@@ -4,9 +4,7 @@ Mihajlo Grbovic(Airbnb) talk in Recsys 2017 [slides]()
 
 
 
-refer:<br>[从KDD 2018 Best Paper看Airbnb实时搜索排序中的Embedding技巧](https://zhuanlan.zhihu.com/p/55149901)<br>[Airbnb如何解决Embedding的数据稀疏问题？](https://zhuanlan.zhihu.com/p/57313656)
-
-
+refer:<br>[从KDD 2018 Best Paper看Airbnb实时搜索排序中的Embedding技巧](https://zhuanlan.zhihu.com/p/55149901)<br>[Airbnb如何解决Embedding的数据稀疏问题？](https://zhuanlan.zhihu.com/p/57313656)<br>[如何评价Airbnb的Real-time Personalization获得2018 kdd最佳论文？](https://www.zhihu.com/question/302288216)
 
 
 
@@ -30,6 +28,8 @@ refer:<br>[从KDD 2018 Best Paper看Airbnb实时搜索排序中的Embedding技�
 
 
 
+
+
 ### embedding
 
 how to construct the listing (短租房) and user(租客) embedding?
@@ -41,27 +41,33 @@ how to construct the listing (短租房) and user(租客) embedding?
 
 #### embedding based on click
 
-该部分两个要点：
+##### data
 
-1. clicked listing数据清洗
+<u>首先要确定你需要embedding表达什么，再选择具有相应context的数据来做embedding（ word2vec在计算词向量时和它context关系非常大）</u>
 
-   Airbnb主要利用click session数据中的clicked listings进行embedding。
+clicked listing数据清洗
 
-   其中，click session指的是一个用户的一次搜索过程，clicked listings即为点击的listing序列，这个序列需要满足两个条件，一个是只有停留时间超过30s的listing page才被算作序列中的一个数据点，二是如果用户超过30分钟没有动作，那么这个序列会断掉，不再是一个序列。一是清洗噪声点和负反馈信号，二是避免非相关序列的产生。
+Airbnb主要利用click session数据中的clicked listings进行embedding。
 
-   然后，把这个clicked listings组成的sequence当作一个“句子”样本，开始embedding的过程。
+其中，click session指的是一个用户的一次搜索过程，clicked listings即为点击的listing序列，这个序列需要满足两个条件，一个是只有停留时间超过30s的listing page才被算作序列中的一个数据点，二是如果用户超过30分钟没有动作，那么这个序列会断掉，不再是一个序列。一是清洗噪声点和负反馈信号，二是避免非相关序列的产生。
 
-2. embedding目标函数
+然后，把这个clicked listings组成的sequence当作一个“句子”样本，开始embedding的过程。
 
-   正样本很自然的取自click session sliding window里的两个listing，负样本则是在确定central listing后随机从语料库（这里就是listing的集合）中选取一个listing作为负样本。
+##### objective
 
-   
+<u>首先要确定embedding学习哪些内容，再选择相应的目标函数（融入用户反馈信息）</u>
 
-   针对其业务特点，在目标函数中新增以下样本：
+正样本很自然的取自click session sliding window里的两个listing，负样本则是在确定central listing后随机从语料库（这里就是listing的集合）中选取一个listing作为负样本。
 
-   正样本：把booking的信息引入embedding。这样直观上可以使Airbnb的搜索列表更倾向于推荐之前booking成功session中的listing。从这个motivation出发，Airbnb把click session分成两类，最终产生booking行为的叫booked session，没有的称做exploratory session。
+针对其业务特点，在目标函数中新增以下样本：
 
-   负样本：为了更好的发现同一市场（marketplace）内部listing的差异性，Airbnb加入了另一组negative sample，就是在central listing同一市场的listing集合中进行随机抽样，获得一组新的negative samples。
+正样本：把booking的信息引入embedding。这样直观上可以使Airbnb的搜索列表更倾向于推荐之前booking成功session中的listing。从这个motivation出发，Airbnb把click session分成两类，最终产生booking行为的叫booked session，没有的称做exploratory session。
+
+>Both are useful from the standpoint of capturing <u>contextual similarity</u>, however booked sessions can be used to adapt the optimization such that at each step we predict not only the neighboring clicked listings but the eventually booked listing as well. This adaptation can be achieved by adding booked listing as <u>global context</u>, such that it will always be predicted no matter if it is within the context window or not
+
+intuition:<br>这样一来，两个listing_id相似，不仅因为所处的点击序列相似，而且还会因为导致预订相同listing而相似。而预订相同listing比点击是一个更强、更有意义的信号，训练得到的embedding对提升“预订率”也更有意义。
+
+负样本：为了更好的发现同一市场（marketplace）内部listing的差异性，Airbnb加入了另一组negative sample，就是在central listing同一市场的listing集合中进行随机抽样，获得一组新的negative samples。
 
 
 
@@ -91,6 +97,10 @@ embedding效果：<br>embedding不仅encode了price，listing-type等信息，�
 
 #### embedding based on booking
 
+##### data
+
+<u>当**需要多个实体embedding**时，要在意是否在一个空间，否则计算距离会变得很奇怪。</u>
+
 为了捕捉用户的长期偏好，Airbnb在这里使用了booking session序列，比如用户在过去1年依次book过5个listing，即为一个booking listing序列。
 
 但是该会遇到非常棘手的数据稀疏问题，表现在以下三点：
@@ -105,6 +115,8 @@ Airbnb如何解决如此严重的数据稀疏问题，训练出有意义的user 
 
 聚合之后，获得user type和listing type。一种直观的生成新的booking listing序列的方式是这样，直接把user type当作原来的user id，生成一个由listing type组成的booking session。这种方法能够解决数据稀疏性的问题，却无法直接得到user type embedding。为了让user type embedding和listing type embedding在同一个vector space中生成，airbnb采用了一种比较“反直觉”的方式。
 
+> To learn user_type and listing_type embeddings in the same vector space we incorporate the user_type into the booking sessions.
+
 针对某一user id按时间排序的booking listing序列，$(l_1,l_2,\dots,l_M)$，我们用（user_type, listing_type）组成的元组替换，因此，sequence变成了
 $$
 ((u_{type1},l_{type1}),(u_{type2},l_{type2}),\dots,(u_{typeM},l_{typeM}))
@@ -117,9 +129,11 @@ $$
 
 
 
-embedding目标函数<br>
+##### objective
 
 负样本：为了引入“房主拒绝”（reject）这个action，airbnb又在objective中加入了reject这样一个negative signal。
+
+
 
 #### question
 
