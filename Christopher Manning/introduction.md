@@ -6,3 +6,7 @@ video<br>[bilibili](https://www.bilibili.com/video/av35805262?from=search&seid=5
 
 Slides<br>https://web.stanford.edu/~jurafsky/NLPCourseraSlides.html 
 
+
+
+### language technology
+
