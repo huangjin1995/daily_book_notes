@@ -10,3 +10,7 @@ Slides<br>https://web.stanford.edu/~jurafsky/NLPCourseraSlides.html
 
 ### language technology
 
+![language_technology](https://github.com/bifeng/daily_book_notes/raw/master/resource/language_technology.png)
+
+
+
