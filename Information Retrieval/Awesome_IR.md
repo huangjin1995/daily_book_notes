@@ -8,9 +8,11 @@ Hang Li, Learning to Rank, Encyclopedia of Machine Learning and Data Mining, 729
 
 + SIGIR  Special Interest Group on Information Retrieval, 国际信息检
   索大会
+
 + TREC Text REtrieval Conference, 国际文本检索大会 
 
   [Tracks](https://en.wikipedia.org/wiki/Text_Retrieval_Conference)
+
 + WSDM
 
 ### scholars
