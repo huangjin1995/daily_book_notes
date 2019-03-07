@@ -4,7 +4,7 @@ http://cs231n.github.io/optimization-2/
 
 In practice we usually only compute the gradient for the parameters (e.g. $W$,$b$) so that we can use it to perform a parameter update. However, as we will see later in the class the gradient on $x_i$ can still be useful sometimes, for example for purposes of visualization and interpreting what the Neural Network might be doing.
 
-#### interpretation of the gradient
+#### Interpretation of the gradient
 
 Keep in mind what the derivatives tell you: They indicate the rate of change of a function with respect to that variable surrounding an infinitesimally small region near a particular point:
 $$
@@ -29,7 +29,7 @@ Backpropagation can thus be thought of as gates communicating to each other (thr
 1. 链式法则将一个个独立的门转变为非常复杂的运算
 2. 通过分析每一个门，可以分析其对最终结果的影响
 
-#### staged computation
+#### Staged computation
 
 Suppose that we have a function of the form:
 $$
@@ -87,17 +87,84 @@ Notice a few things:
 
 **Gradients add up at forks**. The forward expression involves the variables **x,y** multiple times, so when we perform backpropagation we must be careful to use `+=` instead of `=` to accumulate the gradient on these variables (otherwise we would overwrite it). This follows the *multivariable chain rule* in Calculus, which states that if a variable branches out to different parts of the circuit, then the gradients that flow back to it will add.
 
-#### Patterns in backward flow (operation)
+#### Patterns in backward flow (intuition of operation)
 
-It is interesting to note that in many cases the backward-flowing gradient can be interpreted on an intuitive level. For example, the three most commonly used gates in neural networks (*add,mul,max*), all have very simple interpretations in terms of how they act during backpropagation. Consider this example circuit:
+It is interesting to note that in many cases the backward-flowing gradient can be interpreted on an intuitive level. For example, the three most commonly used gates in neural networks (**add,mul,max**), all have very simple interpretations in terms of how they act during backpropagation. Consider this example circuit:
 
 ![example of patterns in backward flow.png](https://github.com/bifeng/daily_book_notes/raw/master/resource/example of patterns in backward flow.png)
 
+##### Add gate
+
 The **add gate** always takes the gradient on its output and distributes it equally to all of its inputs, regardless of what their values were during the forward pass. This follows from the fact that the local gradient for the add operation is simply +1.0, so the gradients on all inputs will exactly equal the gradients on the output because it will be multiplied by x1.0 (and remain unchanged).
+
+##### Max gate
 
 The **max gate** routes the gradient. Unlike the add gate which distributed the gradient unchanged to all its inputs, the max gate distributes the gradient (unchanged) to exactly one of its inputs (the input that had the highest value during the forward pass). This is because the local gradient for a max gate is 1.0 for the highest value, and 0.0 for all other values. 
 
+##### Multiply gate
+
 The **multiply gate** is a little less easy to interpret. Its local gradients are the input values (except switched), and this is multiplied by the gradient on its output during the chain rule.
+
+*Unintuitive effects and their consequences*. Notice that if one of the inputs to the multiply gate is very small and the other is very big, then the multiply gate will do something slightly unintuitive: <u>it will assign a relatively huge gradient to the small input and a tiny gradient to the large input.</u> Note that in linear classifiers where the weights are dot producted $w^Tx_i$ (multiplied) with the inputs, this implies that the scale of the data has an effect on the magnitude of the gradient for the weights. For example, if you multiplied all input data examples $x_i$ by 1000 during preprocessing, then the gradient on the weights will be 1000 times larger, and you’d have to lower the learning rate by that factor to compensate. This is why **preprocessing** matters a lot, sometimes in subtle ways! And having intuitive understanding for how the gradients flow can help you debug some of these cases.
+
+#### Debug models with backpropagation
+
+##### Vanishing gradients on sigmoids (or tanh) non-linearities
+
+Causes: weight initialization or data preprocessing
+
+![sigmoid](https://github.com/bifeng/daily_book_notes/raw/master/resource/sigmoid.png)
+
+```python
+z = 1/(1 + np.exp(-np.dot(W, x))) # forward pass
+dx = np.dot(W.T, z*(1-z)) # backward pass: local gradient for x
+dW = np.outer(z*(1-z), x) # backward pass: local gradient for W
+```
+
+A non-obvious fun fact about sigmoid is that its local gradient (z*(1-z)) achieves a maximum at 0.25, when z = 0.5. That means that every time the gradient signal flows through a sigmoid gate, its magnitude always diminishes by one quarter (or more) (<u>diminishes at least one quarter</u>). If you’re using basic SGD, this would make the lower layers of a network train much slower than the higher ones.
+
+
+
+The inappropriate **weight initialization or data preprocessing** will lead to these non-linearities “saturate” and entirely stop learning — your training loss will be flat and refuse to go down.
+
+If your weight matrix W is initialized too large, the output of the matrix multiply could have a very large range (e.g. numbers between -400 and 400), which will make all outputs in the vector z almost binary: either 1 or 0. But if that is the case, z*(1-z), which is local gradient of the sigmoid non-linearity, will in both cases become zero (“vanish”), making the gradient for both x and W be zero. The rest of the backward pass will come out all zero from this point on due to multiplication in the chain rule.
+
+See a longer explanation in this [CS231n lecture video](https://youtu.be/gYpoJMlgyXA?t=14m14s).
+
+##### Dying ReLUs
+
+Causes: weight initialization or aggressive learning rate
+
+![relu](https://github.com/bifeng/daily_book_notes/raw/master/resource/relu.png)
+
+```python
+z = np.maximum(0, np.dot(W, x)) # forward pass
+dW = np.outer(z > 0, x) # backward pass: local gradient for W
+```
+
+If a neuron gets clamped to zero in the forward pass (i.e. z=0, it doesn’t “fire”), then its weights
+will get zero gradient. This can lead to what is called the “dead ReLU” problem, where if a ReLU neuron is unfortunately initialized such that it never fires, or if a neuron’s weights ever get knocked off with a large update during training into this regime, then this neuron will remain
+permanently dead.
+
+Sometimes you can forward the entire training set through a trained network and find that a large fraction (e.g. 40%) of your neurons were zero the entire time.
+
+Neurons can also die during training, usually as a symptom of aggressive learning rates.
+
+See a longer explanation in [CS231n lecture video](https://youtu.be/gYpoJMlgyXA?t=20m54s).
+
+##### Exploding gradients in RNNs
+
+...
+
+
+
+See a longer explanation in this [CS231n lecture video](https://www.youtube.com/watch?v=yCC09vCHzF8).
+
+##### Spotted in the Wild: DQN Clipping
+
+...
+
+
 
 
 
