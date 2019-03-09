@@ -150,9 +150,9 @@ $\sf{A}$
 
 ### 二元运算符
 
-$+$, $-$, $\times$, $\div$, $\cdot$, 
+$+​$, $-​$, $\times​$, $\div​$, $\cdot​$, 
 
-`\circ \odot` $\rightarrow$ $\circ$, $\odot​$, 
+`\circ \odot` $\rightarrow​$ $\circ​$, $\odot​$, 
 
 `\setminus`  $\rightarrow$   $\setminus$, 
 
