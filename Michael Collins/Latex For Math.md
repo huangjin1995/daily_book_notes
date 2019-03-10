@@ -24,6 +24,10 @@
 
 `\cup \cap` -> $\cup \ \cap$ 
 
+#### 偏导
+
+`\partial` -> $\partial$ 
+
 #### 无穷大
 
 `\infty` $\rightarrow$ $\infty$

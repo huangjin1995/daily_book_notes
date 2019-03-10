@@ -6,9 +6,9 @@ done
 
   
 
-- Fei Fei Li, CS231n Convolutional Neural Networks for Visual Recognition, Stanford [site](http://cs231n.github.io/) [2016](https://www.bilibili.com/video/av32078165/) [2017](https://www.bilibili.com/video/av13260183/?p=4) [youtube 2016](https://www.youtube.com/channel/UCPk8m_r6fkUSYmvgCBwq-sw) - 从梯度流动角度讲解神经网络 
+- Fei Fei Li, CS231n Convolutional Neural Networks for Visual Recognition, Stanford [2017 video](https://www.bilibili.com/video/av13260183/?p=4), [2017 syllabus](http://cs231n.stanford.edu/2017/syllabus), [CS231n assignments](http://cs231n.github.io/)
 
-  - [ ] 
+  - [x] introduction to neural network
 
   - [ ] 
 

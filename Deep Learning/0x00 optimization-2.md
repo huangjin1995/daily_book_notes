@@ -93,15 +93,15 @@ It is interesting to note that in many cases the backward-flowing gradient can b
 
 ![example of patterns in backward flow.png](https://github.com/bifeng/daily_book_notes/raw/master/resource/example of patterns in backward flow.png)
 
-##### Add gate
+##### Add gate (gradient distributor)
 
 The **add gate** always takes the gradient on its output and distributes it equally to all of its inputs, regardless of what their values were during the forward pass. This follows from the fact that the local gradient for the add operation is simply +1.0, so the gradients on all inputs will exactly equal the gradients on the output because it will be multiplied by x1.0 (and remain unchanged).
 
-##### Max gate
+##### Max gate (gradient router)
 
 The **max gate** routes the gradient. Unlike the add gate which distributed the gradient unchanged to all its inputs, the max gate distributes the gradient (unchanged) to exactly one of its inputs (the input that had the highest value during the forward pass). This is because the local gradient for a max gate is 1.0 for the highest value, and 0.0 for all other values. 
 
-##### Multiply gate
+##### Multiply gate (gradient switcher)
 
 The **multiply gate** is a little less easy to interpret. Its local gradients are the input values (except switched), and this is multiplied by the gradient on its output during the chain rule.
 
@@ -121,7 +121,7 @@ dx = np.dot(W.T, z*(1-z)) # backward pass: local gradient for x
 dW = np.outer(z*(1-z), x) # backward pass: local gradient for W
 ```
 
-A non-obvious fun fact about sigmoid is that its local gradient (z*(1-z)) achieves a maximum at 0.25, when z = 0.5. That means that every time the gradient signal flows through a sigmoid gate, its magnitude always diminishes by one quarter (or more) (<u>diminishes at least one quarter</u>). If you’re using basic SGD, this would make the lower layers of a network train much slower than the higher ones.
+A non-obvious fun fact about sigmoid is that its local gradient (z*(1-z)) achieves a maximum at 0.25, when z = 0.5. That means that every time the gradient signal flows through a sigmoid gate, its magnitude always diminishes by one quarter (or more) (<u>diminishes at least one quarter</u>). If you’re using basic SGD, this would make the lower layers of a network train much slower than the higher ones (fist computing the gradient of higher layers, then computing the gradient of lower layers).
 
 
 
