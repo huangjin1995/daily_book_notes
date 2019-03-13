@@ -164,7 +164,9 @@ See a longer explanation in this [CS231n lecture video](https://www.youtube.com/
 
 ...
 
+##### Inspect the Batch Normalization layer
 
+https://kratzert.github.io/2016/02/12/understanding-the-gradient-flow-through-the-batch-normalization-layer.html
 
 
 
