@@ -1,4 +1,4 @@
-refer: CS231n, http://cs231n.github.io/neural-networks-1/
+refer: CS231n, http://cs231n.github.io/neural-networks-2/
 
 zero-centered data
 
