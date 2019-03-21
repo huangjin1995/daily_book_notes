@@ -1,5 +1,15 @@
 refer: CS231n, http://cs231n.github.io/neural-networks-2/
 
+
+
+Before normalization:<br>classification loss very sensitive to changes in weight matrix; hard to optimize
+
+After normalization:<br>less sensitive to small changes in weights; easier to optimize
+
+
+
+### methods
+
 zero-centered data
 
 normalized data

@@ -39,5 +39,31 @@ For skip-gram models trained in medium size corpora, with 50 dimensions, a windo
 
 
 #### Summary
-1，wor2vec本质上是基于马尔科夫假设的bigram language model.
+1. wor2vec本质上是基于马尔科夫假设的bigram language model.
+
+2. CBOW smoothes over a lot of the distributional information (by treating an entire context as one observation). For the most part, this turns out to be a useful thing for <u>smaller datasets</u>. However, skip-gram treats each context-target pair as a new observation, and this tends to do better when we have <u>larger datasets</u>.
+
+3. for training the skip-gram model, negative sample results in faster training and better vector representations for frequent words, compared to more complex hierarchical softmax.
+
+4. **Negative Sampling** is a simplified version of **Noise Contrastive Estimation**
+
+   **NCE guarantees approximation to softmax, Negative Sampling doesn’t** 
+
+   [Mnih and Teh (2012)](https://www.cs.toronto.edu/~amnih/papers/ncelm.pdf) reported that 25 noise samples are sufficient to match the performance of the regular softmax, with an expected speed-up factor of about 45.
+
+   For more information, see: 
+
+   Sebastian Rudder’s “On word embeddings - Part 2: Approximating the Softmax” 
+
+   Chris Dyer’s “Notes on Noise Contrastive Estimation and Negative Sampling”
+
+5. 
+
+
+
+
+
+
+
+
 

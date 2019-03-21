@@ -24,9 +24,11 @@
 
 `\cup \cap` -> $\cup \ \cap$ 
 
-#### 偏导
+#### 导数/偏导
 
 `\partial` -> $\partial$ 
+
+`\bigtriangledown` -> $\bigtriangledown$ 
 
 #### 无穷大
 
@@ -71,11 +73,11 @@ $$
 
 #### 重音符(导数)
 
-`\bar`, `\dot`,`\acute`
+`\bar`, `\dot`,`\acute`, `\widetilde`
 
-$\bar{A}$, $\dot{A}$, $\acute{A}$ 
+$\bar{A}$, $\dot{A}$, $\acute{A}$ , $\widetilde{A}$
 
-`\hat` $\rightarrow$ $\hat{A}​$ 
+`\hat` $\rightarrow$ $\hat{A}$ 
 
 #### 上/下划线
 
