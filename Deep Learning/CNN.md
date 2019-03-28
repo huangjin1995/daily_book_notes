@@ -1,196 +1,88 @@
-cs231n
+refer: CS231n
 
+http://cs231n.github.io/convolutional-networks/
 
 
-ImageNet Large Scale Visual Recognition Challenge (ILSVRC) winners
 
-AlexNet (2012) - ZFNet (2013) - VGG (2014) - GoogleNet (2014) - ResNet (2015)
 
 
+#### Convolution Layer
 
-#### AlexNet
+![conv_layer](https://github.com/bifeng/daily_book_notes/raw/master/resource/conv_layer.png)
 
-Details/Retrospectives:
-- first use of ReLU
-- used Norm layers (not common anymore)
-- heavy data augmentation
-- dropout 0.5
-- batch size 128
-- SGD Momentum 0.9
-- Learning rate 1e-2, reduced by 10 manually when val accuracy plateaus
-- L2 weight decay 5e-4
-- 7 CNN ensemble: 18.2% -> 15.4%
+Common settings:
+K = (powers of 2, e.g. 32, 64, 128, 512)
 
+- F = 3, S = 1, P = 1
+- F = 5, S = 1, P = 2
+- F = 5, S = 2, P = ? (whatever fits)
+- F = 1, S = 1, P = 0
 
+ 1x1 convolution layers make perfect sense, each filter has size 1x1x$D$, and performs a $D$-dimensional dot
+product.
 
-Historical note: 
 
-Trained on GTX 580 GPU with only 3 GB of memory. Network spread across 2 GPUs, half the neurons (feature maps) on each GPU.
 
-#### ZFNet
+how to calculate the spatial size of the output volume?
 
-AlexNet but:
-CONV1: change from (11x11 stride 4) to (7x7 stride 2)
-CONV3,4,5: instead of 384, 384, 256 filters use 512, 1024, 512
+$(W - F + 2P)/S + 1$
 
-ImageNet top 5 error: 16.4% -> 11.7%
+the input volume size ($W$), the receptive field size of the Conv Layer neurons ($F$), the stride with which they are applied ($S$), and the amount of zero padding used ($P$) on the border. 
 
-#### VGG
+Without zero padding will lead to the shrink of volume size. Shrinking too fast is not good, doesn’t work well.
 
-Small filters, Deeper networks
+In general, common to see CONV layers with stride 1, filters of size $F \times F$, and zero-padding with $(F-1)/2$. (will preserve size spatially)
 
-Only 3x3 CONV stride 1, pad 1 and 2x2 MAX POOL stride 2
 
-AlexNet (8 layers)  ->  VGG 16 (16 layers)    VGG 19 (19 layers)
 
-Details:
+##### Parameter Sharing (assumption)
 
-- Similar training procedure as Krizhevsky 2012
-- No Local Response Normalisation (LRN)
-- Use VGG16 or VGG19 (VGG19 only slightly better, more memory)
-- Use ensembles for best results
-- FC7 features generalize well to other tasks
+It turns out that we can dramatically reduce the number of parameters by making one reasonable assumption: if one feature is useful to compute at some spatial position (x,y), then it should also be useful to compute at a different position (x2,y2). 
 
-VGG top 5 error: 11.7% -> 7.3%
+input: 227 x 227 x 3
 
+receptive field size F=11, stride S=4, no zero padding P=0  $\rightarrow$ 11 x 11 x 3
 
+conv layer: 55 x 55 x 96
 
-![vgg16](https://github.com/bifeng/daily_book_notes/raw/master/resource/vgg16_memory_params.png)
+Each of the 55 x 55 x 96 = 290400 neurons has 11 x 11 x 3 = 363 weights and 1 bias. This adds up to 290400 * 364 = 105,705,600 parameters on the first layer of the ConvNet alone. But With this parameter sharing scheme, the first Conv Layer in our example would now have only 96 unique set of weights (one for each depth slice), for a total of 96 x 364 = 34,944 parameters. Alternatively, all 55 x 55 neurons in each depth slice will now be using the same parameters.
 
+Notice that the parameter sharing assumption <u>is relatively reasonable</u>: If detecting a horizontal edge is important at some location in the image, it should intuitively be useful at some other location as well due to the translationally-invariant structure of images. There is therefore no need to relearn to detect a horizontal edge at every one of the 55*55 distinct locations in the Conv layer output volume.
 
+Note that sometimes the parameter sharing assumption <u>may not make sense</u>. One practical example is when the input are faces that have been centered in the image. You might expect that different eye-specific or hair-specific features could (and should) be learned in different spatial locations. In that case it is common to relax the parameter sharing scheme, and instead simply call the layer a **Locally-Connected Layer**.
 
-Q: Why use smaller filters? (3x3 conv) What is the effective receptive field of three 3x3 conv (stride 1) layers?
 
-Stack of three 3x3 conv (stride 1) layers has same effective receptive field as one 7x7 conv layer - (the third 3x3 has the 7x7 receptive field, the second 3x3 has the 5x5 receptive field, the first 3x3 has the 3x3 receptive field)
 
-But deeper, more non-linearities
+What's the number of parameters in this layer?
 
-And fewer parameters: $3 * (3^2C^2)$ vs. $7^2C^2$ for $C$ channels per layer
+Input volume: 32x32x3
+10 5x5 filters with stride 1, pad 2
 
+each filter has 5\*5\*3 + 1 = 76 params (+1 for bias)
+=> 76*10 = 760
 
 
-#### GoogleNet
 
-Deeper networks, with computational efficiency
-- 22 layers
-- Efficient “Inception” module
-- No FC layers
-- Only 5 million parameters!
-  12x less than AlexNet
-- ILSVRC’14 classification winner
-  (6.7% top 5 error)
+#### Pooling Layer
 
+- makes the representations smaller and more manageable
+- operates over each activation map independently
 
 
-![GoogLeNet](https://github.com/bifeng/daily_book_notes/raw/master/resource/GoogLeNet.png)
 
+![pool_layer](https://github.com/bifeng/daily_book_notes/raw/master/resource/pool_layer.png)
 
+Common settings:
+F = 2, S = 2
+F = 3, S = 2
 
-##### Inception module
 
-“Inception module”: design a good local network topology (network within a network) and then stack these modules on top of each other
 
-Apply parallel filter operations on the input from previous layer:
-- Multiple receptive field sizes for convolution (1x1, 3x3, 5x5)
-- Pooling operation (3x3)
-  Concatenate all filter outputs together depth-wise
 
 
 
-![inception_module](https://github.com/bifeng/daily_book_notes/raw/master/resource/inception_module.png)
 
-Solution: “bottleneck” layers that use 1x1 convolutions to reduce feature depth
 
-![inception_module_with_dimension_reduction](https://github.com/bifeng/daily_book_notes/raw/master/resource/inception_module_with_dimension_reduction.png)
-
-
-
-#### ResNet
-
-Very deep networks using residual connections
-- 152-layer model for ImageNet
-- ILSVRC’15 classification winner
-  (3.57% top 5 error)
-- Swept all classification and detection competitions in ILSVRC’15 and COCO’15!
-
-
-
-Full ResNet architecture:
-- Stack residual blocks
-- Every residual block has two 3x3 conv layers
-- Periodically, double # of filters and downsample spatially using stride 2 (/2 in each dimension)
-- Additional conv layer at the beginning
-- No FC layers at the end (only FC 1000 to output classes)
-- For deeper networks (ResNet-50+), use “bottleneck” layer to improve efficiency (similar to GoogLeNet)
-
-
-
-Training ResNet in practice:
-- Batch Normalization after every CONV layer
-- Xavier/2 initialization from He et al.
-- SGD + Momentum (0.9)
-- Learning rate: 0.1, divided by 10 when validation error plateaus
-- Mini-batch size 256
-- Weight decay of 1e-5
-- No dropout used
-
-
-
-##### residual block
-
-![residual_block](https://github.com/bifeng/daily_book_notes/raw/master/resource/residual_block.png)
-
-
-
-#### Comparison
-
-
-
-![comparing complexity](https://github.com/bifeng/daily_book_notes/raw/master/resource/comparing_complexity.png)
-
-
-
-#### Other architectures to know...
-
-- NiN (Network in Network)
-- Wide ResNet
-- ResNeXT
-- Stochastic Depth
-- DenseNet
-- FractalNet
-- SqueezeNet
-
-
-
-#### Summary
-
-Even more recent trend towards examining necessity of depth vs. width and residual connections:
-
-+ depth
-
-  What happens when we continue stacking deeper layers on a “plain” convolutional neural network?
-
-  -> The deeper model performs worse, but it’s not caused by over-fitting (performs worse on both training and test error) ! 
-
-  Hypothesis: the problem is an optimization problem, deeper models are harder to optimize
-
-  The deeper model should be able to perform at least as well as the shallower model.
-
-  Solution: 
-
-  1. A solution by construction is copying the learned layers from the shallower model and setting additional layers to identity mapping.  
-
-     Use network layers to fit a residual mapping instead of directly trying to fit a desired underlying mapping -> This idea lead to the residual block in ResNet.
-
-  2. 
-
-+ width
-
-  
-
-+  residual connections
-
-  
 
 
 

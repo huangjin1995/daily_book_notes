@@ -1,3 +1,9 @@
+more:
+
+https://www.zhihu.com/question/294635686
+
+
+
 refer: Deep Learning book
 
 http://cs231n.github.io/linear-classify/
