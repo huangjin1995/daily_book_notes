@@ -1,10 +1,8 @@
-+ Tracks
+refer:
 
-  TREC QA tracks 
+[如何匹配两段文本的语义？](https://mp.weixin.qq.com/s/F9ZV4jV3UiVuKVz1aqgv9w) 
 
-  Microblog tracks
 
-  ...
 
 ### Application
 
@@ -20,7 +18,7 @@ Question-answering (QA) attempts to automatically answer questions posed by user
 
 **vocabulary mismatch is still a basic problem in QA.**
 
-Benchmark data sets: <br>TREC QA [53], WikiQA [37], WebAP [57, 58], InsuranceQA[59], WikiPassageQA [56] and MS MARCO [36].
+Benchmark data sets: <br>TREC QA [53], WikiQA [37], WebAP [57, 58], **InsuranceQA**[59], WikiPassageQA [56] and MS MARCO [36].
 
 #### Community Question Answering
 
@@ -34,6 +32,14 @@ As a retrieval task, CQA can be further divided into two categories. The first 
 
 Benchmark data sets: <br>The Quora Dataset, Yahoo! Answers Dataset [25] and SemEval-2017 Task3 [64]. The recent proposed datasets include CQADupStack8 [65], ComQA9 [66] and LinkSO [67].
 
+#### Paraphrase Identification
+
+
+
+#### Natural Language Inference
+
+
+
 #### Automatic Conversation
 
 Automatic conversation (AC) aims to create an automatic human-computer dialog process for the purpose of <u>question answering, task completion, and social chat (i.e., chit-chat)</u>. In general, AC could be formulated either as an IR problem that aims to rank/select a proper response from a dialog repository or a generation problem that aims to generate an appropriate response with respect to the input utterance. 
@@ -43,7 +49,7 @@ further divided into single-turn conversation or multi-turn conversation.）
 
 **vocabulary mismatch is no longer the central challenge in AC. Instead, it is critical to model correspondence/coherence and avoid general trivial responses.**
 
-Benchmark data sets: <br>Ubuntu Dialog Corpus (UDC) [75, 77, 78], Sina Weibo dataset [74, 26, 79, 80], MSDialog [81, 30, 82] and the "campaign" NTCIR STC [83].
+Benchmark data sets: <br>Ubuntu Dialog Corpus (UDC) [75, 77, 78], **Sina Weibo dataset** [74, 26, 79, 80], MSDialog [81, 30, 82] and **the "campaign" NTCIR STC** [83].
 
 ### Model Architecture
 
@@ -91,21 +97,34 @@ Ad-hoc retrieval: Three major strategies used in the asymmetric architecture to 
 
   A typical model based on this strategy is DeepRank.
 
-+ One-way Attention, which typically leverages the question representation to obtain the attention over candidate answer words in order the enhance the answer representation.
+
+
+
+Question Answering:  Three major strategies used in the asymmetric architecture to handle the heterogeneity between the question and the answering, namely attention, compare, aggregation, ....
+
++ Attention
+
+  One-way Attention, which typically leverages the question representation to obtain the attention over candidate answer words in order the enhance the answer representation.
 
   For example, IARNN [86] and CompAgg [87] get the attentive answer representation sequence that weighted by the question sentence representation.
 
++ Compare
+
+  
+
++ Aggregation
+
+  
 
 
-Question Answering: 
+
+Community Question Answering: ...
 
 
 
-Community Question Answering: 
+Automatic Conversation: ...
 
 
-
-Automatic Conversation: 
 
 #### Modular
 
@@ -220,18 +239,52 @@ Automatic Conversation:
 
 模型消融分析，可以从**模型组件**及**数据分布**两个方面分析模型架构的有效性！
 
-只有少量涉及消融分析的论文，可以精读！
+
+
+##### Summary
+
+1) Asymmetric的text不能交换位置，Symmetric可以交换位置。
+
+2) Asymmetric的text长短不一，导致各自的embedding空间差异较大；Symmetric的长短差异较小。
+
+3) 对于Asymmetric不好解决的问题，则转化为Symmetric。
+
+4) Attention在Asymmetric中的效果较Symmetric中更为显著。
+
+5）...
+
+6）...
+
+
 
 
 
 ### Model Comparison
+
+#### Empirical Comparison on Ad-hoc Retrieval
+
+Overview of previously published results on ad hoc retrieval datasets. The citation in each row denotes the original paper where the method is proposed. The superscripts 1-5 denote that the results are cited from [21],[33],[34],[84], [28] respectively. The subscripts denote the model architecture belongs to (S)ymmetric or (A)symmetric/(R)epresentation-focused or (I)nteraction-focused or (H)ybrid/Singe-(G)ranularity or (Multi-granularity. The back slash symbols denote that there are no published results for the specic model on the specic data set in the related literature.
+
+![empirical_comparison_on_ad_hoc_retrieval](https://github.com/bifeng/daily_book_notes/raw/master/resource/empirical_comparison_on_ad_hoc_retrieval.png)
+
+#### Empirical Comparison on QA (TREC QA/WikiQA/Yahoo! Answers)
 
 Overview of previously published results on QA benchmark data sets. The citation in each row denotes the original paper where the method is proposed. The superscripts 1-10 denote that the results are cited from [37], [69], [61], [86], [88], [121], [87], [122], [120], [92] respectively. The subscripts denote the model architecture belongs to (S)ymmetric or (A)symmetric/(R)epresentation-focused or (I)nteraction-focused or
 (H)ybrid/Single-(G)ranularity or (M)ulti-granularity. The back slash symbols denote that there are no published results for the specic model on the specic data set in the related literature.
 
 ![empirical_comparison_on_qa](https://github.com/bifeng/daily_book_notes/raw/master/resource/empirical_comparison_on_qa.png)
 
+#### Empirical Comparison on QA (TREC QA)
 
+https://aclweb.org/aclwiki/Question_Answering_(State_of_the_art)
+
+#### Empirical Comparison on PI (MSRP)
+
+https://aclweb.org/aclwiki/Paraphrase_Identification_(State_of_the_art)
+
+#### Empirical Comparison on NLI (SNLI)
+
+https://nlp.stanford.edu/projects/snli/
 
 
 
