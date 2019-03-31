@@ -1,3 +1,15 @@
+more refer:
+
+- A Review on Deep Learning Techniques Applied to Answer Selection, COLING 2018 [paper](https://aclweb.org/anthology/C18-1181) 
+
+  Three neural network architectures: siamese architecture, attentive architecture, compare-aggregate architecture.
+
+- Deep Learning for Matching in Search and Recommendation
+
+- https://github.com/NTMC-Community/awaresome-neural-models-for-semantic-match
+
+  
+
 refer:
 
 [如何匹配两段文本的语义？](https://mp.weixin.qq.com/s/F9ZV4jV3UiVuKVz1aqgv9w) 
@@ -75,6 +87,10 @@ Note here symmetric structure means that the inputs s and t can exchange their p
 
   Representative models include DeepMatch [14], Arc-II [17], MatchPyramid [18] and Match-SRNN [69].
 
++ compare-aggregate networks
+
+  BiMPM...
+
 
 
 ##### Asymmetric matching
@@ -138,35 +154,55 @@ Automatic Conversation: ...
 
 ![representation_interaction_architectures](https://github.com/bifeng/daily_book_notes/raw/master/resource/representation_interaction_architectures.png)
 
-+ Representation (global matching)
+###### Representation (global matching)
 
-  The underlying assumption of this type of architecture is that **relevance depends on compositional meaning of the input texts**.
+The underlying assumption of this type of architecture is that **relevance depends on compositional meaning of the input texts**.
 
-  Representation methods include fully-connected networks (DSSM), convolutional networks (Arc-I, CNTN, CLSM) and recurrent networks (LSTM-RNN, MV-LSTM).
+Representation methods include fully-connected networks (DSSM), convolutional networks (Arc-I, CNTN, CLSM) and recurrent networks (LSTM-RNN, MV-LSTM).
 
-  Notes:
+Notes:
 
-  Representation-focused better fits tasks with the global matching requirement. This architecture is also more suitable for tasks with short input texts (since it is often difficult to obtain good high-level representations of long texts).
+Representation-focused better fits tasks with the global matching requirement. This architecture is also more suitable for tasks with short input texts (since it is often difficult to obtain good high-level representations of long texts).
 
-  Moreover, models in this category are efficient for online computation, since one can pre-calculate representations of the texts offline.
+Moreover, models in this category are efficient for online computation, since one can pre-calculate representations of the texts offline.
 
-+ Interaction (local matching)
+###### Interaction (local matching)
 
-  The underlying assumption of this type of architecture is that **relevance is in essence about the relation between the input texts**, so it would be more effective to directly learn from interactions rather than from individual representations.
+The underlying assumption of this type of architecture is that **relevance is in essence about the relation between the input texts**, so it would be more effective to directly learn from interactions rather than from individual representations.
 
-  Interaction methods include non-parametric, parametric.
+Interaction methods include non-parametric, parametric.
 
-  Non-parametric interaction functions are functions that reflect the closeness or distance between inputs without learnable parameters. In this category, some are defined over each pair of input word vectors, such as binary indicator function [18, 33], cosine similarity function [18, 61, 33], dot-product function [18, 33, 34] and radial-basis function [18]. The others are defined between a word vector and a set of word vectors, e.g. the matching histogram mapping in DRMM [21] and the kernel pooling layer in K-NRM [85].
+Non-parametric interaction functions are functions that reflect the closeness or distance between inputs without learnable parameters. In this category, some are defined over each pair of input word vectors, such as binary indicator function [18, 33], cosine similarity function [18, 61, 33], dot-product function [18, 33, 34] and radial-basis function [18]. The others are defined between a word vector and a set of word vectors, e.g. the matching histogram mapping in DRMM [21] and the kernel pooling layer in K-NRM [85].
 
-  Parametric interaction functions are adopted to learn the similarity/distance function from data. For example, Arc-II [17] uses 1D convolutional layer for the interaction between two phrases. Match-SRNN [69] introduces the neural tensor layer to model complex interactions between input words. In general, parametric interaction functions are adopted when there is sufficient training data since they bring the model flexibility at the expense of larger model complexity.
+Parametric interaction functions are adopted to learn the similarity/distance function from data. For example, Arc-II [17] uses 1D convolutional layer for the interaction between two phrases. Match-SRNN [69] introduces the neural tensor layer to model complex interactions between input words. In general, parametric interaction functions are adopted when there is sufficient training data since they bring the model flexibility at the expense of larger model complexity.
 
-  Notes:
+**Three most used interaction methods, always combined as a pipeline:**
 
-  Interaction-focus better fits tasks that call for specific matching patterns (e.g., exact word matching) and diverse matching requirement [21], e.g., ad-hoc retrieval. This architecture also better fit tasks with heterogeneous inputs, e.g., ad-hoc retrieval and QA, since it circumvents the difficulty of encoding long texts. 
++ **Attention**
 
-  Unfortunately, models in this category are not efficient for online computation, since the interaction function cannot be pre-calculated.
+  ...
+
++ **Comparison**
+
+  ...
+
++ **Aggregation**
+
+  ...
+
+BiMPM
+
+IARNN [86] and CompAgg [87] 
+
+decomposable attention model - Parikh et al., EMNLP ‘16
 
 
+
+Notes:
+
+Interaction-focus better fits tasks that call for specific matching patterns (e.g., exact word matching) and diverse matching requirement [21], e.g., ad-hoc retrieval. This architecture also better fit tasks with heterogeneous inputs, e.g., ad-hoc retrieval and QA, since it circumvents the difficulty of encoding long texts. 
+
+Unfortunately, models in this category are not efficient for online computation, since the interaction function cannot be pre-calculated.
 
 ##### Single-granularity vs. Multi-granularity
 
@@ -286,5 +322,36 @@ https://aclweb.org/aclwiki/Paraphrase_Identification_(State_of_the_art)
 
 https://nlp.stanford.edu/projects/snli/
 
+#### Empirical Comparison on QA (InsuranceQA)
+
+a training set, a validation set, two test sets
+
+The questions are much shorter than answers. The average length of questions is 7, and the average length of answers is 94.
+
+|                                          | Top-1 Accuracy v1 | Top-1 Accuracy v2 |
+| ---------------------------------------- | ----------------- | ----------------- |
+| QA-LSTM with attention (avg pooling) [1] | 68.4              |                   |
+| SUBMULT+NN[2]                            | 77.0              |                   |
+|                                          |                   |                   |
+|                                          |                   |                   |
+|                                          |                   |                   |
+|                                          |                   |                   |
+|                                          |                   |                   |
+
+v1: version1 dataset, v2: version2 dataset
+
+Applying Deep Learning to Answer Selection: A Study and An Open Task, Minwei Feng, Bing Xiang, Michael R. Glass, Lidan Wang, Bowen Zhou ASRU 2015 [arxiv](https://arxiv.org/abs/1508.01585) | [english dataset](https://github.com/shuzi/insuranceQA) | [chinese dataset](https://github.com/Samurais/insuranceqa-corpus-zh) 
+
+[1] LSTM-based Deep Learning Models for Non-factoid Answer Selection, Ming Tan, Cicero dos Santos, Bing Xiang, Bowen Zhou ICLR 2016 [arxiv](https://arxiv.org/abs/1511.04108) 
+
+[2] is CompAgg[87]
+
+### Reference
 
 
+
+BiMPM: Bilateral Multi-Perspective Matching for Natural Language Sentences, Zhiguo Wang, Wael Hamza, Radu Florian, IJCAI 2017 [arxiv](https://arxiv.org/abs/1702.03814) | [code](https://github.com/zhiguowang/BiMPM) 
+
+
+
+ 

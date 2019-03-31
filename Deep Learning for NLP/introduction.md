@@ -11,3 +11,6 @@ http://web.stanford.edu/class/cs224n/(pytorch)
 
 http://www.hankcs.com/nlp/cs224n-introduction-to-nlp-and-deep-learning.html
 
+CS224N 2019  
+video<br>[bilibili](https://www.bilibili.com/video/av46216519/?p=1)  
+http://web.stanford.edu/class/cs224n/index.html#schedule  
