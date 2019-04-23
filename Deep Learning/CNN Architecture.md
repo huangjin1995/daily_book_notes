@@ -2,6 +2,13 @@ cs231n
 
 
 
+#### paper
+
++ GoogleNet - Going Deeper with Convolutions, Christian Szegedy, Wei Liu, Yangqing Jia, Pierre Sermanet, Scott Reed, Dragomir Anguelov, Dumitru Erhan, Vincent Vanhoucke, Andrew Rabinovich, CVPR 2014 [arxiv](https://arxiv.org/abs/1409.4842) 
++ 
+
+
+
 ImageNet Large Scale Visual Recognition Challenge (ILSVRC) winners
 
 AlexNet (2012) - ZFNet (2013) - VGG (2014) - GoogleNet (2014) - ResNet (2015)

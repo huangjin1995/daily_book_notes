@@ -310,6 +310,17 @@ Overview of previously published results on QA benchmark data sets. The citation
 
 ![empirical_comparison_on_qa](https://github.com/bifeng/daily_book_notes/raw/master/resource/empirical_comparison_on_qa.png)
 
+
+
+https://paperswithcode.com/sota/question-answering-on-wikiqa
+
+| Rank | Method                                                       | MAP   | MRR   | Paper Title                                                  | Year | Paper                                                        | Code                                                         |
+| ---- | ------------------------------------------------------------ | ----- | ----- | ------------------------------------------------------------ | ---- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| 1    | [HyperQA](https://paperswithcode.com/paper/hyperbolic-representation-learning-for-fast) | 0.712 | 0.727 | [Hyperbolic Representation Learning for Fast and Efficient Neural Question Answering](https://paperswithcode.com/paper/hyperbolic-representation-learning-for-fast) | 2017 | [paper](https://paperswithcode.com/paper/hyperbolic-representation-learning-for-fast) | [code](https://paperswithcode.com/paper/hyperbolic-representation-learning-for-fast#code) |
+|      |                                                              |       |       |                                                              |      |                                                              |                                                              |
+
+
+
 #### Empirical Comparison on QA (TREC QA)
 
 https://aclweb.org/aclwiki/Question_Answering_(State_of_the_art)
@@ -321,6 +332,30 @@ https://aclweb.org/aclwiki/Paraphrase_Identification_(State_of_the_art)
 #### Empirical Comparison on NLI (SNLI)
 
 https://nlp.stanford.edu/projects/snli/
+
+
+
+https://paperswithcode.com/sota/natural-language-inference-on-snli
+
+| Rank | Method                                                       | % Test Accuracy | % Train Accuracy | Parameters | Paper Title                                                  | Year | Paper | Code |
+| ---- | ------------------------------------------------------------ | --------------- | ---------------- | ---------- | ------------------------------------------------------------ | ---- | ----- | ---- |
+| 1    | [MT-DNN](https://paperswithcode.com/paper/multi-task-deep-neural-networks-for-natural) | 91.1            | 96.8             | 110m       | [Multi-Task Deep Neural Networks for Natural Language Understanding](https://paperswithcode.com/paper/multi-task-deep-neural-networks-for-natural) | 2019 |       |      |
+| 2    | [Densely-Connected Recurrent and Co-Attentive Network Ensemble](https://paperswithcode.com/paper/semantic-sentence-matching-with-densely) | 90.1            | 95.0             | 53.3m      | [Semantic Sentence Matching with Densely-connected Recurrent and Co-attentive Information](https://paperswithcode.com/paper/semantic-sentence-matching-with-densely) | 2018 |       |      |
+| 3    | [Fine-Tuned LM-Pretrained Transformer](https://paperswithcode.com/paper/improving-language-understanding-by) | 89.9            | 96.6             | 85m        | [Improving Language Understanding by Generative Pre-Training](https://paperswithcode.com/paper/improving-language-understanding-by) | 2018 |       |      |
+| 4    | [300D DMAN Ensemble](https://paperswithcode.com/paper/discourse-marker-augmented-network-with) | 89.6            | 96.1             | 79m        | [Discourse Marker Augmented Network with Reinforcement Learning for Natural Language Inference](https://paperswithcode.com/paper/discourse-marker-augmented-network-with) | 2018 |       |      |
+| 5    | [150D Multiway Attention Network Ensemble](https://paperswithcode.com/paper/multiway-attention-networks-for-modeling) | 89.4            | 95.5             | 58m        | [Multiway Attention Networks for Modeling Sentence Pairs](https://paperswithcode.com/paper/multiway-attention-networks-for-modeling) | 2018 |       |      |
+| 6    | [450D DR-BiLSTM Ensemble](https://paperswithcode.com/paper/dr-bilstm-dependent-reading-bidirectional) | 89.3            | 94.8             | 45m        | [DR-BiLSTM: Dependent Reading Bidirectional LSTM for Natural Language Inference](https://paperswithcode.com/paper/dr-bilstm-dependent-reading-bidirectional) | 2018 |       |      |
+| 7    | [300D CAFE Ensemble](https://paperswithcode.com/paper/compare-compress-and-propagate-enhancing) | 89.3            | 92.5             | 17.5m      | [Compare, Compress and Propagate: Enhancing Neural Architectures with Alignment Factorization for Natural Language Inference](https://paperswithcode.com/paper/compare-compress-and-propagate-enhancing) | 2017 |       |      |
+| 8    | [ESIM + ELMo Ensemble](https://paperswithcode.com/paper/deep-contextualized-word-representations) | 89.3            | 92.1             | 40m        | [Deep contextualized word representations](https://paperswithcode.com/paper/deep-contextualized-word-representations) | 2018 |       |      |
+| 9    | [KIM Ensemble](https://paperswithcode.com/paper/neural-natural-language-inference-models) | 89.1            | 93.6             | 43m        | [Neural Natural Language Inference Models Enhanced with External Knowledge](https://paperswithcode.com/paper/neural-natural-language-inference-models) | 2017 |       |      |
+| 10   | [SLRC](https://paperswithcode.com/paper/i-know-what-you-want-semantic-learning-for) | 89.1            | 89.1             | 6.1m       | [I Know What You Want: Semantic Learning for Text Comprehension](https://paperswithcode.com/paper/i-know-what-you-want-semantic-learning-for) | 2018 |       |      |
+| 11   | [Densely-Connected Recurrent and Co-Attentive Network](https://paperswithcode.com/paper/semantic-sentence-matching-with-densely) | 88.9            | 93.1             | 6.7m       | [Semantic Sentence Matching with Densely-connected Recurrent and Co-attentive Information](https://paperswithcode.com/paper/semantic-sentence-matching-with-densely) | 2018 |       |      |
+| 12   | [448D Densely Interactive Inference Network (DIIN, code) Ensemble](https://paperswithcode.com/paper/natural-language-inference-over-interaction-1) | 88.9            | 92.3             | 17m        | [Natural Language Inference over Interaction Space](https://paperswithcode.com/paper/natural-language-inference-over-interaction-1) | 2017 |       |      |
+| 13   | [300D DMAN](https://paperswithcode.com/paper/discourse-marker-augmented-network-with) | 88.8            | 95.4             | 9.2m       | [Discourse Marker Augmented Network with Reinforcement Learning for Natural Language Inference](https://paperswithcode.com/paper/discourse-marker-augmented-network-with) | 2018 |       |      |
+| 14   | [BiMPM Ensemble](https://paperswithcode.com/paper/bilateral-multi-perspective-matching-for) | 88.8            | 93.2             | 6.4m       | [Bilateral Multi-Perspective Matching for Natural Language Sentences](https://paperswithcode.com/paper/bilateral-multi-perspective-matching-for) | 2017 |       |      |
+| 15   | [ESIM + ELMo](https://paperswithcode.com/paper/deep-contextualized-word-representations) | 88.7            | 91.6             | 8.0m       | [Deep contextualized word representations](https://paperswithcode.com/paper/deep-contextualized-word-representations) | 2018 |       |      |
+| 16   | [KIM](https://paperswithcode.com/paper/neural-natural-language-inference-models) | 88.6            | 94.1             | 4.3m       | [Neural Natural Language Inference Models Enhanced with External Knowledge](https://paperswithcode.com/paper/neural-natural-language-inference-models) | 2017 |       |      |
+| 17   | [600D ESIM + 300D Syntactic TreeLSTM](https://paperswithcode.com/paper/enhanced-lstm-for-natural-language-inference) | 88.6            | 93.5             | 7.7m       | [Enhanced LSTM for Natural Language Inference](https://paperswithcode.com/paper/enhanced-lstm-for-natural-language-inference) | 2016 |       |      |
 
 #### Empirical Comparison on QA (InsuranceQA)
 

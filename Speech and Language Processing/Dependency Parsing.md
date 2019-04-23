@@ -11,7 +11,18 @@ A dependency tree is a tree structure composed of the input words and satisfies 
 
 
 
-#### Dependency Parsing
+#### Application
+
+It reveals the dependency <u>relationships</u> between words, especially the distance dependency.
+
+
+
++ semantic role labeling
++ relation extraction, question answering
+
+
+
+#### Methods
 
 Dependency Parsing 主要解决 linking 和 shifting 的问题，通常可以用机器学习分类器来解决。
 
@@ -49,11 +60,13 @@ Dependency Parsing 主要解决 linking 和 shifting 的问题，通常可以用
 
 
 
-#### Dependency Treebank Dataset
+#### Dataset
 
 [The Prague Dependency Treebanks](https://ufal.mff.cuni.cz/pdt2.0/): Extremely high quality
 
-[The Google Universal Dependency Treebanks](http://universaldependencies.org/)
+[The Google Universal Dependency Treebanks](http://universaldependencies.org/) 
+
+
 
 #### Tools
 

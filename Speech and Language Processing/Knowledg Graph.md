@@ -1,3 +1,9 @@
+more:
+
+[一文揭秘！自底向上构建知识图谱全过程](https://mp.weixin.qq.com/s/lBeV6XWzk5bqNGiIMok-zw)
+
+
+
 实体（Entity）是指客观存在并可相互区别的事物，包括具体的人、事、物、抽象的概念或联系，知识库中包含多种类别的实体。
 
 实体消歧
@@ -10,11 +16,17 @@
 
 实体链接
 
-https://github.com/sebastianruder/NLP-progress/blob/master/english/entity_linking.md
-
 
 
 知识库实体对齐技术综述，2016，[paper](http://crad.ict.ac.cn/CN/abstract/abstract3093.shtml) 
+
+
+
+#### Architecture
+
+![knowledge_graph_architecture](https://github.com/bifeng/daily_book_notes/raw/master/resource/knowledge_graph_architecture.png)
+
+
 
 
 
@@ -25,6 +37,8 @@ https://github.com/sebastianruder/NLP-progress/blob/master/english/entity_linkin
 + 
 
 
+
+####
 
 
 
