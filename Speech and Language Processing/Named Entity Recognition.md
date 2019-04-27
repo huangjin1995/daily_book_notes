@@ -2,17 +2,30 @@ refer:<br>[面向新闻媒体的命名实体识别技术](https://mp.weixin.qq.c
 
 
 
+### literature review
+
++ A Survey on Deep Learning for Named Entity Recognition, Jing Li, Aixin Sun, Jianglei Han, Chenliang Li, 2018.12, [arxiv](https://arxiv.org/abs/1812.09449) 
++ A survey of named entity recognition and classification, David Nadeau, Satoshi Sekine, 2007, [paper](https://nlp.cs.nyu.edu/sekine/papers/li07.pdf)  :star::star::star::star:
+
+
+
 ### Challenge
 
 - 自动识别未登录词从而发现新词
 
 - 兼容领域词库从而实现多领域自动适配
 
+  
+
 - 嵌套的实体类型？
 
-- 
+  一个实体类型的长词，包含另一个实体类型的短词
+
+  
 
 - 一个实体属于多种类型？
+
+  
 
 - 如何识别大量的实体类型？
 
@@ -26,11 +39,26 @@ refer:<br>[面向新闻媒体的命名实体识别技术](https://mp.weixin.qq.c
 
   新增弱标注数据，扩大训练集
 
+  
+
+- how to recognize long tail of less well-known entities ?
+
+  
+
 
 
 ### STOA
 
 + https://nlpprogress.com/english/named_entity_recognition.html
++ 
+
+
+
+### tools
+
++ http://alchemy.cs.washington.edu/
++ ProbCog: A Toolbox for Statistical Relational Learning and Reasoning [code](https://github.com/opcode81/ProbCog) 
++ 
 
 
 
@@ -38,7 +66,11 @@ refer:<br>[面向新闻媒体的命名实体识别技术](https://mp.weixin.qq.c
 
 #### rule and dictionary based
 
+
+
 #### machine learning based
+
+
 
 #### deep learning based
 

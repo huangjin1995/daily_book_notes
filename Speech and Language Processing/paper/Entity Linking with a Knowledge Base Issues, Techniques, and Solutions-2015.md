@@ -4,7 +4,7 @@ Entity linking is also called Named Entity Disambiguation (NED) in the NLP commu
 
 name variations and entity ambiguity. 
 
-A named entity may have multiple surface forms, such as its full name, partial names, aliases, abbreviations, and alternate spellings.
+A named entity may have multiple surface forms, such as its full name, partial names, **aliases**, **abbreviations**, and alternate spellings.
 
 On the other hand, an entity mention could possibly denote different named entities.
 
@@ -30,7 +30,49 @@ Generally speaking, a typical entity linking system consists of the following th
 
 ### Candidate Entity Generation
 
+Approaches to candidate entity generation are mainly based on string comparison between the surface form of the entity mention and the name of the entity existing in a knowledge base.
 
+#### Name Dictionary Based Techniques
+
+Name dictionary based techniques are the main approaches to candidate entity generation and are leveraged by many entity linking systems.
+
+The dictionary D is constructed by leveraging features from Wikipedia as follows:
+
++ Entity pages
+
++ Redirect pages
+
+  Redirect pages often indicate synonym terms, abbreviations, or other variations of the pointed entities.
+
++ Disambiguation pages
+
+  These disambiguation pages are very useful in extracting abbreviations or other aliases of entities.
+
++ Bold phrases from the first paragraphs
+
+  Varma et al. [63,64] observed that these bold phrases invariably are nick names, alias names or full names of the entity described in this article.
+
++ Hyperlinks in Wikipedia articles
+
+  The anchor text of a link pointing to an entity page provides a very useful source of synonyms and other name variations of the pointed entity,
+
+Using these features from Wikipedia described above, entity linking systems could construct a dictionary D. Besides leveraging the features from Wikipedia, there are some studies [80,81,82] that exploit query click logs and Web documents to find **entity synonyms**, which are also helpful for the name dictionary construction.
+
+
+
+#### Surface Form Expansion From The Local Document
+
+expansion the acronyms or part of their full names to the full name !
+
++ Heuristic Based Methods
+
+
+
++ Supervised Learning Methods
+
+
+
+#### Methods Based on Search Engines
 
 
 
@@ -132,6 +174,22 @@ modeling,” in IJCAI, 2011, pp. 1909–1914.
 
 
 ### Unlinkable Mention Prediction
+
+
+
+## Directions and Conclusions
+
+the entity linking task is highly data dependent and it is unlikely a technique dominates all others across all data sets. For a given entity linking task, it is difficult to determine which techniques are best suited. There are many aspects that affect the design of the entity linking system, such as the system requirement and the characteristics of the data sets.
+
+In the following, we point out some promising research directions in entity linking.
+
+Firstly, entities linking in diverse types of data. such as Web tables (Web tables are semi-structured text and have almost no textual context) [119] , Web lists [92], and **tweets** (tweets are very short and noisy) [22,56,79,96,146].
+
+Secondly, for real-time and large-scale applications, efficiency and scalability are significantly important and essential.
+
+Thirdly, the increasing demand for constructing and populating domain-specific knowledge bases (e.g., in the domains of biomedicine, entertainment, products, finance, tourism, etc.) makes domain-specific entity linking important as well.
+
+
 
 
 
