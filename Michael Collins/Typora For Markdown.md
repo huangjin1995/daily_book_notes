@@ -189,6 +189,17 @@ Typroa 推荐使用两个*号。
 
 把鼠标放在`注释`上，将会有提示内容。
 
+### 折叠
+
+```mark
+<details>
+<summary>Title</summary>
+```
+
+<details>
+<summary>Title</summary>
+
+
 ### 表格
 
 ~~~

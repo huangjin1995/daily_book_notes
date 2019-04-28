@@ -61,7 +61,7 @@ https://github.com/sebastianruder/NLP-progress/blob/master/english/entity_linkin
 
 
 
-+ Analysis of Named Entity Recognition and Linking for Tweets, Leon Derczynski, Diana Maynard, Giuseppe Rizzo, Marieke van Erp, Genevieve Gorrell, Raphaël Troncy, Johann Petrak, Kalina Bontcheva, 2014, [arxiv](https://arxiv.org/abs/1410.7182) :star::star::star:
++ Analysis of Named Entity Recognition and Linking for Tweets, Leon Derczynski, Diana Maynard, Giuseppe Rizzo, Marieke van Erp, Genevieve Gorrell, Raphaël Troncy, Johann Petrak, Kalina Bontcheva, 2015, [arxiv](https://arxiv.org/abs/1410.7182) :star::star::star:
 
   
 

@@ -5,6 +5,7 @@ refer:<br>[面向新闻媒体的命名实体识别技术](https://mp.weixin.qq.c
 ### literature review
 
 + A Survey on Deep Learning for Named Entity Recognition, Jing Li, Aixin Sun, Jianglei Han, Chenliang Li, 2018.12, [arxiv](https://arxiv.org/abs/1812.09449) 
++ A Survey on Recent Advances in Named Entity Recognition from Deep Learning models, Vikas Yadav, Steven Bethard, 2018, [paper](https://www.aclweb.org/anthology/C18-1182) 
 + A survey of named entity recognition and classification, David Nadeau, Satoshi Sekine, 2007, [paper](https://nlp.cs.nyu.edu/sekine/papers/li07.pdf)  :star::star::star::star:
 
 

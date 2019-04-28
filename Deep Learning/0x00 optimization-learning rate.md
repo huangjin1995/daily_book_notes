@@ -1,5 +1,11 @@
 cs231n
 
+more:
+
+http://blog.dlib.net/2018/02/automatic-learning-rate-scheduling-that.html
+
+
+
 
 
 ### learning rate decay 
