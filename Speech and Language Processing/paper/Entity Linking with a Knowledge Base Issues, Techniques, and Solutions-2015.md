@@ -85,10 +85,18 @@ We can broadly divide these candidate entity ranking methods into two categories
 
 In addition, we could also categorize the candidate entity ranking methods into another three categories:
 
-+ Independent ranking methods. These approaches consider that entity mentions which need to be linked in a document are independent, and <u>do not leverage the relations between the entity mentions in one document</u> to
++ **Independent ranking methods**. These approaches consider that entity mentions which need to be linked in a document are independent, and <u>do not leverage the relations between the entity mentions in one document</u> to
   help candidate entity ranking. In order to rank the candidate entities, they <u>mainly leverage the context similarity</u> between the text around the entity mention and the document associated with the candidate entity.
-+ Collective ranking methods. These methods assume that <u>a document largely refers to coherent entities from one or a few related topics, and entity assignments for entity mentions in one document are interdependent with each other</u>. Thus, in these methods, entity mentions in one document are collectively linked by exploiting this “topical coherence”.
-+ Collaborative ranking methods. For an entity mention that needs to be linked, these approaches identify other entity mentions having similar surface forms and similar textual contexts in the other documents. They <u>leverage this cross-document extended context information obtained from the other similar entity mentions and the context information of the entity mention itself to rank candidate entities for the entity mention</u>.
+
+  单文本-语境相似
+
++ **Collective ranking methods**. These methods assume that <u>a document largely refers to coherent entities from one or a few related topics, and entity assignments for entity mentions in one document are interdependent with each other</u>. Thus, in these methods, entity mentions in one document are collectively linked by exploiting this “topical coherence”.
+
+  单文本-主题相关
+
++ **Collaborative ranking methods**. For an entity mention that needs to be linked, these approaches identify other entity mentions having similar surface forms and similar textual contexts in the other documents. They <u>leverage this cross-document extended context information obtained from the other similar entity mentions and the context information of the entity mention itself to rank candidate entities for the entity mention</u>.
+
+  跨文本-实体相似（别称(alias)）、语境相似等
 
 #### Features
 
@@ -137,7 +145,12 @@ Moreover, when multiple candidate entities for an entity mention are classified 
 
 ##### Learning to Rank Methods
 
+The advantages of learning to rank methods:<br>First,  training data is balanced since we have a single ranking example for each entity mention (take into account relations between candidate entities for the same entity mention). <br>Secondly, methods just need to select the candidate entity which achieves the highest score in the test phase as the
+mapping entity for each entity mention, rather than resorting to other techniques to select the most likely one.
+
 Most entity linking systems that leverage the learning to rank framework utilize the ranking SVM framework to learn the ranking model.
+
+
 
 ##### Probabilistic Methods
 
@@ -177,6 +190,24 @@ modeling,” in IJCAI, 2011, pp. 1909–1914.
 
 
 
+两类unlinkable实体: 
+
+1. 不能在knowledge base找到
+
+   通过命名实体的规则或多个命名实体识别的集成，对实体进行过滤。
+
+2. 能在knowledge base找到，但不是指称该实体
+
+   方式一：利用候选实体排序的阈值过滤，该阈值也是排序模型可以学习的参数。
+
+   方式二：训练一个二分类unlinkable mention prediction模型，特征也与候选实体排序模型的特征一样，也可以增加一些额外的特征（如排序的分数）。
+
+   方式三：To predict the unlinkable mention, they added a NIL entity into the candidate entity set, and considered NIL as a distinct candidate. If the ranker outputs NIL as the top-ranked entity, this entity mention is considered as unlinkable. Otherwise, the top-ranked entity is returned as the correct mapping entity.（incorporated the unlinkable mention prediction process into the entity ranking process）。
+
+   
+
+
+
 ## Directions and Conclusions
 
 the entity linking task is highly data dependent and it is unlikely a technique dominates all others across all data sets. For a given entity linking task, it is difficult to determine which techniques are best suited. There are many aspects that affect the design of the entity linking system, such as the system requirement and the characteristics of the data sets.
@@ -193,7 +224,27 @@ Thirdly, the increasing demand for constructing and populating domain-specific k
 
 
 
+## Question
 
++ question about learning to rank
+
+  there is no need worry about unbalance ?
+
+  how does it the take into account relations between candidate entities ?
+
+  what's the loss ?
+
++ how to construct the training data for multiple entity mention in one text ? (there are lots of candidate entity for each entity mention)
+
++ 
+
++ how to select useful information from context information (long entity description in a document) for ranking ?
+
++ 
+
++ how to incorporated the unlinkable mention prediction process into the entity ranking process ?
+
++ 
 
 
 

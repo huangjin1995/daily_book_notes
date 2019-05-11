@@ -1,8 +1,22 @@
+
+
+
+
 ## methods
 
 ### end to end
 
 将实体链指任务，放在实体识别上，即在实体识别中新增实体的类型标签。
+
+
+
+An alternative approach is to compute the score for each entity candidate using distributed vector representations of the entities, mentions, and context. Each of the vector embeddings can be learned from an end-to-end objective, or pre-trained on unlabeled data.
+
++ Pretrained entity embeddings can be obtained from an existing knowledge base (Bordes et al., 2011, 2013), or by running a word embedding algorithm such as WORD2VEC on the text of Wikipedia, with hyperlinks substituted for the anchor text.
++ The embedding of the mention x can be computed by averaging the embeddings of the words in the mention (Yang et al., 2016), or by the compositional techniques described in section 14.8 (Distributed representations of multiword units - phrases, sentences, and paragraphs).
++ The embedding of the context c can also be computed from the embeddings of the words in the context.
+
+refer: Natural Language Processing Jacob Eisenstein-10-15-2018
 
 
 
@@ -47,7 +61,23 @@ refer - "Information Extraction and Knowledge Base Population", Invited course f
 
 
 
+##### pairwise ranking loss function
 
+Usunier et al. (2009) define a general ranking error function, ...
+
+we want a high rank for the correct entity, and we want it to be separated from other entities by a substantial margin. We therefore define the margin-augmented rank, ...
+
+
+
+For each instance, a hinge loss is computed from the ranking error associated with this margin-augmented rank, and the violation of the margin constraint, ...
+
+
+
+WARP (Weston et al., 2011) approximate ranking loss...
+
+
+
+refer: Natural Language Processing Jacob Eisenstein-10-15-2018
 
 
 
