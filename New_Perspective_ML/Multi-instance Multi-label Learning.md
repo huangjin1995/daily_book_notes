@@ -10,3 +10,15 @@ Multi-instance multi-label learning, Zhi-Hua Zhou, Min-Ling Zhang, Sheng-Jun Hua
 
 
 
+
+
+周志华 - 
+
+- [Multi-instance learning](http://cs.nju.edu.cn/zhouzh/zhouzh.files/publication/publication_toc.htm#Multi-Instance%20Learning)
+- [多示例学习](https://wenku.baidu.com/view/a66fab43f12d2af90242e6da.html) 
+- 
+
+
+
+
+

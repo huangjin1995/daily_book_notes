@@ -2,11 +2,13 @@
 
 + How to prediction relation type for multiple sentence share a pair of entities ? It will output multi-label ?
 
++ Can apply it on unequal size of sentence sets ? 取众数或中位数 ?
+
   
 
 ### Task
 
-
+Given a set of sentences $\{x_1, x_2, \dots,x_n\}$ and two corresponding entities, our model measures the probability of each relation $r$.
 
 
 
@@ -20,11 +22,15 @@
 
 
 
-contribution???
-
-loss function?？？？
 
 
+#### The objective function
+
+We define the objective function using cross-entropy <u>at the set level</u> as follows:
+$$
+J(\theta) = \sum^s_{i=1} \log p(r_i|S_i, \theta)
+$$
+where $s$ indicates the number of sentence sets and $\theta$ indicates all parameters of our model.
 
 ### Architecture
 
@@ -63,6 +69,14 @@ loss function?？？？
    其中，$\rm{A}$是加权对角矩阵，$\rm{r}$为查询向量，即实体关系$r$的表示。
 
     
+
+### Experimental Setting
+
+The NYT dataset.
+
+We use the word2vec tool to train the word embeddings on NYT corpus. We keep the words which appear more than 100 times in the corpus as vocabulary. Besides, we concatenate the words of an entity when it has multiple words.
+
+
 
 
 

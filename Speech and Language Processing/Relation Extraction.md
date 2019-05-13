@@ -1,26 +1,14 @@
 #### Challenge
 
-+ overlapping relation extraction
+Three task:
 
-  
+One pair entities correspond to only one sentence
 
-  solution:
+One pair entities correspond to multiple sentences (distant supervised datasets)
 
-  1. one sentence just focus one pair of entities, so if the sentence contain multiple relation, then you need replicate the sentence.
+Multiple pair entities correspond to only one sentence (overlapping relation extraction)
 
-     Downside - 
-
-     First, it will introduce the sentence independent hypotheses, which is not true!
-
-     Second, for multiple relation share the common entity, you will lose the information for this entity connection with other entities.
-
-     Third, for prediction new sentence, you should provide lots of entity pairs of this sentence, which is redundancy.
-
-     Last but not least, create lots of training example which contain some redundancy.
-
-  2. 
-
-  
+<u>It must consider the domain of relation type (data distribution unbalance problem).</u>
 
 
 
@@ -84,7 +72,11 @@ https://paperswithcode.com/task/relation-extraction
 
   New York Times Corpus
 
-  Give one pair of entity which share by multiple or one sentence, decide the relationship of entity pair in each sentence.
+  This dataset consists of 1.18M sentences sampled from 294k 1987-2007 New York Times news articles. There are 24 valid relations in total.
+
+  Give one pair of entity which share by multiple or one sentence, decide the relationship of entity pair in each sentence. In the original testing data set, there are 74,857 entity pairs that correspond to only one sentence, nearly 3/4 over all entity pairs.
+
+  (Sebastian Riedel, Limin Yao, and Andrew McCallum. Modeling relations and their mentions without labeled text, 2010. In Proceedings of ECML PKDD.)
 
   
 
@@ -109,6 +101,15 @@ https://paperswithcode.com/task/relation-extraction
   BioInfer
 
   more than 50% of the data has overlapping relations
+
+  
+
+  WebNLG
+
+  It is originally created for Natural Language Generation (NLG) task. This dataset contains 246 valid relations. In this dataset, a instance including a group of triplets and several standard sentences (written by human). Every standard sentence contains all triplets of this instance.
+
+  (Claire Gardent, Anastasia Shimorina, Shashi Narayan, and Laura Perez-Beltrachini. 2017. Creating training
+  corpora for nlg micro-planners. In Proceedings of ACL.)
 
   
 
@@ -142,11 +143,6 @@ https://github.com/may-/cnn-re-tf
 
 
 
-
-- Neural Relation Extraction with Selective Attention over Instances, Yankai Lin, Shiqi Shen, Zhiyuan Liu, Huanbo Luan, Maosong Sun, ACL 2016, [paper](http://nlp.csai.tsinghua.edu.cn/~lzy/publications/acl2016_nre.pdf) | [OpenNRE](https://github.com/thunlp/OpenNRE) :star::star::star:
-
-
-
 ##### Multi-task Learning
 
 + A Hierarchical Multi-task Approach for Learning Embeddings from Semantic Tasks, Victor Sanh, Thomas Wolf, **Sebastian Ruder**, AAAI 2019, [arxiv](https://arxiv.org/abs/1811.06031) | [code](https://github.com/huggingface/hmtl) 
@@ -167,7 +163,7 @@ Giannis Bekoulis, Johannes Deleu, Thomas Demeester, Chris Develder. Adversarial 
 
 
 
-End-to-End Relation Extraction using LSTMs on Sequences and Tree Structures, Makoto Miwa, Mohit Bansal, ACL2016, [arxiv](https://arxiv.org/pdf/1601.00770v2.pdf) :star::star::star:
+End-to-End Relation Extraction using LSTMs on Sequences and Tree Structures, Makoto Miwa, Mohit Bansal, ACL2016, [arxiv](https://arxiv.org/pdf/1601.00770v2.pdf) :star::star::star: - It utilizes more linguistic resources (e.g., POS tags, chunks, syntactic parsing trees).
 
 
 
@@ -189,11 +185,29 @@ CoType: Joint Extraction of Typed Entities and Relations with Knowledge Bases, X
 
 
 
-##### Multi-instance
+##### Two-stage
 
-Mainly for the distant supervision dataset.
 
-+ Multi-instance Single-label
+
+Relation Classification via Convolutional Deep Neural Network, Daojian Zeng, Kang Liu, Siwei Lai, Guangyou Zhou and Jun Zhao, 2014 :star::star::star:
+
+
+
+###### Attention
+
+It can be used for the distant supervision dataset. - 利用Attention模型对数据进行全方位的权重计算，从而得到全面而不失“选择”的训练数据.
+
+Neural Relation Extraction with Selective Attention over Instances, Yankai Lin, Shiqi Shen, Zhiyuan Liu, Huanbo Luan, Maosong Sun, ACL 2016, [paper](http://nlp.csai.tsinghua.edu.cn/~lzy/publications/acl2016_nre.pdf) | [OpenNRE](https://github.com/thunlp/OpenNRE) :star::star::star:
+
+Cross-relation Cross-bag Attention for Distantly-supervised Relation Extraction, Yujin Yuan, Liyuan Liu, Siliang Tang, Zhongfei Zhang, Yueting Zhuang, Shiliang Pu, Fei Wu, Xiang Ren, AAAI 2019 [arxiv](https://arxiv.org/abs/1812.10604)
+
+
+
+###### Multi-instance
+
+Mainly for the distant supervision dataset. - 从训练集中抽取取置信度高的训练样例训练模型.
+
+- Multi-instance Single-label
 
   For multi-sentence share a pair of entities, it assume that only one sentence is active for this entity pair (should have only one relation type). Hence, it will lose a large amount of rich information containing in those neglected sentences.
 
@@ -203,31 +217,37 @@ Distant supervision for relation extraction via piecewise convolutional neural n
 
 
 
-+ Multi-instance Multi-label
+- Multi-instance Multi-label
 
   multi-sentence share a pair of entities should have multiple relation type
 
-Knowledge based weak supervision for information extraction of overlapping relations, Raphael Hoffmann, Congle Zhang, Xiao Ling, Luke Zettlemoyer, and Daniel S Weld. ACLHLT 2011. :star::star::star:
+Knowledge based weak supervision for information extraction of overlapping relations, Raphael Hoffmann, Congle Zhang, Xiao Ling, Luke Zettlemoyer, and Daniel S Weld. ACLHLT 2011, [paper](http://raphaelhoffmann.com/publications/acl2011.pdf) [Slides](http://raphaelhoffmann.com/publications/acl2011-slides.pptx) [Source Code](http://www.cs.washington.edu/ai/raphaelh/mr). :star::star::star:
 
 Multi-instance Multi-label Learning for Relation Extraction, Mihai Surdeanu, Julie Tibshirani, Ramesh Nallapati, **Christopher D. Manning**, EMNLP-CoNLL 2012 [paper](http://aclweb.org/anthology-new/D/D12/D12-1042.pdf) | [code](https://nlp.stanford.edu/software/mimlre.shtml):star::star::star:
 
 
 
-##### Two-stage
+###### Dependency Trees
 
-
-
-Relation Classification via Convolutional Deep Neural Network, Daojian Zeng, Kang Liu, Siwei Lai, Guangyou Zhou and Jun Zhao, 2014 :star::star::star:
-
-
-
-+ Dependency Trees
-
-Graph Convolution over Pruned Dependency Trees Improves Relation Extraction, Yuhao Zhang, Peng Qi, **Christopher D. Manning**, EMNLP 2018 [arxiv](https://arxiv.org/abs/1809.10185) | [code](https://github.com/qipeng/gcn-over-pruned-trees) 
+Shortest dependency path (SDP) between entity pairs of dependency parse trees
 
 RelEx—Relation extraction using dependency parse trees, Katrin Fundel  Robert Küffner  Ralf Zimmer, Bioinformatics 2007. :star::star::star:
 
+Classifying relations via long short term memory networks along shortest dependency paths, Y. Xu, L. Mou, G. Li, Y. Chen, H. Peng, and Z. Jin, EMNLP 2015. 
 
+Improved relation classification by deep recurrent neural networks with data augmentation, Y. Xu, R. Jia, L. Mou, G. Li, Y. Chen, Y. Lu, and Z. Jin, arXiv preprint arXiv:1601.03651, (2016).
+
+Graph Convolution over Pruned Dependency Trees Improves Relation Extraction, Yuhao Zhang, Peng Qi, **Christopher D. Manning**, EMNLP 2018 [arxiv](https://arxiv.org/abs/1809.10185) | [code](https://github.com/qipeng/gcn-over-pruned-trees) 
+
+
+
+###### Reinforcement Learning
+
+Mainly for the distant supervision dataset.
+
+Reinforcement Learning for Relation Classification from Noisy Data, Jun Feng, Minlie Huang, Li Zhao, Yang Yang, Xiaoyan Zhu, AAAI2018. [arxiv](https://arxiv.org/abs/1808.08013v1) | [code](https://github.com/unreliableXu/TensorFlow_RLRE) 
+
+Robust Distant Supervision Relation Extraction via Deep Reinforcement Learning, Pengda Qin, Weiran Xu, William Yang Wang, [arxiv](https://arxiv.org/abs/1805.09927v1) - Unlike the removal operation in the previous studies, we redistribute them into the negative examples.
 
 
 
@@ -268,33 +288,9 @@ testing:
 
  Allison co-produced the Academy Award winning [Saving Private Ryan], directed by [Steven Spielberg]... 
 
-##### Multi-instance learning
-
-周志华 - 
-
-- [Multi-instance learning](http://cs.nju.edu.cn/zhouzh/zhouzh.files/publication/publication_toc.htm#Multi-Instance%20Learning)
-- [多示例学习](https://wenku.baidu.com/view/a66fab43f12d2af90242e6da.html) 
-- 
 
 
 
-##### Attention 
-
-
-
-##### Joint Learning
-
-
-
-##### summary
-
-过滤或降低噪声数据的方法：
-
-Multi-instance learning - 从训练集中抽取取置信度高的训练样例训练模型
-
-Attention - 利用Attention模型对数据进行全方位的权重计算，从而得到全面而不失“选择”的训练数据
-
-Joint Learning - 对于错误传播放大的问题近期更有“joint learning”方法的提出，将命名实体识别和关系抽取两部并为一步走
 
 
 
